@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2026 ERP Heritage (https://www.erpheritage.com.au)
+    License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
+-->
+<odoo>
+    <data>
+
+        <record id="view_res_users_form_eh_access" model="ir.ui.view">
+            <field name="name">res.users.form.eh.access.studio</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Access Studio"
+                          name="eh_access_studio"
+                          groups="eh_access_studio.group_eh_access_user">
+                        <field name="access_profile_ids" readonly="1">
+                            <list>
+                                <field name="name"/>
+                                <field name="active"/>
+                                <field name="readonly"/>
+                                <field name="rule_count"/>
+                                <field name="date_until" optional="show"/>
+                            </list>
+                        </field>
+                        <div class="alert alert-info mt-3" role="status">
+                            Profiles applied to this user. Edit them in the
+                            Access Studio app. Profile rights are OR-ed for
+                            domain access; restrictive UI hide flags are the
+                            union across all active profiles.
+                        </div>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

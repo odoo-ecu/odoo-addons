@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_eh_access_domain_wizard_form" model="ir.ui.view">
+        <field name="name">eh.access.domain.wizard.form</field><field name="model">eh.access.domain.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Build a record filter">
+                <group><field name="profile_id" context="{'active_test': False}" domain="[('active', '=', False)]" options="{'no_create': True}"/><field name="model_id" options="{'no_create': True}"/><field name="model_name" invisible="1"/><field name="rights"/></group>
+                <group><field name="scope"/><field name="owner_field_id" invisible="scope == 'all'" options="{'no_create': True}"/><field name="soft_restrict"/></group>
+                <group><field name="period"/><field name="date_field_id" invisible="period == 'none'" options="{'no_create': True}"/></group>
+                <group><field name="additional_domain" widget="domain" options="{'model': 'model_name'}"/></group>
+                <p>Current User and My Team are resolved for each user when access is checked. Team follows the Employees manager hierarchy. Multiple profiles can widen record access; this filter cannot grant access beyond native Odoo permissions.</p>
+                <group string="Advanced preview"><field name="preview" readonly="1" nolabel="1"/></group>
+                <footer><button name="action_apply" type="object" string="Add to inactive profile" class="btn-primary"/><button string="Cancel" special="cancel"/></footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_eh_access_domain_wizard" model="ir.actions.act_window">
+        <field name="name">Build Record Filter</field><field name="res_model">eh.access.domain.wizard</field>
+        <field name="view_mode">form</field><field name="target">new</field>
+    </record>
+</odoo>

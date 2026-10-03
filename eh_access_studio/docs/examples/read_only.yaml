@@ -1,0 +1,44 @@
+# User Access Studio: read-only viewer template.
+# Copyright 2026 ERP Heritage (https://www.erpheritage.com.au).
+# License LGPL-3.0 or later.
+#
+# Scenario: a stakeholder who must inspect the system but never write
+# to it. Read-Only Mode is the cheapest possible setup. Administrators
+# (base.group_system, base.group_erp_manager) cannot be added.
+#
+# Import: Access Studio -> Configuration -> Import / Export, paste this
+# YAML, click Import. Edit users / companies before import to match
+# your environment.
+
+profiles:
+  - name: Read-only viewer
+    sequence: 10
+    active: true
+    readonly: true
+    apply_to_all_companies: true
+    date_from: null
+    date_until: null
+
+    hide_chatter: false
+    hide_send_message: false
+    hide_log_note: false
+    hide_schedule_activity: false
+
+    hide_import: false
+    hide_export: false
+    hide_spreadsheet: false
+    hide_add_property: false
+
+    disable_login: false
+    disable_debug_mode: false
+
+    users:
+      - viewer.alice@example.test
+    companies: []
+    hidden_menus: []
+
+    field_lines: []
+    model_lines: []
+    node_lines: []
+    chatter_lines: []
+    domain_lines: []

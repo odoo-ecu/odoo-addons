@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2026 ERP Heritage (https://www.erpheritage.com.au)
+    License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
+
+    Worked examples, so a fresh database opens on something to read
+    rather than an empty list.
+
+    One profile, Front desk, is assigned to the demo user so a fresh
+    database actually SHOWS the product doing something: sign in as
+    demo and Contacts is visibly shaped. The other three are left with
+    no users, because a read-only or time-boxed profile applied to the
+    demo user would look like a broken database rather than a feature.
+
+    Nothing here touches an administrator, and demo data never loads in
+    production. They target res.partner only, so they make sense
+    whatever else is installed.
+-->
+<odoo>
+    <data noupdate="1">
+
+        <record id="demo_profile_read_only" model="eh.access.profile">
+            <field name="name">Example: Read only viewer</field>
+            <field name="sequence">100</field>
+            <field name="readonly" eval="True"/>
+            <field name="hide_export" eval="True"/>
+            <field name="hide_import" eval="True"/>
+            <field name="disable_debug_mode" eval="True"/>
+        </record>
+
+        <record id="demo_profile_own_records" model="eh.access.profile">
+            <field name="name">Example: Own contacts only</field>
+            <field name="sequence">110</field>
+        </record>
+
+        <record id="demo_domain_own_contacts" model="eh.access.domain">
+            <field name="profile_id" ref="demo_profile_own_records"/>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="rights_preset">read_create_write</field>
+            <field name="apply_filter" eval="True"/>
+            <field name="domain">[("user_id", "=", "__uid__")]</field>
+        </record>
+
+        <record id="demo_profile_front_desk" model="eh.access.profile">
+            <field name="name">Example: Front desk</field>
+            <field name="sequence">120</field>
+            <field name="user_ids"
+                   eval="[(4, ref('base.user_demo'))] if ref('base.user_demo', raise_if_not_found=False) else []"/>
+            <field name="hide_add_property" eval="True"/>
+            <field name="hide_export" eval="True"/>
+        </record>
+
+        <record id="demo_model_front_desk" model="eh.access.model">
+            <field name="profile_id" ref="demo_profile_front_desk"/>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="restrict_delete" eval="True"/>
+            <field name="restrict_archive" eval="True"/>
+            <field name="restrict_export" eval="True"/>
+        </record>
+
+        <record id="demo_field_front_desk" model="eh.access.field">
+            <field name="profile_id" ref="demo_profile_front_desk"/>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="field_ids"
+                   eval="[(6, 0, [ref('base.field_res_partner__comment')])]"/>
+            <field name="readonly" eval="True"/>
+        </record>
+
+        <record id="demo_profile_auditor" model="eh.access.profile">
+            <field name="name">Example: Time boxed auditor</field>
+            <field name="sequence">130</field>
+            <field name="readonly" eval="True"/>
+            <field name="date_from"
+                   eval="(DateTime.today()).strftime('%Y-%m-%d')"/>
+            <field name="date_until"
+                   eval="(DateTime.today() + relativedelta(days=30)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="demo_domain_auditor" model="eh.access.domain">
+            <field name="profile_id" ref="demo_profile_auditor"/>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="rights_preset">read_only</field>
+            <field name="apply_filter" eval="True"/>
+            <field name="domain">[("create_date", "&gt;=", "__quarter_start__")]</field>
+        </record>
+
+    </data>
+</odoo>

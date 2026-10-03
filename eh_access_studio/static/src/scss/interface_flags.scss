@@ -1,0 +1,23 @@
+// Copyright 2026 ERP Heritage (https://www.erpheritage.com.au)
+// License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
+//
+// The classes come from interface_flags.js and sit on <html>. One selector list covers
+// Odoo 16 to 19: each series names these controls differently, and on
+// Odoo 19 the custom group by exists twice (the field picker and the
+// properties picker). A selector that matches nothing on a series
+// costs nothing there.
+
+// Chatter buttons, Odoo 16 (17 and later hide them in the component).
+.eh_access_hide_send_message .o_ChatterTopbar_buttonSendMessage,
+.eh_access_hide_log_note .o_ChatterTopbar_buttonLogNote,
+.eh_access_hide_schedule_activity .o_ChatterTopbar_buttonScheduleActivity,
+
+// The custom filter entry: Odoo 16, then 17 and later.
+.eh_access_hide_custom_filter .o_add_custom_filter_menu,
+.eh_access_hide_custom_filter .o_add_custom_filter,
+
+// The custom group by entry, including the properties picker on 19.
+.eh_access_hide_custom_group .o_add_custom_group_menu,
+.eh_access_hide_custom_group .o_add_custom_group {
+    display: none !important;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Access Studio 3 | ERP Heritage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Free LGPL access management for Odoo 19 Community. Build restriction profiles, inspect current access, manage roles and temporary assignments, review employee requests, and generate optional AI policy drafts.">
+</head>
+<body style="margin:0;padding:0;background-color:#FBF8F2;color:#0E1E2B;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;font-size:16px;line-height:1.65;">
+<header style="background-color:#F4EFE6;border-bottom:4px solid #D4A055;padding:48px 24px;">
+  <div style="max-width:1120px;margin:0 auto;">
+    <img src="brand_logo_ink.png" alt="ERP Heritage" style="height:58px;width:auto;display:block;margin-bottom:28px;">
+    <p style="color:#93661E;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;margin:0 0 10px;">User Access Studio &middot; Version 3</p>
+    <h1 style="font-size:46px;line-height:1.12;margin:0 0 20px;max-width:850px;">Understand access.<br>Make changes with confidence.</h1>
+    <p style="font-size:21px;line-height:1.6;max-width:870px;margin:0 0 18px;">Build restriction profiles, inspect a user's current access, and manage roles, employee requests, and temporary assignments from one Odoo app.</p>
+    <p style="font-size:17px;max-width:870px;color:#3A4A5C;margin:0;">Start with a guided draft. Review the policy and its scope. Assign it through a role or directly to users, then inspect the resulting access. Optional AI helps draft a policy from plain language.</p>
+    <div style="margin-top:26px;">
+      <span style="display:inline-block;padding:8px 17px;margin:4px 8px 4px 0;background-color:#0E1E2B;color:#FBF8F2;border-radius:24px;font-weight:700;">Free &middot; LGPL-3</span>
+      <span style="display:inline-block;padding:8px 17px;margin:4px 8px 4px 0;background-color:#FFFFFF;border:1px solid #D4A055;border-radius:24px;">Odoo 19 Community</span>
+      <span style="display:inline-block;padding:8px 17px;margin:4px 8px 4px 0;background-color:#FFFFFF;border:1px solid #D4A055;border-radius:24px;">Guided setup &amp; governance</span>
+    </div>
+    <p style="font-size:14px;color:#526171;margin:14px 0 0;">No paid module tier. Optional OpenAI use needs your own provider configuration and may incur provider charges.</p>
+  </div>
+</header>
+<main>
+<section style="padding:42px 24px;background-color:#0E1E2B;color:#FBF8F2;">
+  <div style="max-width:1120px;margin:0 auto;">
+    <h2 style="font-size:29px;line-height:1.25;margin:0 0 15px;color:#FBF8F2;">Two tools that work together</h2>
+    <p style="max-width:920px;margin:0 0 12px;font-size:18px;">Profiles narrow access and shape the interface. Roles assign native Odoo groups and restriction profiles to users, with an accountable assignment history.</p>
+    <p style="max-width:920px;margin:0;color:#D7E0E7;">Native groups can grant access. A restriction profile cannot grant what native Odoo permissions deny. Role company scope governs administration and recipient eligibility; it does not make native group membership company-local. Native record rules and company rules still matter.</p>
+  </div>
+</section>
+<section style="padding:46px 24px;">
+  <div style="max-width:1120px;margin:0 auto;">
+    <p style="color:#93661E;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;margin:0 0 8px;">Included workflows</p>
+    <h2 style="font-size:32px;line-height:1.25;margin:0 0 26px;">From a policy idea to a reviewed assignment</h2>
+    <div style="padding:24px;background-color:#FFFFFF;border:1px solid #DDD6CB;border-radius:12px;margin-bottom:16px;">
+      <h3 style="font-size:22px;margin:0 0 8px;">1. Build a guided policy draft</h3>
+      <p style="margin:0;">Choose a starter template and an installed model. Discover named buttons, tabs, links, and search controls from actual views. Build record filters with owner or hierarchy scopes and a visual condition editor. Templates and guided additions use inactive profiles so you can review them before activation.</p>
+      <p style="margin:10px 0 0;color:#526171;">Hierarchy scopes need HR employee relationships. Calendar presets target Date fields; other conditions remain available in the visual editor. Existing live restrictions can stay active while you prepare a separate draft.</p>
+    </div>
+    <div style="padding:24px;background-color:#FFFFFF;border:1px solid #DDD6CB;border-radius:12px;margin-bottom:16px;">
+      <h3 style="font-size:22px;margin:0 0 8px;">2. Inspect current access</h3>
+      <p style="margin:0;">Select a user, model, operation, company, and optional record. Inspect native Odoo access alongside Studio restrictions, with contributing groups, rules, profiles, and record filters shown in the result.</p>
+      <p style="margin:10px 0 0;color:#526171;">The inspector reports allowed, denied, conditional, or unknown. It does not execute business create, write, or delete operations. It cannot guarantee a custom workflow or an operation using proposed values will succeed.</p>
+    </div>
+    <div style="padding:24px;background-color:#FFFFFF;border:1px solid #DDD6CB;border-radius:12px;margin-bottom:16px;">
+      <h3 style="font-size:22px;margin:0 0 8px;">3. Assign roles with a reason and a lifecycle</h3>
+      <p style="margin:0;">Bundle native groups, included roles, and company-scoped profiles. Record who receives the role, why, and when the assignment starts and ends. Track owned memberships so revocation preserves overlapping assignments and independently held access.</p>
+      <p style="margin:10px 0 0;color:#526171;">Reconciliation is scheduled every minute. Start and expiry enforcement depend on a healthy scheduler. Expiring a restriction profile removes a restriction; use an expiring role assignment when you intend to remove a grant.</p>
+    </div>
+    <div style="padding:24px;background-color:#FFFFFF;border:1px solid #DDD6CB;border-radius:12px;margin-bottom:16px;">
+      <h3 style="font-size:22px;margin:0 0 8px;">4. Handle employee access requests</h3>
+      <p style="margin:0;">Internal employees can request eligible roles with a reason and end time, and follow their own requests. Another manager reviews the request before an assignment is created. The manager Overview highlights pending requests, upcoming expiry, overdue reconciliation, and recent governance events.</p>
+      <p style="margin:10px 0 0;color:#526171;">Request ownership, company scope, and manager privileges are checked on the server. Managers cannot approve their own requests. Dashboard counts support follow-up; they are not a risk score.</p>
+    </div>
+    <div style="padding:24px;background-color:#FFFFFF;border:1px solid #DDD6CB;border-radius:12px;margin-bottom:16px;">
+      <h3 style="font-size:22px;margin:0 0 8px;">5. Review imports and keep policy revisions</h3>
+      <p style="margin:0;">Preview YAML policy differences before import. References are validated, changes after preview are detected, and active-policy changes require explicit confirmation. Save an immutable policy revision and restore a selected revision with a review step.</p>
+      <p style="margin:10px 0 0;color:#526171;">Imports, restores, and AI-created policies create snapshots automatically. Ordinary form edits require Save Revision. Governance evidence records managed actions; it is not a log of every read or denied operation, and application immutability does not prevent database-administrator changes.</p>
+    </div>
+    <div style="padding:24px;background-color:#FDF5E0;border:1px solid #D4A055;border-radius:12px;">
+      <h3 style="font-size:22px;margin:0 0 8px;">6. Generate an optional AI policy draft</h3>
+      <p style="margin:0;">Describe restrictions for one selected business model. With your explicit consent, the configured OpenAI provider receives your prompt and that model's selected field schema. Review the structured response, then create an inactive profile in a separate step.</p>
+      <p style="margin:10px 0 0;color:#526171;">No business record values, user list, or existing policy contents are automatically included. AI does not activate the profile, assign users, or generate role grants. Review global switches and all generated conditions. Provider handling is covered by mocked tests; live-provider validation is not claimed.</p>
+    </div>
+  </div>
+</section>
+<section style="padding:40px 24px;background-color:#F4EFE6;">
+  <div style="max-width:1120px;margin:0 auto;">
+    <h2 style="font-size:30px;margin:0 0 12px;line-height:1.3;">A familiar place to configure restrictions</h2>
+    <p style="max-width:900px;color:#3A4A5C;margin:0 0 22px;">Profiles bring menus, fields, model operations, named interface controls, record filters, chatter, and global options together. The screenshots below show the core profile controls; the new guided and governance workflows are described above.</p>
+    <div style="background-color:#FFFFFF;border:1px solid #DDD6CB;border-radius:12px;overflow:hidden;margin:0 0 22px;">
+      <img src="shot_profile.png" alt="Core access profile form showing assigned users and restriction tabs" style="width:100%;height:auto;display:block;">
+      <p style="padding:12px 18px;margin:0;color:#526171;font-size:14px;">Core profile workspace: users, dates, company scope, and restriction tabs.</p>
+    </div>
+    <div style="background-color:#FFFFFF;border:1px solid #DDD6CB;border-radius:12px;overflow:hidden;margin:0 0 22px;">
+      <img src="shot_fields.png" alt="Core field restriction controls" style="width:100%;height:auto;display:block;">
+      <p style="padding:12px 18px;margin:0;color:#526171;font-size:14px;">Field controls for visibility, read-only behavior, required values, and conditions.</p>
+    </div>
+    <div style="background-color:#FFFFFF;border:1px solid #DDD6CB;border-radius:12px;overflow:hidden;">
+      <img src="shot_model_access.png" alt="Core per-model operation restrictions" style="width:100%;height:auto;display:block;">
+      <p style="padding:12px 18px;margin:0;color:#526171;font-size:14px;">Model operation controls for the selected profile.</p>
+    </div>
+  </div>
+</section>
+<section style="padding:46px 24px;">
+  <div style="max-width:1120px;margin:0 auto;">
+    <h2 style="font-size:30px;margin:0 0 14px;line-height:1.3;">Know what each control does</h2>
+    <p style="max-width:940px;color:#3A4A5C;margin:0 0 22px;">A hidden control and a denied operation serve different purposes. Configure the server restriction when an operation must be blocked, then use interface controls to make the available workflow clear.</p>
+    <table style="width:100%;border-collapse:collapse;background-color:#FFFFFF;border:1px solid #DDD6CB;">
+      <thead><tr style="background-color:#0E1E2B;color:#FBF8F2;"><th style="padding:14px;text-align:left;width:32%;">Control</th><th style="padding:14px;text-align:left;">Behavior and scope</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:14px;border-bottom:1px solid #DDD6CB;vertical-align:top;font-weight:700;">Model operations and record filters</td><td style="padding:14px;border-bottom:1px solid #DDD6CB;">Studio hooks check covered ORM operations alongside native Odoo access. Filters use current user, company, date, and hierarchy context. Test the installed application's actual workflow, including any custom code.</td></tr>
+        <tr><td style="padding:14px;border-bottom:1px solid #DDD6CB;vertical-align:top;font-weight:700;">Field restrictions</td><td style="padding:14px;border-bottom:1px solid #DDD6CB;">Visibility, read-only, and required rules cover the module's supported view and server paths. Hidden-field handling is not encryption or a universal guarantee against custom computations and third-party endpoints.</td></tr>
+        <tr><td style="padding:14px;border-bottom:1px solid #DDD6CB;vertical-align:top;font-weight:700;">Menus, tabs, and named controls</td><td style="padding:14px;border-bottom:1px solid #DDD6CB;">These shape the interface. Hiding a named business button does not generally disable its underlying method. Use model restrictions or application-specific authorization for the operation itself.</td></tr>
+        <tr><td style="padding:14px;border-bottom:1px solid #DDD6CB;vertical-align:top;font-weight:700;">Roles and assignments</td><td style="padding:14px;border-bottom:1px solid #DDD6CB;">These can add native group membership and profile membership. Privileged group grants are restricted. Native groups remain database-wide, even when the role is administered for one company.</td></tr>
+        <tr><td style="padding:14px;vertical-align:top;font-weight:700;">Privileged execution</td><td style="padding:14px;">Code running with elevated rights can bypass ordinary user access restrictions. Review custom modules and integrations that use elevated execution.</td></tr>
+      </tbody>
+    </table>
+    <p style="margin:18px 0 0;color:#526171;">Profile composition matters: applicable record domains can combine permissively. Review all profiles affecting the user, including assignments from multiple roles, and inspect the resulting access.</p>
+  </div>
+</section>
+<section style="padding:42px 24px;background-color:#F4EFE6;">
+  <div style="max-width:1120px;margin:0 auto;">
+    <h2 style="font-size:30px;margin:0 0 20px;line-height:1.3;">Practical setup</h2>
+    <h3 style="font-size:20px;margin:0 0 8px;">What do I need?</h3>
+    <p style="margin:0 0 20px;max-width:930px;">The matching Odoo 19 Community package, the standard base, mail, and web modules, and the PyYAML Python dependency. HR employee relationships are needed for the guided team and subordinate scopes. The AI feature is optional and needs a system administrator to configure OpenAI.</p>
+    <h3 style="font-size:20px;margin:0 0 8px;">How should I introduce a policy?</h3>
+    <p style="margin:0 0 20px;max-width:930px;">Start with an inactive draft. Review company scope, native groups, and overlapping profiles. Save a revision, activate the reviewed policy, inspect a representative user and record, and exercise the real workflow in a test environment. The profile's Manual Test Instructions button provides manual test guidance.</p>
+    <h3 style="font-size:20px;margin:0 0 8px;">What validation is included?</h3>
+    <p style="margin:0 0 20px;max-width:930px;">The module includes a test suite for access enforcement, configuration validation, governance, revisions, guided workflows, and optional AI handling. Test results apply to the package and runtime tested; they are not a certification of custom modules or deployments.</p>
+    <h3 style="font-size:20px;margin:0 0 8px;">Is it free?</h3>
+    <p style="margin:0;max-width:930px;">Yes. The module is free under LGPL-3, with no paid feature tier. Hosting, implementation services, and any optional AI provider charges are separate. The included HOWTO explains setup and operational limits.</p>
+  </div>
+</section>
+</main>
+<footer style="padding:40px 24px;background-color:#0E1E2B;color:#FBF8F2;">
+  <div style="max-width:1120px;margin:0 auto;">
+    <p style="font-size:24px;font-weight:700;margin:0 0 10px;">User Access Studio by ERP Heritage</p>
+    <p style="margin:0 0 12px;color:#D7E0E7;">Free software, with implementation support available when you need it.</p>
+    <p style="margin:0;"><a href="https://www.erpheritage.com.au" style="color:#E8C887;">ERP Heritage</a> &nbsp;&middot;&nbsp; <a href="mailto:info@erpheritage.com.au" style="color:#E8C887;">info@erpheritage.com.au</a></p>
+  </div>
+</footer>
+</body>
+</html>

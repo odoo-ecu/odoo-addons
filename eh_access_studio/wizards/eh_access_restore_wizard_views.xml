@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_eh_access_revision_list" model="ir.ui.view">
+        <field name="name">eh.access.revision.list</field>
+        <field name="model">eh.access.revision</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0" delete="0">
+                <field name="create_date"/>
+                <field name="profile_name"/>
+                <field name="author_id"/>
+                <field name="reason"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_eh_access_revision_form" model="ir.ui.view">
+        <field name="name">eh.access.revision.form</field>
+        <field name="model">eh.access.revision</field>
+        <field name="arch" type="xml">
+            <form create="0" edit="0" delete="0">
+                <header><button name="action_restore" string="Review Restore" type="object" class="btn-primary" invisible="not profile_id"/></header>
+                <sheet>
+                    <group><field name="profile_id"/><field name="profile_name"/><field name="author_id"/><field name="create_date"/><field name="reason"/><field name="schema_version"/><field name="fingerprint"/></group>
+                    <field name="policy_text" nolabel="1"/>
+                    <group string="AI draft provenance" invisible="not provenance_text"><field name="provenance_text" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_eh_access_revision" model="ir.actions.act_window">
+        <field name="name">Policy Revisions</field><field name="res_model">eh.access.revision</field><field name="view_mode">list,form</field>
+    </record>
+    <record id="view_eh_access_restore_wizard_form" model="ir.ui.view">
+        <field name="name">eh.access.restore.wizard.form</field><field name="model">eh.access.restore.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Review Policy Restore">
+                <group><field name="revision_id"/><field name="summary" nolabel="1"/><field name="confirm_active"/></group>
+                <footer><button name="action_apply" string="Restore Reviewed Policy" type="object" class="btn-primary"/><button string="Cancel" special="cancel"/></footer>
+            </form>
+        </field>
+    </record>
+    <record id="view_eh_access_profile_revisions" model="ir.ui.view">
+        <field name="name">eh.access.profile.revisions</field><field name="model">eh.access.profile</field>
+        <field name="inherit_id" ref="eh_access_studio.view_eh_access_profile_form"/>
+        <field name="arch" type="xml"><xpath expr="//header" position="inside">
+            <button name="action_save_revision" string="Save Revision" type="object" groups="eh_access_studio.group_eh_access_manager"/>
+            <button name="action_view_revisions" string="Revisions" type="object" groups="eh_access_studio.group_eh_access_manager"/>
+        </xpath></field>
+    </record>
+</odoo>

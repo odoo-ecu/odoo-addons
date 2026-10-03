@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2026 ERP Heritage (https://www.erpheritage.com.au)
+    License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
+-->
+<templates>
+    <t t-name="eh_access_studio.ChatterPatch"
+       t-inherit="mail.Chatter"
+       t-inherit-mode="extension">
+        <xpath expr="//button[contains(@class, 'o-mail-Chatter-sendMessage')]"
+               position="attributes">
+            <attribute name="t-if">!ehAccess.hide_send_message</attribute>
+        </xpath>
+        <xpath expr="//button[contains(@class, 'o-mail-Chatter-logNote')]"
+               position="attributes">
+            <attribute name="t-if">!ehAccess.hide_log_note</attribute>
+        </xpath>
+        <!-- The Activity button already carries t-if="props.has_activities"
+             in core (mail/static/src/chatter/web/chatter.xml). Replacing
+             that attribute outright would show the button on models that
+             have no activities at all, for every user, so we AND our
+             condition onto the core one instead of overwriting it. -->
+        <xpath expr="//button[contains(@class, 'o-mail-Chatter-activity')]"
+               position="attributes">
+            <attribute name="t-if">props.has_activities and !ehAccess.hide_schedule_activity</attribute>
+        </xpath>
+    </t>
+</templates>

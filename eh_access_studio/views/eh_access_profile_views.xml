@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2026 ERP Heritage (https://www.erpheritage.com.au)
+    License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
+-->
+<odoo>
+    <data>
+
+        <record id="view_eh_access_profile_list" model="ir.ui.view">
+            <field name="name">eh.access.profile.list</field>
+            <field name="model">eh.access.profile</field>
+            <field name="arch" type="xml">
+                <list decoration-muted="not active" decoration-warning="readonly">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="user_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                    <field name="rule_count"/>
+                    <field name="readonly"/>
+                    <field name="apply_to_all_companies"/>
+                    <field name="date_until" optional="hide"/>
+                    <field name="active" widget="boolean_toggle"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_access_profile_form" model="ir.ui.view">
+            <field name="name">eh.access.profile.form</field>
+            <field name="model">eh.access.profile</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_toggle_active"
+                                string="Activate"
+                                type="object"
+                                class="btn-primary"
+                                invisible="active"/>
+                        <button name="action_toggle_active"
+                                string="Deactivate"
+                                type="object"
+                                invisible="not active"/>
+                        <button name="action_diagnostic"
+                                string="Summary"
+                                type="object"/>
+                        <button name="action_duplicate_profile"
+                                string="Duplicate"
+                                type="object"/>
+                        <button name="action_test_plan"
+                                string="Manual Test Instructions"
+                                type="object"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button"
+                                    name="action_diagnostic"
+                                    type="object"
+                                    icon="fa-list-alt"
+                                    help="Open the diagnostic summary for this profile.">
+                                <field name="rule_count" widget="statinfo" string="Rules"/>
+                            </button>
+                            <button class="oe_stat_button"
+                                    name="action_test_plan"
+                                    type="object"
+                                    icon="fa-users"
+                                    help="View the test plan for the targeted users.">
+                                <field name="user_count" widget="statinfo" string="Users"/>
+                            </button>
+                            <button class="oe_stat_button"
+                                    name="action_diagnostic"
+                                    type="object"
+                                    icon="fa-shield"
+                                    help="Strict ORM-level rules.">
+                                <field name="domain_rule_count" widget="statinfo" string="Domain Rules"/>
+                            </button>
+                            <button class="oe_stat_button"
+                                    name="action_diagnostic"
+                                    type="object"
+                                    icon="fa-eye-slash"
+                                    help="Menus removed from navigation.">
+                                <field name="hidden_menu_count" widget="statinfo" string="Hidden Menus"/>
+                            </button>
+                        </div>
+                        <widget name="web_ribbon"
+                                title="Read-Only"
+                                bg_color="text-bg-warning"
+                                invisible="not readonly"/>
+                        <widget name="web_ribbon"
+                                title="Inactive"
+                                bg_color="text-bg-danger"
+                                invisible="active"/>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Profile name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="user_ids"
+                                       widget="many2many_tags"
+                                       options="{'no_create': True}"/>
+                                <field name="readonly"/>
+                                <field name="active" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="apply_to_all_companies"/>
+                                <field name="company_ids"
+                                       widget="many2many_tags"
+                                       options="{'no_create': True}"
+                                       invisible="apply_to_all_companies"
+                                       required="not apply_to_all_companies"
+                                       groups="base.group_multi_company"/>
+                                <field name="date_from"/>
+                                <field name="date_until"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Hide Menus" name="menus">
+                                <field name="hidden_menu_ids"
+                                       options="{'no_create': True}">
+                                    <list>
+                                        <field name="display_name"/>
+                                        <field name="parent_id" optional="hide"/>
+                                    </list>
+                                </field>
+                                <div class="alert alert-info mt-3" role="status">
+                                    Menus listed here are removed from the
+                                    navigation for users in this profile. The
+                                    Access Studio configuration menu is always
+                                    visible to administrators.
+                                </div>
+                            </page>
+                            <page string="Hide Fields" name="fields">
+                                <field name="field_line_ids">
+                                    <list editable="bottom">
+                                        <field name="model_id"
+                                               context="{'eh_access_studio': True}"
+                                               options="{'no_open': True, 'no_create': True}"/>
+                                        <field name="condition" optional="show"
+                                               placeholder="e.g. state == 'posted'"/>
+                                        <field name="field_ids"
+                                               widget="many2many_tags"
+                                               context="{'eh_access_studio': True}"
+                                               options="{'no_open': True, 'no_create': True}"/>
+                                        <field name="invisible"/>
+                                        <field name="readonly"/>
+                                        <field name="required"/>
+                                        <field name="hide_external_link" string="No Link"/>
+                                    </list>
+                                </field>
+                                <div class="alert alert-info mt-3" role="status">
+                                    <strong>Reads and writes are treated
+                                    differently here.</strong> Hidden fields are
+                                    removed from supported views and their values
+                                    are masked on covered read and RPC paths.
+                                    Read-only fields remain visible. Both prevent
+                                    covered user writes when their conditions
+                                    apply. This is not encryption: custom computed
+                                    fields, endpoints and elevated server code
+                                    need separate review. Use Domain Access when
+                                    a user must not see the records at all.
+                                </div>
+                            </page>
+                            <page string="Model Access" name="model_access">
+                                <field name="model_line_ids">
+                                    <list editable="bottom">
+                                        <field name="model_id"
+                                               context="{'eh_access_studio': True}"
+                                               options="{'no_open': True, 'no_create': True}"/>
+                                        <field name="restrict_create"/>
+                                        <field name="restrict_edit"/>
+                                        <field name="restrict_delete"/>
+                                        <field name="restrict_archive"/>
+                                        <field name="restrict_duplicate"/>
+                                        <field name="restrict_import"/>
+                                        <field name="restrict_export"/>
+                                        <!-- restrict_spreadsheet is retired from this list: the
+                                             client reads one global session flag for spreadsheet
+                                             insertion, so the capability can only be switched off
+                                             for the whole session. Use the Global tab. The column
+                                             is kept on the model for stored data compatibility. -->
+                                        <field name="restrict_add_property"/>
+                                        <field name="hidden_view_types"
+                                               placeholder="list,kanban,..."
+                                               optional="hide"/>
+                                        <field name="hidden_report_action_ids"
+                                               widget="many2many_tags"
+                                               options="{'no_create': True}"
+                                               optional="hide"/>
+                                        <field name="hidden_server_action_ids"
+                                               widget="many2many_tags"
+                                               options="{'no_create': True}"
+                                               optional="hide"/>
+                                    </list>
+                                </field>
+                                <div class="alert alert-info mt-3" role="status">
+                                    Hide Create, Hide Edit and Hide Delete
+                                    remove the buttons AND block the matching
+                                    operation at the ORM gate, so they hold over
+                                    the API as well. Archive, Duplicate, Import
+                                    and Export are blocked the same way. Only
+                                    the hidden view types, reports and server
+                                    actions are interface-level. Use Domain
+                                    Access to restrict WHICH records a user may
+                                    touch.
+                                </div>
+                            </page>
+                            <page string="Hide Buttons / Tabs / Filters" name="nodes">
+                                <button name="%(action_eh_access_element_wizard)d" type="action" string="Choose from installed views"
+                                        context="{'default_profile_id': id}" class="btn-secondary mb-3" groups="eh_access_studio.group_eh_access_manager"/>
+                                <field name="node_line_ids">
+                                    <list editable="bottom">
+                                        <field name="model_id"
+                                               context="{'eh_access_studio': True}"
+                                               options="{'no_open': True, 'no_create': True}"/>
+                                        <field name="kind"/>
+                                        <field name="target_name"/>
+                                        <field name="condition" optional="show"
+                                               placeholder="e.g. state != 'draft'"/>
+                                        <field name="target_label" optional="show"/>
+                                    </list>
+                                </field>
+                                <div class="alert alert-info mt-3" role="status">
+                                    Use the technical name (the 'name' XML
+                                    attribute) of the target node. Smart
+                                    buttons usually start with 'action_'.
+                                    Notebook tabs use the 'name' attribute on
+                                    the &lt;page/&gt; element. Filters and
+                                    group-by entries use the 'name' attribute
+                                    on the &lt;filter/&gt; element.
+                                </div>
+                            </page>
+                            <page string="Domain Access" name="domain">
+                                <button name="%(action_eh_access_domain_wizard)d" type="action" string="Build filter with guided choices"
+                                        context="{'default_profile_id': id}" class="btn-secondary mb-3" groups="eh_access_studio.group_eh_access_manager"/>
+                                <field name="domain_line_ids">
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <field name="model_id"
+                                                       context="{'eh_access_studio': True}"
+                                                       options="{'no_open': True, 'no_create': True}"/>
+                                                <field name="model_name" invisible="1"/>
+                                            </group>
+                                            <group>
+                                                <field name="rights_preset"
+                                                       widget="selection"/>
+                                            </group>
+                                            <group invisible="rights_preset != 'custom'">
+                                                <group string="Custom rights">
+                                                    <field name="read_right"/>
+                                                    <field name="create_right"/>
+                                                </group>
+                                                <group>
+                                                    <field name="write_right"/>
+                                                    <field name="delete_right"/>
+                                                </group>
+                                            </group>
+                                            <group>
+                                                <field name="apply_filter"/>
+                                                <field name="soft_restrict"
+                                                       invisible="not apply_filter"/>
+                                                <field name="domain"
+                                                       placeholder="[(&quot;user_id&quot;, &quot;=&quot;, &quot;__uid__&quot;)]"
+                                                       invisible="not apply_filter" colspan="2"/>
+                                            </group>
+                                            <div class="alert alert-info mt-2"
+                                                 role="status"
+                                                 invisible="not apply_filter">
+                                                <strong>Filter syntax.</strong>
+                                                Python list of domain leaves.
+                                                Smart placeholders are resolved
+                                                at evaluation time. Ready-made
+                                                examples (copy and adapt):
+                                                <ul class="mt-2 mb-0">
+                                                    <li><code>[("user_id", "=", "__uid__")]</code> own records by responsible</li>
+                                                    <li><code>[("create_uid", "=", "__uid__")]</code> own records by creator</li>
+                                                    <li><code>[("company_id", "in", "__company_ids__")]</code> records in the user's allowed companies</li>
+                                                    <li><code>[("create_date", "&gt;=", "__month_start__")]</code> created this month</li>
+                                                    <li><code>[("date", "&gt;=", "__last_30_days__")]</code> last thirty days</li>
+                                                    <li><code>["&amp;", ("user_id", "=", "__uid__"), ("state", "=", "draft")]</code> compound (own and draft)</li>
+                                                </ul>
+                                                <div class="mt-2">
+                                                    Full placeholder list:
+                                                    <code>__uid__</code>,
+                                                    <code>__cid__</code>,
+                                                    <code>__company_ids__</code>,
+                                                    <code>__today__</code>,
+                                                    <code>__yesterday__</code>,
+                                                    <code>__tomorrow__</code>,
+                                                    <code>__week_start__</code> to <code>__week_end__</code>,
+                                                    <code>__month_start__</code> to <code>__month_end__</code>,
+                                                    <code>__quarter_start__</code> to <code>__quarter_end__</code>,
+                                                    <code>__year_start__</code> to <code>__year_end__</code>,
+                                                    <code>__last_7_days__</code>,
+                                                    <code>__last_30_days__</code>,
+                                                    <code>__last_90_days__</code>,
+                                                    <code>__last_365_days__</code>.
+                                                </div>
+                                            </div>
+                                        </sheet>
+                                    </form>
+                                    <list>
+                                        <field name="model_id"/>
+                                        <field name="rights_preset"/>
+                                        <field name="apply_filter"/>
+                                        <field name="soft_restrict" optional="show"/>
+                                        <field name="read_right" optional="hide"/>
+                                        <field name="create_right" optional="hide"/>
+                                        <field name="write_right" optional="hide"/>
+                                        <field name="delete_right" optional="hide"/>
+                                    </list>
+                                </field>
+                                <div class="alert alert-warning mt-3" role="status">
+                                    <strong>Domain Access is the strict gate.</strong>
+                                    Rights and filters defined here are enforced
+                                    by the ORM, not just the UI. They block
+                                    server code, the API and any other
+                                    interaction path. Filters that fail to
+                                    parse, or that reference unknown
+                                    placeholders, fail closed (block all
+                                    access). Test in a non-production
+                                    environment first.
+                                </div>
+                            </page>
+                            <page string="Chatter" name="chatter">
+                                <group>
+                                    <group string="Whole-system">
+                                        <field name="hide_chatter"/>
+                                    </group>
+                                    <group string="Per-button (when chatter is shown)">
+                                        <field name="hide_send_message"/>
+                                        <field name="hide_log_note"/>
+                                        <field name="hide_schedule_activity"/>
+                                    </group>
+                                </group>
+                                <field name="chatter_line_ids"
+                                       readonly="hide_chatter">
+                                    <list editable="bottom">
+                                        <field name="model_id"
+                                               context="{'eh_access_studio': True}"
+                                               options="{'no_open': True, 'no_create': True}"/>
+                                    </list>
+                                </field>
+                                <div class="alert alert-info mt-3" role="status">
+                                    Profile-level Hide Chatter removes the
+                                    chatter widget from every model. The
+                                    per-button toggles hide individual chatter
+                                    buttons system-wide while leaving the
+                                    chatter visible. The per-model list below
+                                    targets specific models when the global
+                                    toggle is off.
+                                </div>
+                            </page>
+                            <page string="Global" name="global">
+                                <group>
+                                    <group string="Import / Export">
+                                        <field name="hide_import"/>
+                                        <field name="hide_export"/>
+                                        <field name="hide_spreadsheet"/>
+                                        <field name="hide_add_property"/>
+                                    </group>
+                                    <group string="Search controls">
+                                        <field name="hide_custom_filter"/>
+                                        <field name="hide_custom_group"/>
+                                    </group>
+                                    <group string="Authentication / Debug">
+                                        <field name="restrict_module_management"/>
+                                        <field name="disable_login"/>
+                                        <field name="disable_debug_mode"/>
+                                    </group>
+                                </group>
+                                <div class="alert alert-info mt-3" role="status">
+                                    Global toggles apply to every model the
+                                    affected users open. Per-model overrides
+                                    on the Model Access tab take precedence.
+                                </div>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eh_access_profile_search" model="ir.ui.view">
+            <field name="name">eh.access.profile.search</field>
+            <field name="model">eh.access.profile</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="user_ids"/>
+                    <separator/>
+                    <filter name="active"
+                            string="Active"
+                            domain="[('active', '=', True)]"/>
+                    <filter name="inactive"
+                            string="Inactive"
+                            domain="[('active', '=', False)]"/>
+                    <filter name="readonly"
+                            string="Read-Only"
+                            domain="[('readonly', '=', True)]"/>
+                    <separator/>
+                    <filter name="group_by_active"
+                            string="Status"
+                            context="{'group_by': 'active'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_eh_access_profile" model="ir.actions.act_window">
+            <field name="name">Access Profiles</field>
+            <field name="res_model">eh.access.profile</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{'search_default_active': 1}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create your first access profile</p>
+                <p>
+                    Profiles bundle a list of users with a set of access
+                    overlays. Hide menus and fields from selected users
+                    without writing record rules or editing security
+                    groups.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_eh_access_conflict_report" model="ir.actions.server">
+            <field name="name">Access Studio: conflict report</field>
+            <field name="model_id" ref="model_eh_access_profile"/>
+            <field name="binding_model_id" ref="model_eh_access_profile"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">action = model.action_conflict_report()</field>
+        </record>
+
+        <record id="action_eh_access_health_check" model="ir.actions.server">
+            <field name="name">Access Studio: health check</field>
+            <field name="model_id" ref="model_eh_access_profile"/>
+            <field name="binding_model_id" ref="model_eh_access_profile"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">action = model.action_health_check()</field>
+        </record>
+
+    </data>
+</odoo>

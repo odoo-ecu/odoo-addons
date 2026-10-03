@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_eh_access_request_list" model="ir.ui.view">
+        <field name="name">eh.access.request.list</field>
+        <field name="model">eh.access.request</field>
+        <field name="arch" type="xml">
+            <list delete="0" decoration-info="state == 'submitted'" decoration-muted="state in ('rejected', 'cancelled', 'revoked')">
+                <field name="user_id"/>
+                <field name="role_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="starts_at"/>
+                <field name="ends_at"/>
+                <field name="state" widget="badge"/>
+                <field name="approver_id" optional="show"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_eh_access_request_form" model="ir.ui.view">
+        <field name="name">eh.access.request.form</field>
+        <field name="model">eh.access.request</field>
+        <field name="arch" type="xml">
+            <form delete="0">
+                <header>
+                    <button name="action_submit" type="object" string="Submit Request" class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_approve" type="object" string="Approve" class="btn-primary" invisible="state != 'submitted'" groups="eh_access_studio.group_eh_access_manager"/>
+                    <button name="action_reject" type="object" string="Reject" invisible="state != 'submitted'" groups="eh_access_studio.group_eh_access_manager"/>
+                    <button name="action_cancel" type="object" string="Cancel Request" invisible="state not in ('draft', 'submitted')"/>
+                    <button name="action_revoke" type="object" string="Revoke Granted Access" invisible="state != 'approved'" groups="eh_access_studio.group_eh_access_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,submitted,approved"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="role_id" readonly="state != 'draft'" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="company_id"/>
+                            <field name="reason" readonly="state != 'draft'" placeholder="Explain the task and why this access is needed."/>
+                        </group>
+                        <group>
+                            <field name="starts_at" readonly="state != 'draft'"/>
+                            <field name="ends_at" readonly="state != 'draft'"/>
+                            <field name="submitted_at" invisible="not submitted_at"/>
+                            <field name="decided_at" invisible="not decided_at"/>
+                            <field name="approver_id" invisible="not approver_id"/>
+                        </group>
+                    </group>
+                    <group string="Review" groups="eh_access_studio.group_eh_access_manager" invisible="state == 'draft'">
+                        <field name="decision_reason" readonly="state != 'submitted'" placeholder="Required for rejection. Another manager must decide your own request."/>
+                    </group>
+                    <group string="Decision" groups="!eh_access_studio.group_eh_access_manager" invisible="not decision_reason">
+                        <field name="decision_reason" readonly="1"/>
+                    </group>
+                    <field name="assignment_ids" readonly="1" invisible="state not in ('approved', 'revoked')">
+                        <list create="0" delete="0">
+                            <field name="role_id"/>
+                            <field name="starts_at"/>
+                            <field name="ends_at"/>
+                            <field name="applied_state" widget="badge"/>
+                        </list>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_eh_access_request_search" model="ir.ui.view">
+        <field name="name">eh.access.request.search</field>
+        <field name="model">eh.access.request</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="user_id"/>
+                <field name="role_id"/>
+                <filter name="my_requests" string="My Requests" domain="[('user_id', '=', uid)]"/>
+                <filter name="submitted" string="Awaiting Review" domain="[('state', '=', 'submitted')]"/>
+                <filter name="approved" string="Approved" domain="[('state', '=', 'approved')]"/>
+                <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_eh_access_request" model="ir.actions.act_window">
+        <field name="name">Access Requests</field>
+        <field name="res_model">eh.access.request</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html"><p class="o_view_nocontent_smiling_face">Request a role with a reason and expiry. Another manager reviews each request.</p></field>
+    </record>
+</odoo>

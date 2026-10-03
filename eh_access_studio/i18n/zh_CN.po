@@ -1,0 +1,2002 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_access_studio
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:32+0000\n"
+"PO-Revision-Date: 2026-07-01 04:32+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_access_studio
+#: model:res.groups,comment:eh_access_studio.group_eh_access_manager
+msgid ""
+"\n"
+"                Full access to Access Studio. Can create, edit and deactivate\n"
+"                profiles. Implies Access Studio User.\n"
+"            "
+msgstr ""
+"\n"
+"对 Access Studio 的完全访问权限。可以创建、编辑和停用配置文件。\n"
+"                隐含 Access Studio User 权限。"
+
+#. module: eh_access_studio
+#: model:res.groups,comment:eh_access_studio.group_eh_access_user
+msgid ""
+"\n"
+"                Read-only access to the Access Studio configuration. Users in\n"
+"                this group can view profiles and rule lines but cannot edit\n"
+"                them.\n"
+"            "
+msgstr ""
+"\n"
+"对 Access Studio 配置的只读访问权限。此组中的用户\n"
+"                可以查看配置文件和规则行，但无法编辑它们。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"\n"
+"... and %(extra)s more."
+msgstr ""
+"\n"
+"... 以及另外 %(extra)s 项。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(n)s active profile(s) have no rules (no-op): %(names)s"
+msgstr "%(n)s 个活动配置文件没有规则（无操作）：%(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(n)s active profile(s) have no users assigned: %(names)s"
+msgstr "%(n)s 个活动配置文件未分配用户：%(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(n)s active profile(s) past their Active Until date (cron has not "
+"deactivated them yet): %(names)s"
+msgstr "%(n)s 个活动配置文件已超过其“有效至”日期（cron 尚未停用它们）：%(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(n)s company / companies"
+msgstr "%(n)s 家公司"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(n)s conflict(s) detected:\n"
+"\n"
+"%(list)s%(tail)s\n"
+"\n"
+"Resolution: deactivate one of the profiles, or align their domain filters so they describe the same record set."
+msgstr ""
+"检测到 %(n)s 个冲突：\n"
+"\n"
+"%(list)s%(tail)s\n"
+"\n"
+"解决方法：停用其中一个配置文件，或调整它们的域筛选器，使其描述相同的记录集。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(n)s domain rule(s) cannot be parsed and will fail closed at runtime. "
+"Profiles affected: %(names)s"
+msgstr "%(n)s 条域规则无法解析，将在运行时以关闭方式失败。受影响的配置文件：%(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(name)s (copy)"
+msgstr "%(name)s（副本）"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(name)s applies to %(users)s user(s) under %(scope)s.\n"
+"\n"
+"%(body)s"
+msgstr ""
+"%(name)s 适用于 %(scope)s 下的 %(users)s 个用户。\n"
+"\n"
+"%(body)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(user)s on %(model)s: %(profiles)s"
+msgstr "%(user)s 在 %(model)s 上：%(profiles)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "'profiles' must be a list."
+msgstr "'profiles' 必须是一个列表。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s domain rule(s): strict ORM-level gates"
+msgstr "- %(n)s 条域规则：严格的 ORM 级门控"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s field rule(s) across %(models)s model(s)"
+msgstr "- %(n)s 条字段规则，涉及 %(models)s 个模型"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s menu(s) hidden: %(names)s%(tail)s"
+msgstr "- 已隐藏 %(n)s 个菜单：%(names)s%(tail)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s model rule(s) across %(models)s model(s)"
+msgstr "- %(n)s 条模型规则，涉及 %(models)s 个模型"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s node rule(s) (button / tab / link / filter)"
+msgstr "- %(n)s 条节点规则（按钮 / 选项卡 / 链接 / 过滤器）"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s per-model chatter override(s)"
+msgstr "- %(n)s 项按模型的沟通栏覆盖设置"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- Chatter hidden on every form view"
+msgstr "- 在每个表单视图中隐藏沟通栏"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- No rules configured. The profile is a no-op."
+msgstr "- 未配置任何规则。此配置文件不执行任何操作。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- Read-only mode: blocks create / edit / delete on every model"
+msgstr "- 只读模式：阻止对每个模型进行创建 / 编辑 / 删除"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<code>[\"&amp;\", (\"user_id\", \"=\", \"__uid__\"), (\"state\", \"=\", "
+"\"draft\")]</code> compound (own and draft)"
+msgstr ""
+"<code>[\"&amp;\", (\"user_id\", \"=\", \"__uid__\"), (\"state\", \"=\", "
+"\"draft\")]</code> 复合（自有且草稿）"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<code>[(\"company_id\", \"in\", \"__company_ids__\")]</code> records in the "
+"user's allowed companies"
+msgstr "<code>[(\"company_id\", \"in\", \"__company_ids__\")]</code> 用户允许的公司中的记录"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<code>[(\"create_date\", \"&gt;=\", \"__month_start__\")]</code> created "
+"this month"
+msgstr "<code>[(\"create_date\", \"&gt;=\", \"__month_start__\")]</code> 本月创建"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "<code>[(\"create_uid\", \"=\", \"__uid__\")]</code> own records by creator"
+msgstr "<code>[(\"create_uid\", \"=\", \"__uid__\")]</code> 按创建者划分的自有记录"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "<code>[(\"date\", \"&gt;=\", \"__last_30_days__\")]</code> last thirty days"
+msgstr "<code>[(\"date\", \"&gt;=\", \"__last_30_days__\")]</code> 过去三十天"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "<code>[(\"user_id\", \"=\", \"__uid__\")]</code> own records by responsible"
+msgstr "<code>[(\"user_id\", \"=\", \"__uid__\")]</code> 按负责人划分的自有记录"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<strong>Domain Access is the strict gate.</strong>\n"
+"                                    Rights and filters defined here are enforced\n"
+"                                    by the ORM, not just the UI. They block\n"
+"                                    server code, the API and any other\n"
+"                                    interaction path. Filters that fail to\n"
+"                                    parse, or that reference unknown\n"
+"                                    placeholders, fail closed (block all\n"
+"                                    access). Test in a non-production\n"
+"                                    environment first."
+msgstr ""
+"<strong>域访问是严格的关卡。</strong>\n"
+"                                    此处定义的权限和过滤器由 ORM 强制执行，而不仅仅是界面层。它们会阻断服务器代码、API 及任何其他交互路径。无法解析或引用未知占位符的过滤器将以失败关闭方式处理（阻断所有访问）。请先在非生产环境中测试。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<strong>Filter syntax.</strong>\n"
+"                                                Python list of domain leaves.\n"
+"                                                Smart placeholders are resolved\n"
+"                                                at evaluation time. Ready-made\n"
+"                                                examples (copy and adapt):"
+msgstr ""
+"<strong>过滤器语法。</strong>\n"
+"                                                Python 域叶子列表。智能占位符在求值时解析。现成示例（复制并调整）:"
+
+#. module: eh_access_studio
+#: model:ir.actions.act_window,name:eh_access_studio.action_eh_access_profile
+msgid "Access Profiles"
+msgstr "访问配置文件"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_res_users_form_eh_access
+msgid "Access Studio"
+msgstr ""
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_res_users__access_profile_ids
+msgid "Access Studio Profiles"
+msgstr "Access Studio 配置文件"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/base_model.py:0
+msgid ""
+"Access Studio: %(action)s is disabled for this model by your access profile."
+msgstr "Access Studio：您的访问配置文件已为此模型禁用 %(action)s。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Access Studio: %(user)s is an administrator and cannot be placed in a read-"
+"only profile."
+msgstr "Access Studio：%(user)s 是管理员，无法置于只读配置文件中。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Access Studio: 'Active From' must not be later than 'Active Until'."
+msgstr "Access Studio：“生效起始”不得晚于“生效截止”。"
+
+#. module: eh_access_studio
+#: model:res.groups,name:eh_access_studio.group_eh_access_manager
+msgid "Access Studio: Manager"
+msgstr "Access Studio：管理员"
+
+#. module: eh_access_studio
+#: model:res.groups,name:eh_access_studio.group_eh_access_user
+msgid "Access Studio: User"
+msgstr "Access Studio：用户"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_field.py:0
+msgid "Access Studio: a field cannot be both hidden and required. Pick one."
+msgstr "Access Studio：字段不能同时为隐藏和必填。请择其一。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_field.py:0
+msgid ""
+"Access Studio: a field rule must mark its fields hidden, read-only, required"
+" or hide the external link."
+msgstr "Access Studio：字段规则必须将其字段标记为隐藏、只读、必填，或隐藏外部链接。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_node.py:0
+msgid "Access Studio: a node rule must have a technical name."
+msgstr "Access Studio：节点规则必须具有技术名称。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Access Studio: a profile named %(name)s already exists. Pick a different "
+"name so import / export can match by name unambiguously."
+msgstr "Access Studio：名为 %(name)s 的配置文件已存在。请选择其他名称，以便导入/导出可按名称明确匹配。"
+
+#. module: eh_access_studio
+#: model:ir.actions.server,name:eh_access_studio.action_eh_access_conflict_report
+msgid "Access Studio: conflict report"
+msgstr "Access Studio：冲突报告"
+
+#. module: eh_access_studio
+#: model:ir.actions.server,name:eh_access_studio.cron_deactivate_expired_profiles_ir_actions_server
+msgid "Access Studio: deactivate expired profiles"
+msgstr "Access Studio：停用已过期的配置文件"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_domain.py:0
+msgid ""
+"Access Studio: filter cannot be parsed (%(error)s). Use a Python list of "
+"domain leaves."
+msgstr "Access Studio：无法解析筛选器 (%(error)s)。请使用由域叶节点组成的 Python 列表。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_domain.py:0
+msgid "Access Studio: filter must be a Python list."
+msgstr "Access Studio：筛选器必须是 Python 列表。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+#: model:ir.actions.server,name:eh_access_studio.action_eh_access_health_check
+msgid "Access Studio: health check"
+msgstr "Access Studio：健康检查"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Access Studio: health check passed"
+msgstr "Access Studio：健康检查通过"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_chatter.py:0
+msgid ""
+"Access Studio: model %(model)s already has a chatter rule on this profile."
+msgstr "Access Studio：模型 %(model)s 在此配置文件上已有 chatter 规则。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Access Studio: profile auto-deactivated because its Active Until date "
+"(%(date)s) has passed."
+msgstr "Access Studio：配置文件已自动停用，因为其“有效截止”日期 (%(date)s) 已过。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_model.py:0
+msgid "Access Studio: unknown view type(s) %(types)s. Allowed: %(allowed)s."
+msgstr "Access Studio：未知的视图类型 %(types)s。允许的类型：%(allowed)s。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__rights_preset
+msgid "Access level"
+msgstr "访问级别"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_needaction
+msgid "Action Needed"
+msgstr "所需操作"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Activate"
+msgstr "激活"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__active
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Active"
+msgstr "有效"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__date_from
+msgid "Active From"
+msgstr "生效起始"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__date_until
+msgid "Active Until"
+msgstr "生效截止"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Activities button hidden"
+msgstr "活动按钮已隐藏"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活动异常标示"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活动类型图标"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Add Property hidden everywhere"
+msgstr "在所有位置隐藏“添加属性”"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Add at least one user to the profile first."
+msgstr "请先向该配置文件添加至少一个用户。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__apply_filter
+msgid "Apply Filter"
+msgstr "应用筛选器"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__apply_to_all_companies
+msgid "Apply to all companies"
+msgstr "应用于所有公司"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__user_ids
+msgid "Apply to users"
+msgstr "应用于用户"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数量"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Auditor template"
+msgstr "审计员模板"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__auditor
+msgid "Auditor: read everything, no edit, no debug"
+msgstr "审计员：查看所有内容，不可编辑，不可调试"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Authentication / Debug"
+msgstr "认证 / 调试"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_base
+msgid "Base"
+msgstr "基数"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__button
+msgid "Button (object / action)"
+msgstr "按钮（object / action）"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Chatter"
+msgstr "图表"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__chatter_line_ids
+msgid "Chatter Lines"
+msgstr "沟通栏行"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "Close"
+msgstr "关闭"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_model__hidden_view_types
+msgid ""
+"Comma-separated list of view types to remove from action responses. "
+"Recognised values: list, kanban, form, calendar, pivot, graph, gantt, "
+"activity, cohort, grid, map, hierarchy, search."
+msgstr ""
+"以逗号分隔的要从操作响应中移除的视图类型列表。可识别的值：list, kanban, form, calendar, pivot, graph, "
+"gantt, activity, cohort, grid, map, hierarchy, search。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__company_ids
+msgid "Companies"
+msgstr "公司"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_configuration
+msgid "Configuration"
+msgstr "配置"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Conflict report"
+msgstr "冲突报告"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Could not decode the uploaded file (%(error)s). Expected UTF-8."
+msgstr "无法解码上传的文件 (%(error)s)。应为 UTF-8。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Could not decode the uploaded file (%(error)s). Expected base64."
+msgstr "无法解码上传的文件 (%(error)s)。应为 base64。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Could not parse YAML (%(error)s)."
+msgstr "无法解析 YAML (%(error)s)。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__create_right
+msgid "Create"
+msgstr "创建"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Create profile"
+msgstr "创建配置文件"
+
+#. module: eh_access_studio
+#: model_terms:ir.actions.act_window,help:eh_access_studio.action_eh_access_profile
+msgid "Create your first access profile"
+msgstr "创建您的第一个访问配置文件"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__create_date
+msgid "Created on"
+msgstr "创建日期"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a heavily restricted profile: hides the standard Settings menu, "
+"hides export everywhere, disables developer mode, and stamps a domain on "
+"sale.order limiting access to the user's own records."
+msgstr ""
+"创建一个高度受限的配置文件：隐藏标准的设置菜单，处处隐藏导出，禁用开发者模式，并在 sale.order 上标记一个域，将访问限制为用户自己的记录。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a profile with Read-Only Mode enabled. The user can browse the "
+"entire system but cannot create, edit or delete any record. Administrators "
+"are exempt."
+msgstr "创建一个启用只读模式的配置文件。用户可以浏览整个系统，但无法创建、编辑或删除任何记录。管理员不受此限制。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a profile with a domain rule on the chosen model that limits read / "
+"edit to records where user_id equals the current user. Hides the export "
+"button on every model."
+msgstr "在所选模型上创建一个带域规则的配置文件，将读取/编辑限制为 user_id 等于当前用户的记录。在每个模型上隐藏导出按钮。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a read-only profile with disable_debug_mode enabled and an Active "
+"Until date set to today plus the chosen number of days. After expiry the "
+"daily cron deactivates the profile."
+msgstr ""
+"创建一个只读配置文件，启用 disable_debug_mode，并将“有效期至”日期设置为今天加上所选天数。到期后，每日 cron 会停用该配置文件。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__custom
+msgid "Custom"
+msgstr "自定义"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Custom rights"
+msgstr "自定义权限"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Deactivate"
+msgstr "取消激活"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__delete_right
+msgid "Delete"
+msgstr "删除"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__description
+msgid "Description"
+msgstr "描述"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Developer mode disabled (debug=0 enforced)"
+msgstr "开发者模式已禁用(强制 debug=0)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__disable_debug_mode
+msgid "Disable Developer Mode"
+msgstr "禁用开发者模式"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__disable_login
+msgid "Disable Login"
+msgstr "禁用登录"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_line_mixin__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model_fields__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_rule__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_menu__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_view__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_res_users__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Domain Access"
+msgstr "域访问"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__domain_line_ids
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__domain_rule_count
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Domain Rules"
+msgstr "域规则"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Duplicate"
+msgstr "复制"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__duration_days
+msgid "Duration in days (auditor template)"
+msgstr "持续天数（审计员模板）"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__write_right
+msgid "Edit"
+msgstr "编辑"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_yaml_wizard__mode__export
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "Export"
+msgstr "导出"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Export button hidden everywhere"
+msgstr "导出按钮在所有位置隐藏"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_yaml_wizard__payload
+msgid ""
+"Export: filled in when the export action runs. Import: upload the file you "
+"want to import."
+msgstr "导出：在导出操作运行时填充。导入：上传您要导入的文件。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__field_line_ids
+msgid "Field Lines"
+msgstr "字段行"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_model_fields
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__field_ids
+msgid "Fields"
+msgstr "字段"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__payload_name
+msgid "File name"
+msgstr "文件名"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__domain
+msgid "Filter"
+msgstr "筛选"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者（合作伙伴）"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font Awesome图标，例如：fa-tasks"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__hide_external_link
+msgid ""
+"For relational fields (many2one / many2many / one2many), strip the external "
+"open / create / edit affordances by injecting widget options no_open, "
+"no_create and no_edit. Has no effect on non-relational fields."
+msgstr ""
+"对于关系型字段（many2one / many2many / one2many），通过注入控件选项 no_open、no_create 和 "
+"no_edit 来去除外部的打开 / 创建 / 编辑操作。对非关系型字段无效。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__duration_days
+msgid ""
+"For the 'auditor' template: number of days the profile remains active. After"
+" that the daily cron deactivates it."
+msgstr "对于 'auditor' 模板：配置文件保持激活状态的天数。此后每日 cron 将其停用。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__target_model
+msgid ""
+"For the 'own records only' template: the model whose records the user should"
+" be limited to. The template stamps a domain of [('user_id', '=', "
+"'__uid__')] on this model."
+msgstr ""
+"对于 'own records only' 模板：应将用户限制在其记录范围内的模型。该模板会在此模型上标记域 [('user_id', '=', "
+"'__uid__')]。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__full
+msgid "Full access (Read + Create + Edit + Delete)"
+msgstr "完全访问权限（读取 + 创建 + 编辑 + 删除）"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Full placeholder list:\n"
+"                                                    <code>__uid__</code>,\n"
+"                                                    <code>__cid__</code>,\n"
+"                                                    <code>__company_ids__</code>,\n"
+"                                                    <code>__today__</code>,\n"
+"                                                    <code>__yesterday__</code>,\n"
+"                                                    <code>__tomorrow__</code>,\n"
+"                                                    <code>__week_start__</code> to <code>__week_end__</code>,\n"
+"                                                    <code>__month_start__</code> to <code>__month_end__</code>,\n"
+"                                                    <code>__quarter_start__</code> to <code>__quarter_end__</code>,\n"
+"                                                    <code>__year_start__</code> to <code>__year_end__</code>,\n"
+"                                                    <code>__last_7_days__</code>,\n"
+"                                                    <code>__last_30_days__</code>,\n"
+"                                                    <code>__last_90_days__</code>,\n"
+"                                                    <code>__last_365_days__</code>."
+msgstr ""
+"完整占位符列表：\n"
+"                                                    <code>__uid__</code>,\n"
+"                                                    <code>__cid__</code>,\n"
+"                                                    <code>__company_ids__</code>,\n"
+"                                                    <code>__today__</code>,\n"
+"                                                    <code>__yesterday__</code>,\n"
+"                                                    <code>__tomorrow__</code>,\n"
+"                                                    <code>__week_start__</code> 至 <code>__week_end__</code>,\n"
+"                                                    <code>__month_start__</code> 至 <code>__month_end__</code>,\n"
+"                                                    <code>__quarter_start__</code> 至 <code>__quarter_end__</code>,\n"
+"                                                    <code>__year_start__</code> 至 <code>__year_end__</code>,\n"
+"                                                    <code>__last_7_days__</code>,\n"
+"                                                    <code>__last_30_days__</code>,\n"
+"                                                    <code>__last_90_days__</code>,\n"
+"                                                    <code>__last_365_days__</code>."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Global"
+msgstr "全局"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Global toggles apply to every model the\n"
+"                                    affected users open. Per-model overrides\n"
+"                                    on the Model Access tab take precedence."
+msgstr ""
+"全局开关适用于受影响用户打开的\n"
+"                                    每个模型。Model Access 选项卡上\n"
+"                                    的按模型覆盖设置优先。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__has_message
+msgid "Has Message"
+msgstr "有消息"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__invisible
+msgid "Hidden"
+msgstr "隐藏"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hidden_menu_count
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hidden_menu_ids
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hidden Menus"
+msgstr "隐藏的菜单"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__hidden_report_action_ids
+msgid "Hidden Reports"
+msgstr "隐藏的报表"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__hidden_server_action_ids
+msgid "Hidden Server Actions"
+msgstr "隐藏的服务器操作"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__hidden_view_types
+msgid "Hidden View Types"
+msgstr "隐藏的视图类型"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_log_note
+msgid "Hide 'Log Note'"
+msgstr "隐藏“Log Note”"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_schedule_activity
+msgid "Hide 'Schedule Activity'"
+msgstr "隐藏“Schedule Activity”"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_send_message
+msgid "Hide 'Send Message'"
+msgstr "隐藏“Send Message”"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_add_property
+msgid "Hide Add Property"
+msgstr "隐藏添加属性"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_add_property
+msgid "Hide Add Property (everywhere)"
+msgstr "隐藏添加属性（在所有位置）"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_archive
+msgid "Hide Archive"
+msgstr "隐藏归档"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hide Buttons / Tabs / Filters"
+msgstr "隐藏按钮 / 选项卡 / 筛选器"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_chatter
+msgid "Hide Chatter (everywhere)"
+msgstr "隐藏 Chatter（在所有位置）"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_create
+msgid "Hide Create"
+msgstr "隐藏创建"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_delete
+msgid "Hide Delete"
+msgstr "隐藏删除"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_duplicate
+msgid "Hide Duplicate"
+msgstr "隐藏复制"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_edit
+msgid "Hide Edit"
+msgstr "隐藏编辑"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_export
+msgid "Hide Export"
+msgstr "隐藏导出"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_export
+msgid "Hide Export (everywhere)"
+msgstr "隐藏导出（在所有位置）"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__hide_external_link
+msgid "Hide External Link"
+msgstr "隐藏外部链接"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hide Fields"
+msgstr "隐藏字段"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_import
+msgid "Hide Import"
+msgstr "隐藏导入"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_import
+msgid "Hide Import (everywhere)"
+msgstr "隐藏导入（在所有位置）"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_spreadsheet
+msgid "Hide Insert in Spreadsheet"
+msgstr "隐藏插入到电子表格"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_spreadsheet
+msgid "Hide Insert in Spreadsheet (everywhere)"
+msgstr "隐藏插入到电子表格（在所有位置）"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hide Menus"
+msgstr "隐藏菜单"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_schedule_activity
+msgid "Hides the Activities button on every chatter."
+msgstr "在每个 Chatter 上隐藏“活动”按钮。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_log_note
+msgid "Hides the Log Note button on every chatter."
+msgstr "在每个 Chatter 上隐藏“Log Note”按钮。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_send_message
+msgid "Hides the Send Message button on every chatter."
+msgstr "在每个 Chatter 上隐藏“Send Message”按钮。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_line_mixin__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model_fields__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_rule__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_menu__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_view__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_res_users__id
+msgid "ID"
+msgstr "识别号"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_exception_icon
+msgid "Icon"
+msgstr "图标"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "指示异常活动的图标。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "如果勾选此项，则需要查看新消息。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果勾选此项， 某些消息将出现发送错误。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_yaml_wizard__mode__import
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "Import"
+msgstr "导入"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_yaml
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Import / Export"
+msgstr "导入/导出"
+
+#. module: eh_access_studio
+#: model:ir.actions.act_window,name:eh_access_studio.action_eh_access_yaml_wizard
+msgid "Import / Export Profiles"
+msgstr "进口 / 出口配置文件"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Import button hidden everywhere"
+msgstr "导入按钮在各处隐藏"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Imported: %(created)s created, %(updated)s updated."
+msgstr "已导入：%(created)s 已创建，%(updated)s 已更新。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Inactive"
+msgstr "无效的"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Insert in Spreadsheet hidden everywhere"
+msgstr "在电子表格中插入的选项在所有位置隐藏"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_is_follower
+msgid "Is Follower"
+msgstr "是关注者"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__link
+msgid "Kanban link"
+msgstr "看板链接"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__kind
+msgid "Kind"
+msgstr "类型"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__target_label
+msgid "Label"
+msgstr "标签"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__write_date
+msgid "Last Updated on"
+msgstr "上次更新日期"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Log Note button hidden"
+msgstr "记录备注按钮已隐藏"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/res_users.py:0
+msgid "Login denied for %(user)s."
+msgstr "%(user)s 的登录被拒绝。"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_ui_menu
+msgid "Menu"
+msgstr "菜单"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hidden_menu_ids
+msgid ""
+"Menus and submenus removed from the navigation for users in this profile."
+msgstr "对此配置文件中的用户从导航中移除的菜单和子菜单。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Menus listed here are removed from the\n"
+"                                    navigation for users in this profile. The\n"
+"                                    Access Studio configuration menu is always\n"
+"                                    visible to administrators."
+msgstr ""
+"此处列出的菜单将从\n"
+"                                    导航中移除，针对此配置文件中的用户。\n"
+"                                    Access Studio 配置菜单始终对\n"
+"                                    管理员可见。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Menus removed from navigation."
+msgstr "从导航中移除的菜单。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_has_error
+msgid "Message Delivery error"
+msgstr "消息发送错误"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__mode
+msgid "Mode"
+msgstr "模式"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__model_name
+msgid "Model"
+msgstr "模型"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid "Model %(m)s does not exist in this database."
+msgstr "模型 %(m)s 在此数据库中不存在。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Model Access"
+msgstr "模型访问"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__model_line_ids
+msgid "Model Lines"
+msgstr "模型明细行"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Model-level toggles drop buttons from the\n"
+"                                    UI. They do not block the ORM. Combine with\n"
+"                                    Domain Access for strict gates."
+msgstr ""
+"模型级别的开关会从\n"
+"                                    UI 中移除按钮。它们不会阻止 ORM。请与\n"
+"                                    域访问结合使用以实现严格的访问控制。"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_model
+msgid "Models"
+msgstr "模型"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活动截止时间"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__name
+msgid "Name"
+msgstr "名称"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_template
+msgid "New from Template"
+msgstr "从模板新建"
+
+#. module: eh_access_studio
+#: model:ir.actions.act_window,name:eh_access_studio.action_eh_access_template_wizard
+msgid "New profile from template"
+msgstr "从模板新建配置文件"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "下一活动日历事件"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一活动截止日期"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一活动摘要"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一活动类型"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "No Link"
+msgstr "无链接"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__none
+msgid "No access"
+msgstr "无法访问"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "No domain-rule conflicts detected."
+msgstr "未检测到域规则冲突。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "No issues found across %(n)s active profile(s)."
+msgstr "在 %(n)s 个活动配置文件中未发现问题。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__node_line_ids
+msgid "Node Lines"
+msgstr "节点行"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__page
+msgid "Notebook page / tab"
+msgstr "笔记本页面/选项卡"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_needaction_counter
+msgid "Number of Actions"
+msgstr "操作数量"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_has_error_counter
+msgid "Number of errors"
+msgstr "错误数量"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要采取行动的消息数量"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "发送错误的消息的数量"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Open the diagnostic summary for this profile."
+msgstr "打开此配置文件的诊断摘要。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__date_until
+msgid ""
+"Optional end date. A scheduled action deactivates the profile when this date"
+" has passed."
+msgstr "可选的结束日期。当此日期过后，计划操作会停用此配置文件。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_node__target_label
+msgid "Optional label shown only in this configuration screen."
+msgstr "仅在此配置界面中显示的可选标签。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__date_from
+msgid "Optional start date. Profile is treated as inactive before this date."
+msgstr "可选的开始日期。在此日期之前，配置文件被视为未激活。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Own-records template"
+msgstr "自有记录模板"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Per-button (when chatter is shown)"
+msgstr "按按钮（显示 chatter 时）"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_domain__rights_preset
+msgid ""
+"Pick a common combination. Switch to 'Custom' to set individual rights "
+"checkboxes."
+msgstr "选择一个常用组合。切换到“自定义”以单独设置权限复选框。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid "Pick a name for the new profile."
+msgstr "为新配置文件选择一个名称。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Pick at least one profile to export."
+msgstr "至少选择一个要导出的配置文件。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__profile_id
+msgid "Profile"
+msgstr "个人资料"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__company_ids
+msgid ""
+"Profile applies only when the user is currently logged into one of these "
+"companies. Leave empty when 'Apply to all companies' is enabled."
+msgstr "仅当用户当前登录到这些公司之一时，配置文件才适用。启用“应用于所有公司”时请留空。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__name
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Profile name"
+msgstr "配置文件名称"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Profile summary: %(name)s"
+msgstr "配置文件摘要：%(name)s"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Profile-level Hide Chatter removes the\n"
+"                                    chatter widget from every model. The\n"
+"                                    per-button toggles hide individual chatter\n"
+"                                    buttons system-wide while leaving the\n"
+"                                    chatter visible. The per-model list below\n"
+"                                    targets specific models when the global\n"
+"                                    toggle is off."
+msgstr ""
+"配置文件级别的“隐藏沟通栏”会从每个模型中移除\n"
+"                                    沟通栏小部件。\n"
+"                                    每个按钮的开关会在系统范围内隐藏\n"
+"                                    各个沟通栏按钮，\n"
+"                                    同时保持沟通栏可见。下方的\n"
+"                                    每个模型列表会在全局开关\n"
+"                                    关闭时针对特定模型。"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_profiles
+msgid "Profiles"
+msgstr "配置文件"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_res_users_form_eh_access
+msgid ""
+"Profiles applied to this user. Edit them in the\n"
+"                            Access Studio app. Profile rights are OR-ed for\n"
+"                            domain access; restrictive UI hide flags are the\n"
+"                            union across all active profiles."
+msgstr ""
+"应用于此用户的配置文件。请在\n"
+"                            Access Studio 应用中编辑它们。配置文件权限在\n"
+"                            域访问方面按 OR 组合；限制性 UI 隐藏标志是\n"
+"                            所有活动配置文件的并集。"
+
+#. module: eh_access_studio
+#: model_terms:ir.actions.act_window,help:eh_access_studio.action_eh_access_profile
+msgid ""
+"Profiles bundle a list of users with a set of access\n"
+"                    overlays. Hide menus and fields from selected users\n"
+"                    without writing record rules or editing security\n"
+"                    groups."
+msgstr ""
+"配置文件将一组用户与一组访问\n"
+"                    叠加层捆绑在一起。无需编写记录规则或编辑安全\n"
+"                    组，即可对选定用户隐藏菜单和字段。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__profile_ids
+msgid "Profiles to export"
+msgstr "要导出的配置文件"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_domain__domain
+msgid ""
+"Python list of domain leaves. Smart placeholders are supported. Example: "
+"[(\"company_id\", \"in\", \"__company_ids__\"), (\"create_date\", \">=\", "
+"\"__month_start__\")]."
+msgstr ""
+"domain leaves 的 Python 列表。支持智能占位符。示例：[(\"company_id\", \"in\", "
+"\"__company_ids__\"), (\"create_date\", \">=\", \"__month_start__\")]。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__read_right
+msgid "Read"
+msgstr "读取"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_create
+msgid "Read + Create"
+msgstr "读取 + 创建"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_create_write
+msgid "Read + Create + Edit"
+msgstr "读取 + 创建 + 编辑"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_write
+msgid "Read + Edit"
+msgstr "读取 + 编辑"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_only
+msgid "Read only"
+msgstr "只读"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__readonly
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Read-Only"
+msgstr "只读"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__readonly
+msgid "Read-Only Mode"
+msgstr "只读模式"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__read_only
+msgid "Read-only across the system"
+msgstr "在整个系统中只读"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_rule
+msgid "Record Rule"
+msgstr "规则"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_spreadsheet
+msgid "Removes 'Insert in Spreadsheet' from list, pivot and graph cog menus."
+msgstr "从列表、透视表和图表齿轮菜单中移除“Insert in Spreadsheet”。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_add_property
+msgid "Removes the 'Add Property' action from form views."
+msgstr "从表单视图中移除“Add Property”操作。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_export
+msgid "Removes the Export button on every list and kanban view."
+msgstr "从每个列表和看板视图中移除“导出”按钮。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_import
+msgid "Removes the Import button on every list and kanban view."
+msgstr "从每个列表和看板视图中移除“导入”按钮。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_chatter
+msgid "Removes the chatter widget from every form view."
+msgstr "从每个表单视图中移除聊天记录小部件。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__required
+msgid "Required"
+msgstr "必填"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_user_id
+msgid "Responsible User"
+msgstr "责任用户"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__summary
+msgid "Result"
+msgstr "结果"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__rule_count
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Rules"
+msgstr "规则"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__own_records_only
+msgid "Sales rep: own records only"
+msgstr "销售代表：仅限本人记录"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__filter
+msgid "Search filter"
+msgstr "搜索筛选器"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__group
+msgid "Search group-by"
+msgstr "搜索分组依据"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Send Message button hidden"
+msgstr "发送消息按钮已隐藏"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__sequence
+msgid "Sequence"
+msgstr "序列"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Serialised %(count)s profile(s)."
+msgstr "已序列化 %(count)s 个配置文件。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__name
+msgid "Short human-readable label shown in administration screens."
+msgstr "在管理界面中显示的简短易读标签。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Sign in as one of %(users)s in a private browser window. The active-profile "
+"cache, the ir.rule extension and the view post-processors all run on every "
+"page load, so the first navigation exercises the full enforcement path."
+msgstr ""
+"在隐私浏览器窗口中以 %(users)s 之一的身份登录。活动配置文件缓存、ir.rule "
+"扩展和视图后处理器均会在每次页面加载时运行，因此首次导航即会执行完整的强制路径。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Sign-in disabled for the targeted users"
+msgstr "已为目标用户禁用登录"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/res_users.py:0
+msgid "Sign-in is disabled for this account by an Access Studio profile."
+msgstr "此账户的登录已被某个 Access Studio 配置文件禁用。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Status"
+msgstr "状态"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基于活动的状态\n"
+"逾期：超出到期日期\n"
+"今天：活动日期是今天\n"
+"计划：未来活动。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Strict ORM-level rules."
+msgstr "严格的 ORM 级规则。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__disable_debug_mode
+msgid ""
+"Strips debug mode from the URL whenever a user in this profile loads the web"
+" client."
+msgstr "当此配置文件中的用户加载 Web 客户端时，从 URL 中移除调试模式。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Summary"
+msgstr "摘要"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__target_model
+msgid "Target model (own-records template)"
+msgstr "目标模型（自有记录模板）"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__target_name
+msgid "Technical Name"
+msgstr "技术名称"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__template
+msgid "Template"
+msgstr "模板"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Test Plan"
+msgstr "测试计划"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Test plan not available"
+msgstr "测试计划不可用"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Test plan: %(name)s"
+msgstr "测试计划：%(name)s"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_node__target_name
+msgid ""
+"The 'name' attribute of the target node in XML. For example: "
+"'action_view_orders' for a smart button."
+msgstr "XML 中目标节点的 'name' 属性。例如：智能按钮的 'action_view_orders'。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__name
+msgid "The new profile is created with this name."
+msgstr "使用此名称创建新的配置文件。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__invisible
+msgid "The selected fields are removed from views."
+msgstr "所选字段将从视图中移除。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__readonly
+msgid ""
+"The selected fields are shown but cannot be edited. The framework's "
+"force_save flag is set so existing values survive saves on records the user "
+"can otherwise modify."
+msgstr "所选字段会显示但无法编辑。已设置框架的 force_save 标志，因此在用户可以修改的记录上保存时，现有值得以保留。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__required
+msgid ""
+"The selected fields become mandatory. Use sparingly: a required overlay on a"
+" field that the user cannot fill in (because it lives on a hidden tab) "
+"blocks all saves."
+msgstr "所选字段将变为必填。请谨慎使用：对用户无法填写的字段（因为它位于隐藏的选项卡上）强制设为必填会阻止所有保存操作。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "记录中异常活动的类型。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"UI hide is UI hide. Fields hidden here are\n"
+"                                    not rendered in views. They remain readable\n"
+"                                    over the API and from server code. Use\n"
+"                                    Domain Access (later phase) when you need a\n"
+"                                    strict gate at the ORM level."
+msgstr ""
+"界面隐藏仅是界面隐藏。此处隐藏的字段\n"
+"                                    不会在视图中呈现。它们仍可通过\n"
+"                                    API 和服务器代码读取。当你需要\n"
+"                                    在 ORM 层设置严格限制时，请使用\n"
+"                                    Domain Access（后续阶段）。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid "Unknown template: %(t)s."
+msgstr "未知模板：%(t)s。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Upload a YAML file first."
+msgstr "请先上传 YAML 文件。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Use the technical name (the 'name' XML\n"
+"                                    attribute) of the target node. Smart\n"
+"                                    buttons usually start with 'action_'.\n"
+"                                    Notebook tabs use the 'name' attribute on\n"
+"                                    the &lt;page/&gt; element. Filters and\n"
+"                                    group-by entries use the 'name' attribute\n"
+"                                    on the &lt;filter/&gt; element."
+msgstr ""
+"使用目标节点的技术名称（XML 的 'name' 属性）。智能按钮通常以 'action_' 开头。笔记本选项卡使用 &lt;page/&gt; "
+"元素上的 'name' 属性。筛选器和分组条目使用 &lt;filter/&gt; 元素上的 'name' 属性。"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_res_users
+msgid "User"
+msgstr "用户"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_root
+msgid "User Access Studio"
+msgstr "用户访问工作室"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_chatter
+msgid "User Access Studio Chatter Rule"
+msgstr "用户访问工作室聊天记录规则"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_domain
+msgid "User Access Studio Domain Rule"
+msgstr "用户访问工作室域规则"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_field
+msgid "User Access Studio Field Rule"
+msgstr "用户访问工作室字段规则"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_yaml_wizard
+msgid "User Access Studio Import / Export"
+msgstr "用户访问工作室导入 / 导出"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_model
+msgid "User Access Studio Model Rule"
+msgstr "用户访问工作室模型规则"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_node
+msgid "User Access Studio Node Rule"
+msgstr "用户访问工作室节点规则"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_profile
+msgid "User Access Studio Profile"
+msgstr "用户访问工作室配置文件"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_template_wizard
+msgid "User Access Studio Template Wizard"
+msgstr "用户访问工作室模板向导"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_line_mixin
+msgid "User Access Studio rule-line cache hook"
+msgstr "用户访问工作室规则行缓存钩子"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "User Access Studio: Import / Export"
+msgstr "用户访问工作室：导入 / 导出"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "User Access Studio: New profile from template"
+msgstr "用户访问工作室：从模板创建新配置文件"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__user_count
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__user_ids
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Users"
+msgstr "用户"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__user_ids
+msgid "Users assigned to the new profile."
+msgstr "分配到新配置文件的用户。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__disable_login
+msgid ""
+"Users in this profile are denied at the authentication gate. Use only when "
+"the profile is targeted at one user; applying it to a group disables the "
+"whole group."
+msgstr "此配置文件中的用户在身份验证入口被拒绝。仅当配置文件针对单个用户时使用；将其应用于组会禁用整个组。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__user_ids
+msgid "Users to whom this profile applies."
+msgstr "此配置文件适用的用户。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__vendor_portal
+msgid "Vendor / contractor: portal-style restricted view"
+msgstr "供应商/承包商:门户样式的受限视图"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_ui_view
+msgid "View"
+msgstr "视图"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "View the test plan for the targeted users."
+msgstr "查看目标用户的测试计划。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__apply_to_all_companies
+msgid ""
+"When enabled, the profile applies regardless of the user's current company. "
+"The Companies field is ignored."
+msgstr "启用后，无论用户当前所属公司如何，该配置文件均适用。将忽略公司字段。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_domain__apply_filter
+msgid ""
+"When enabled, the rule limits the set of records to which the chosen rights "
+"apply. Without a filter, the rights apply to all records of the model."
+msgstr "启用后，该规则会限制所选权限适用的记录集合。若无筛选条件，权限将适用于该模型的所有记录。"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__readonly
+msgid ""
+"When enabled, users in this profile cannot create, edit or delete records "
+"anywhere in the system. The Access Studio configuration is excluded so "
+"administrators are never locked out."
+msgstr ""
+"启用后，此配置文件中的用户无法在系统的任何位置创建、编辑或删除记录。Access Studio 配置除外，以便管理员永远不会被锁定在系统之外。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Whole-system"
+msgstr "整个系统"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__payload
+msgid "YAML"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid ""
+"YAML payload too large (max %(mb)s MB). Split the export into smaller files."
+msgstr "YAML 负载过大（最大 %(mb)s MB）。请将导出拆分为更小的文件。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "YAML payload too large after decode (max %(mb)s MB)."
+msgstr "解码后 YAML 负载过大（最大 %(mb)s MB）。"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "YAML root must be a mapping with a 'profiles' key."
+msgstr "YAML 根节点必须是包含 'profiles' 键的映射。"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "[(\"user_id\", \"=\", \"__uid__\")]"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "all companies"
+msgstr "所有公司"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "disable_debug_mode"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "disable_login"
+msgstr ""
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "e.g. Sales reps - own records"
+msgstr "例如：销售代表 - 自有记录"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_add_property"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_export"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_import"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_log_note"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_schedule_activity"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_spreadsheet"
+msgstr ""
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "list,kanban,..."
+msgstr ""

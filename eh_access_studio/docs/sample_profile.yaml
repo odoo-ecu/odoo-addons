@@ -1,0 +1,79 @@
+# User Access Studio: sample export.
+# Copyright 2026 ERP Heritage (https://www.erpheritage.com.au)
+# License LGPL-3.0 or later.
+#
+# Demonstrates the YAML format produced by the Import / Export wizard.
+# Field names match the eh.access.profile schema. Lines reference users
+# by login, companies by name, models by technical name, fields by
+# technical name. The format is the contract: edit by hand and
+# re-import to apply.
+
+profiles:
+  - name: Sales rep (own records only)
+    sequence: 10
+    active: true
+    readonly: false
+    apply_to_all_companies: true
+    date_from: null
+    date_until: null
+
+    hide_chatter: false
+    hide_send_message: false
+    hide_log_note: true
+    hide_schedule_activity: false
+
+    hide_import: false
+    hide_export: true
+    hide_spreadsheet: false
+    hide_add_property: false
+
+    disable_login: false
+    disable_debug_mode: true
+
+    users:
+      - sales.alice@example.test
+      - sales.bob@example.test
+    companies: []
+    hidden_menus:
+      - Settings
+      - Inventory
+
+    field_lines:
+      - model: sale.order
+        fields: [internal_note]
+        invisible: true
+        readonly: false
+        required: false
+
+    model_lines:
+      - model: sale.order
+        restrict_create: false
+        restrict_edit: false
+        restrict_delete: true
+        restrict_archive: true
+        restrict_duplicate: false
+        restrict_import: true
+        restrict_export: true
+        restrict_spreadsheet: true
+        restrict_add_property: true
+        hidden_view_types: pivot,graph
+        hidden_reports: []
+        hidden_server_actions: []
+
+    node_lines:
+      - model: sale.order
+        kind: button
+        target_name: action_confirm
+        target_label: Confirm
+
+    chatter_lines:
+      - sale.order
+
+    domain_lines:
+      - model: sale.order
+        read_right: true
+        create_right: true
+        write_right: true
+        delete_right: false
+        apply_filter: true
+        domain: '[("user_id", "=", "__uid__")]'

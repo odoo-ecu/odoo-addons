@@ -1,0 +1,81 @@
+# User Access Studio: vendor / contractor portal template.
+# Copyright 2026 ERP Heritage (https://www.erpheritage.com.au).
+# License LGPL-3.0 or later.
+#
+# Scenario: an external collaborator (vendor, agency, contractor) who
+# needs minimal access to a small slice of operational data. Settings
+# is hidden, every IO surface is restricted, developer mode is
+# disabled, and a domain rule on sale.order limits read to records
+# they are personally responsible for.
+#
+# This is a heavier-handed setup than 'own_records.yaml' because the
+# user is external. Combine with a dedicated portal-style group on
+# the Odoo side for layered defence.
+
+profiles:
+  - name: Vendor portal user
+    sequence: 30
+    active: true
+    readonly: false
+    apply_to_all_companies: true
+    date_from: null
+    date_until: null
+
+    hide_chatter: false
+    hide_send_message: false
+    hide_log_note: true
+    hide_schedule_activity: true
+
+    hide_import: true
+    hide_export: true
+    hide_spreadsheet: true
+    hide_add_property: true
+
+    disable_login: false
+    disable_debug_mode: true
+
+    users:
+      - vendor.partner@example.test
+    companies: []
+    hidden_menus:
+      - Settings
+      - Inventory
+
+    field_lines:
+      - model: sale.order
+        fields: [internal_note, partner_invoice_id, partner_shipping_id]
+        invisible: true
+        readonly: false
+        required: false
+
+    model_lines:
+      - model: sale.order
+        restrict_create: true
+        restrict_edit: false
+        restrict_delete: true
+        restrict_archive: true
+        restrict_duplicate: true
+        restrict_import: true
+        restrict_export: true
+        restrict_spreadsheet: true
+        restrict_add_property: true
+        hidden_view_types: pivot,graph,gantt,map,hierarchy
+        hidden_reports: []
+        hidden_server_actions: []
+
+    node_lines:
+      - model: sale.order
+        kind: button
+        target_name: action_confirm
+        target_label: Confirm
+
+    chatter_lines: []
+
+    domain_lines:
+      - model: sale.order
+        read_right: true
+        create_right: false
+        write_right: true
+        delete_right: false
+        apply_filter: true
+        domain: '[("user_id", "=", "__uid__")]'

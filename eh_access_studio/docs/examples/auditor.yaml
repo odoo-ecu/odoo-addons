@@ -1,0 +1,43 @@
+# User Access Studio: time-bound auditor template.
+# Copyright 2026 ERP Heritage (https://www.erpheritage.com.au).
+# License LGPL-3.0 or later.
+#
+# Scenario: an external or internal auditor who needs read access for a
+# specific window. Read-Only Mode prevents accidental edits, debug mode
+# is disabled to keep developer tools out of view, and Active Until is
+# set so the daily cron deactivates the profile when the audit ends.
+#
+# Adjust date_until to your audit close date before importing.
+
+profiles:
+  - name: Q4 audit window
+    sequence: 40
+    active: true
+    readonly: true
+    apply_to_all_companies: true
+    date_from: 2026-05-07
+    date_until: 2026-06-07
+
+    hide_chatter: false
+    hide_send_message: true
+    hide_log_note: true
+    hide_schedule_activity: true
+
+    hide_import: true
+    hide_export: false
+    hide_spreadsheet: false
+    hide_add_property: true
+
+    disable_login: false
+    disable_debug_mode: true
+
+    users:
+      - auditor.morgan@example.test
+    companies: []
+    hidden_menus: []
+
+    field_lines: []
+    model_lines: []
+    node_lines: []
+    chatter_lines: []
+    domain_lines: []

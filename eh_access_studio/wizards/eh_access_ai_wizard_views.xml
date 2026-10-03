@@ -1,0 +1,27 @@
+<odoo>
+  <record id="view_eh_access_ai_wizard" model="ir.ui.view">
+    <field name="name">eh.access.ai.wizard.form</field><field name="model">eh.access.ai.wizard</field>
+    <field name="arch" type="xml"><form string="Draft a policy with AI">
+      <div class="alert alert-info">AI creates an inactive draft. Review every rule before assigning users or activating it. No existing policy is replaced.</div>
+      <group><field name="name"/><field name="model_id" options="{'no_create': True}"/><field name="prompt"/><field name="consent"/></group>
+      <group><field name="explanation"/><field name="draft_json"/><field name="profile_id"/><field name="result_model" invisible="1"/></group>
+      <footer><button name="action_generate" type="object" string="Generate draft" class="btn-primary"/>
+        <button name="action_create_draft" type="object" string="Create inactive profile"/>
+        <button string="Close" special="cancel"/></footer>
+    </form></field>
+  </record>
+  <record id="action_eh_access_ai_wizard" model="ir.actions.act_window">
+    <field name="name">AI Policy Draft</field><field name="res_model">eh.access.ai.wizard</field><field name="view_mode">form</field><field name="target">new</field>
+  </record>
+  <record id="view_eh_access_ai_settings" model="ir.ui.view">
+    <field name="name">eh.access.ai.settings.form</field><field name="model">eh.access.ai.settings</field>
+    <field name="arch" type="xml"><form string="AI Provider Settings">
+      <div class="alert alert-info">Optional OpenAI Responses integration. Provider charges apply. Core access controls work without AI. Draft generation requires explicit data-transmission consent.</div>
+      <group><field name="enabled"/><field name="model_name"/><field name="configured"/><field name="api_key" password="True"/><field name="clear_key"/></group>
+      <footer><button name="action_save" type="object" string="Save" class="btn-primary"/><button string="Cancel" special="cancel"/></footer>
+    </form></field>
+  </record>
+  <record id="action_eh_access_ai_settings" model="ir.actions.act_window">
+    <field name="name">AI Provider</field><field name="res_model">eh.access.ai.settings</field><field name="view_mode">form</field><field name="target">new</field>
+  </record>
+</odoo>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2026 ERP Heritage (https://www.erpheritage.com.au)
+    License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
+-->
+<odoo>
+    <data>
+
+        <record id="view_eh_access_yaml_wizard_form" model="ir.ui.view">
+            <field name="name">eh.access.yaml.wizard.form</field>
+            <field name="model">eh.access.yaml.wizard</field>
+            <field name="arch" type="xml">
+                <form string="User Access Studio: Import / Export">
+                    <sheet>
+                        <group>
+                            <field name="mode" widget="radio"/>
+                        </group>
+                        <group invisible="mode != 'export'">
+                            <field name="profile_ids"
+                                   widget="many2many_tags"
+                                   options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="payload"
+                                   filename="payload_name"
+                                   invisible="mode == 'export' and not payload"/>
+                            <field name="payload_name" invisible="1"/>
+                        </group>
+                        <field name="preview_digest" invisible="1"/>
+                        <group invisible="mode != 'import' or not preview_digest">
+                            <field name="confirm_active"/>
+                        </group>
+                        <group invisible="not summary">
+                            <field name="summary" readonly="1" nolabel="1"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_export"
+                                string="Export"
+                                type="object"
+                                class="btn-primary"
+                                invisible="mode != 'export'"/>
+                        <button name="action_preview" string="Validate and Preview" type="object" invisible="mode != 'import'"/>
+                        <button name="action_import"
+                                string="Apply Reviewed Import"
+                                type="object"
+                                class="btn-primary"
+                                invisible="mode != 'import' or not preview_digest"/>
+                        <button string="Close" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_eh_access_yaml_wizard" model="ir.actions.act_window">
+            <field name="name">Import / Export Profiles</field>
+            <field name="res_model">eh.access.yaml.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

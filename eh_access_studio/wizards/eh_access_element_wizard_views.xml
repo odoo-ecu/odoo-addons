@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_eh_access_element_wizard_form" model="ir.ui.view">
+        <field name="name">eh.access.element.wizard.form</field><field name="model">eh.access.element.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Choose interface elements">
+                <group><field name="profile_id" context="{'active_test': False}" domain="[('active', '=', False)]" options="{'no_create': True}"/><field name="model_id" options="{'no_create': True}"/><field name="kind"/></group>
+                <button name="action_discover" type="object" string="Find elements" class="btn-secondary"/>
+                <group><field name="discovery_notes" readonly="1" nolabel="1"/><field name="choice_id" options="{'no_create': True, 'no_open': True}"/></group>
+                <field name="choice_ids" readonly="1"><list create="0" delete="0"><field name="name"/><field name="view_names"/><field name="target_name" optional="hide"/></list></field>
+                <footer><button name="action_apply" type="object" string="Add to inactive profile" class="btn-primary"/><button string="Cancel" special="cancel"/></footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_eh_access_element_wizard" model="ir.actions.act_window">
+        <field name="name">Choose Interface Elements</field><field name="res_model">eh.access.element.wizard</field>
+        <field name="view_mode">form</field><field name="target">new</field>
+    </record>
+</odoo>

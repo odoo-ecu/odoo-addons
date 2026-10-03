@@ -1,0 +1,2096 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_access_studio
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:32+0000\n"
+"PO-Revision-Date: 2026-07-01 04:32+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: eh_access_studio
+#: model:res.groups,comment:eh_access_studio.group_eh_access_manager
+msgid ""
+"\n"
+"                Full access to Access Studio. Can create, edit and deactivate\n"
+"                profiles. Implies Access Studio User.\n"
+"            "
+msgstr ""
+"\n"
+"Volledige toegang tot Access Studio. Kan profielen aanmaken, bewerken en deactiveren.\n"
+"                Impliceert Access Studio User."
+
+#. module: eh_access_studio
+#: model:res.groups,comment:eh_access_studio.group_eh_access_user
+msgid ""
+"\n"
+"                Read-only access to the Access Studio configuration. Users in\n"
+"                this group can view profiles and rule lines but cannot edit\n"
+"                them.\n"
+"            "
+msgstr ""
+"\n"
+"Alleen-lezen toegang tot de Access Studio-configuratie. Gebruikers in\n"
+"                deze groep kunnen profielen en regelregels bekijken, maar niet bewerken."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"\n"
+"... and %(extra)s more."
+msgstr ""
+"\n"
+"... en nog %(extra)s meer."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(n)s active profile(s) have no rules (no-op): %(names)s"
+msgstr ""
+"%(n)s actief/actieve profiel(en) hebben geen regels (geen actie): %(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(n)s active profile(s) have no users assigned: %(names)s"
+msgstr ""
+"%(n)s actief/actieve profiel(en) hebben geen toegewezen gebruikers: "
+"%(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(n)s active profile(s) past their Active Until date (cron has not "
+"deactivated them yet): %(names)s"
+msgstr ""
+"%(n)s actief/actieve profiel(en) zijn hun 'Actief tot'-datum voorbij (cron "
+"heeft ze nog niet gedeactiveerd): %(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(n)s company / companies"
+msgstr "%(n)s bedrijf/bedrijven"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(n)s conflict(s) detected:\n"
+"\n"
+"%(list)s%(tail)s\n"
+"\n"
+"Resolution: deactivate one of the profiles, or align their domain filters so they describe the same record set."
+msgstr ""
+"%(n)s conflict(en) gedetecteerd:\n"
+"\n"
+"%(list)s%(tail)s\n"
+"\n"
+"Oplossing: deactiveer een van de profielen, of stem hun domeinfilters op elkaar af zodat ze dezelfde recordset beschrijven."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(n)s domain rule(s) cannot be parsed and will fail closed at runtime. "
+"Profiles affected: %(names)s"
+msgstr ""
+"%(n)s domeinregel(s) kan/kunnen niet worden geparseerd en zal/zullen tijdens"
+" runtime gesloten mislukken. Betrokken profielen: %(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(name)s (copy)"
+msgstr "%(name)s (kopie)"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(name)s applies to %(users)s user(s) under %(scope)s.\n"
+"\n"
+"%(body)s"
+msgstr ""
+"%(name)s is van toepassing op %(users)s gebruiker(s) onder %(scope)s.\n"
+"\n"
+"%(body)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(user)s on %(model)s: %(profiles)s"
+msgstr "%(user)s op %(model)s: %(profiles)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "'profiles' must be a list."
+msgstr "'profiles' moet een lijst zijn."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s domain rule(s): strict ORM-level gates"
+msgstr "- %(n)s domeinregel(s): strikte ORM-niveaupoorten"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s field rule(s) across %(models)s model(s)"
+msgstr "- %(n)s veldregel(s) over %(models)s model(len)"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s menu(s) hidden: %(names)s%(tail)s"
+msgstr "- %(n)s menu('s) verborgen: %(names)s%(tail)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s model rule(s) across %(models)s model(s)"
+msgstr "- %(n)s modelregel(s) over %(models)s model(len)"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s node rule(s) (button / tab / link / filter)"
+msgstr "- %(n)s knooppuntregel(s) (knop / tabblad / link / filter)"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s per-model chatter override(s)"
+msgstr "- %(n)s chatter-overschrijving(en) per model"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- Chatter hidden on every form view"
+msgstr "- Chatter verborgen op elke formulierweergave"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- No rules configured. The profile is a no-op."
+msgstr "- Geen regels geconfigureerd. Het profiel doet niets."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- Read-only mode: blocks create / edit / delete on every model"
+msgstr ""
+"- Alleen-lezen-modus: blokkeert aanmaken / bewerken / verwijderen op elk "
+"model"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<code>[\"&amp;\", (\"user_id\", \"=\", \"__uid__\"), (\"state\", \"=\", "
+"\"draft\")]</code> compound (own and draft)"
+msgstr ""
+"<code>[\"&amp;\", (\"user_id\", \"=\", \"__uid__\"), (\"state\", \"=\", "
+"\"draft\")]</code> samengesteld (eigen en concept)"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<code>[(\"company_id\", \"in\", \"__company_ids__\")]</code> records in the "
+"user's allowed companies"
+msgstr ""
+"<code>[(\"company_id\", \"in\", \"__company_ids__\")]</code> records in de "
+"toegestane bedrijven van de gebruiker"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<code>[(\"create_date\", \"&gt;=\", \"__month_start__\")]</code> created "
+"this month"
+msgstr ""
+"<code>[(\"create_date\", \"&gt;=\", \"__month_start__\")]</code> deze maand "
+"aangemaakt"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "<code>[(\"create_uid\", \"=\", \"__uid__\")]</code> own records by creator"
+msgstr "<code>[(\"create_uid\", \"=\", \"__uid__\")]</code> eigen records op maker"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "<code>[(\"date\", \"&gt;=\", \"__last_30_days__\")]</code> last thirty days"
+msgstr "<code>[(\"date\", \"&gt;=\", \"__last_30_days__\")]</code> afgelopen dertig dagen"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "<code>[(\"user_id\", \"=\", \"__uid__\")]</code> own records by responsible"
+msgstr ""
+"<code>[(\"user_id\", \"=\", \"__uid__\")]</code> eigen records op "
+"verantwoordelijke"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<strong>Domain Access is the strict gate.</strong>\n"
+"                                    Rights and filters defined here are enforced\n"
+"                                    by the ORM, not just the UI. They block\n"
+"                                    server code, the API and any other\n"
+"                                    interaction path. Filters that fail to\n"
+"                                    parse, or that reference unknown\n"
+"                                    placeholders, fail closed (block all\n"
+"                                    access). Test in a non-production\n"
+"                                    environment first."
+msgstr ""
+"<strong>Domeintoegang is de strikte poort.</strong>\n"
+"                                    De hier gedefinieerde rechten en filters worden afgedwongen door de ORM, niet alleen door de UI. Ze blokkeren servercode, de API en elk ander interactiepad. Filters die niet kunnen worden geparseerd of die verwijzen naar onbekende plaatshouders, falen gesloten (blokkeren alle toegang). Test eerst in een niet-productieomgeving."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<strong>Filter syntax.</strong>\n"
+"                                                Python list of domain leaves.\n"
+"                                                Smart placeholders are resolved\n"
+"                                                at evaluation time. Ready-made\n"
+"                                                examples (copy and adapt):"
+msgstr ""
+"<strong>Filtersyntaxis.</strong>\n"
+"                                                Python-lijst van domeinbladeren. Slimme plaatshouders worden bij evaluatie omgezet. Kant-en-klare voorbeelden (kopiëren en aanpassen):"
+
+#. module: eh_access_studio
+#: model:ir.actions.act_window,name:eh_access_studio.action_eh_access_profile
+msgid "Access Profiles"
+msgstr "Toegangsprofielen"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_res_users_form_eh_access
+msgid "Access Studio"
+msgstr ""
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_res_users__access_profile_ids
+msgid "Access Studio Profiles"
+msgstr "Access Studio-profielen"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/base_model.py:0
+msgid ""
+"Access Studio: %(action)s is disabled for this model by your access profile."
+msgstr ""
+"Access Studio: %(action)s is voor dit model uitgeschakeld door uw "
+"toegangsprofiel."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Access Studio: %(user)s is an administrator and cannot be placed in a read-"
+"only profile."
+msgstr ""
+"Access Studio: %(user)s is beheerder en kan niet in een alleen-lezenprofiel "
+"worden geplaatst."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Access Studio: 'Active From' must not be later than 'Active Until'."
+msgstr "Access Studio: 'Actief vanaf' mag niet later zijn dan 'Actief tot'."
+
+#. module: eh_access_studio
+#: model:res.groups,name:eh_access_studio.group_eh_access_manager
+msgid "Access Studio: Manager"
+msgstr ""
+
+#. module: eh_access_studio
+#: model:res.groups,name:eh_access_studio.group_eh_access_user
+msgid "Access Studio: User"
+msgstr "Access Studio: gebruiker"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_field.py:0
+msgid "Access Studio: a field cannot be both hidden and required. Pick one."
+msgstr ""
+"Access Studio: een veld kan niet tegelijk verborgen en verplicht zijn. Kies "
+"er één."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_field.py:0
+msgid ""
+"Access Studio: a field rule must mark its fields hidden, read-only, required"
+" or hide the external link."
+msgstr ""
+"Access Studio: een veldregel moet zijn velden verborgen, alleen-lezen of "
+"verplicht maken, of de externe koppeling verbergen."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_node.py:0
+msgid "Access Studio: a node rule must have a technical name."
+msgstr "Access Studio: een knooppuntregel moet een technische naam hebben."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Access Studio: a profile named %(name)s already exists. Pick a different "
+"name so import / export can match by name unambiguously."
+msgstr ""
+"Access Studio: een profiel met de naam %(name)s bestaat al. Kies een andere "
+"naam zodat import / export ondubbelzinnig op naam kan matchen."
+
+#. module: eh_access_studio
+#: model:ir.actions.server,name:eh_access_studio.action_eh_access_conflict_report
+msgid "Access Studio: conflict report"
+msgstr "Access Studio: conflictrapport"
+
+#. module: eh_access_studio
+#: model:ir.actions.server,name:eh_access_studio.cron_deactivate_expired_profiles_ir_actions_server
+msgid "Access Studio: deactivate expired profiles"
+msgstr "Access Studio: verlopen profielen deactiveren"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_domain.py:0
+msgid ""
+"Access Studio: filter cannot be parsed (%(error)s). Use a Python list of "
+"domain leaves."
+msgstr ""
+"Access Studio: filter kan niet worden geparseerd (%(error)s). Gebruik een "
+"Python-lijst met domeinbladeren."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_domain.py:0
+msgid "Access Studio: filter must be a Python list."
+msgstr "Access Studio: filter moet een Python-lijst zijn."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+#: model:ir.actions.server,name:eh_access_studio.action_eh_access_health_check
+msgid "Access Studio: health check"
+msgstr "Access Studio: statuscontrole"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Access Studio: health check passed"
+msgstr "Access Studio: statuscontrole geslaagd"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_chatter.py:0
+msgid ""
+"Access Studio: model %(model)s already has a chatter rule on this profile."
+msgstr ""
+"Access Studio: model %(model)s heeft al een chatter-regel op dit profiel."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Access Studio: profile auto-deactivated because its Active Until date "
+"(%(date)s) has passed."
+msgstr ""
+"Access Studio: profiel automatisch gedeactiveerd omdat de datum Actief tot "
+"(%(date)s) is verstreken."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_model.py:0
+msgid "Access Studio: unknown view type(s) %(types)s. Allowed: %(allowed)s."
+msgstr ""
+"Access Studio: onbekend(e) weergavetype(n) %(types)s. Toegestaan: "
+"%(allowed)s."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__rights_preset
+msgid "Access level"
+msgstr "Toegangsniveau"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_needaction
+msgid "Action Needed"
+msgstr "Actie gevraagd"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Activate"
+msgstr "Activeer"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__active
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Active"
+msgstr "Actief"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__date_from
+msgid "Active From"
+msgstr "Actief vanaf"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__date_until
+msgid "Active Until"
+msgstr "Actief tot"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_ids
+msgid "Activities"
+msgstr "Activiteiten"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Activities button hidden"
+msgstr "Knop Activiteiten verborgen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activiteit uitzondering decoratie"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_state
+msgid "Activity State"
+msgstr "Activiteitsfase"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Activiteitstype icoon"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Add Property hidden everywhere"
+msgstr "Eigenschap toevoegen overal verborgen"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Add at least one user to the profile first."
+msgstr "Voeg eerst minstens één gebruiker toe aan het profiel."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__apply_filter
+msgid "Apply Filter"
+msgstr "Filter toepassen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__apply_to_all_companies
+msgid "Apply to all companies"
+msgstr "Toepassen op alle bedrijven"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__user_ids
+msgid "Apply to users"
+msgstr "Toepassen op gebruikers"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_attachment_count
+msgid "Attachment Count"
+msgstr "Aantal bijlagen"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Auditor template"
+msgstr "Auditorsjabloon"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__auditor
+msgid "Auditor: read everything, no edit, no debug"
+msgstr "Auditor: alles lezen, niet bewerken, geen debug"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Authentication / Debug"
+msgstr "Authenticatie / Debug"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_base
+msgid "Base"
+msgstr "Basis"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__button
+msgid "Button (object / action)"
+msgstr "Knop (object / action)"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Cancel"
+msgstr "Annuleren"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Chatter"
+msgstr ""
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__chatter_line_ids
+msgid "Chatter Lines"
+msgstr "Chatter-regels"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "Close"
+msgstr "Sluiten"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_model__hidden_view_types
+msgid ""
+"Comma-separated list of view types to remove from action responses. "
+"Recognised values: list, kanban, form, calendar, pivot, graph, gantt, "
+"activity, cohort, grid, map, hierarchy, search."
+msgstr ""
+"Door komma's gescheiden lijst van weergavetypen die uit actie-antwoorden "
+"moeten worden verwijderd. Herkende waarden: list, kanban, form, calendar, "
+"pivot, graph, gantt, activity, cohort, grid, map, hierarchy, search."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__company_ids
+msgid "Companies"
+msgstr "Bedrijven"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_configuration
+msgid "Configuration"
+msgstr "Configuratie"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Conflict report"
+msgstr "Conflictrapport"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Could not decode the uploaded file (%(error)s). Expected UTF-8."
+msgstr "Kon het geüploade bestand niet decoderen (%(error)s). UTF-8 verwacht."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Could not decode the uploaded file (%(error)s). Expected base64."
+msgstr ""
+"Kon het geüploade bestand niet decoderen (%(error)s). base64 verwacht."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Could not parse YAML (%(error)s)."
+msgstr "Kon YAML niet parseren (%(error)s)."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__create_right
+msgid "Create"
+msgstr "Aanmaken"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Create profile"
+msgstr "Profiel aanmaken"
+
+#. module: eh_access_studio
+#: model_terms:ir.actions.act_window,help:eh_access_studio.action_eh_access_profile
+msgid "Create your first access profile"
+msgstr "Maak uw eerste toegangsprofiel"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a heavily restricted profile: hides the standard Settings menu, "
+"hides export everywhere, disables developer mode, and stamps a domain on "
+"sale.order limiting access to the user's own records."
+msgstr ""
+"Maakt een sterk beperkt profiel: verbergt het standaard instellingenmenu, "
+"verbergt exporteren overal, schakelt de ontwikkelaarsmodus uit en zet een "
+"domein op sale.order dat de toegang beperkt tot de eigen records van de "
+"gebruiker."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a profile with Read-Only Mode enabled. The user can browse the "
+"entire system but cannot create, edit or delete any record. Administrators "
+"are exempt."
+msgstr ""
+"Maakt een profiel met de alleen-lezen modus ingeschakeld. De gebruiker kan "
+"het hele systeem doorbladeren maar kan geen enkel record aanmaken, bewerken "
+"of verwijderen. Beheerders zijn uitgezonderd."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a profile with a domain rule on the chosen model that limits read / "
+"edit to records where user_id equals the current user. Hides the export "
+"button on every model."
+msgstr ""
+"Maakt een profiel met een domeinregel op het gekozen model die "
+"lezen/bewerken beperkt tot records waarbij user_id gelijk is aan de huidige "
+"gebruiker. Verbergt de exportknop op elk model."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a read-only profile with disable_debug_mode enabled and an Active "
+"Until date set to today plus the chosen number of days. After expiry the "
+"daily cron deactivates the profile."
+msgstr ""
+"Maakt een alleen-lezen profiel met disable_debug_mode ingeschakeld en een "
+"'Actief tot'-datum ingesteld op vandaag plus het gekozen aantal dagen. Na "
+"afloop deactiveert de dagelijkse cron het profiel."
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__custom
+msgid "Custom"
+msgstr "Aangepast"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Custom rights"
+msgstr "Aangepaste rechten"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Deactivate"
+msgstr "Deactiveren"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__delete_right
+msgid "Delete"
+msgstr "Verwijderen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__description
+msgid "Description"
+msgstr "Omschrijving"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Developer mode disabled (debug=0 enforced)"
+msgstr "Ontwikkelaarsmodus uitgeschakeld (debug=0 afgedwongen)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__disable_debug_mode
+msgid "Disable Developer Mode"
+msgstr "Ontwikkelaarsmodus uitschakelen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__disable_login
+msgid "Disable Login"
+msgstr "Aanmelden uitschakelen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_line_mixin__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model_fields__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_rule__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_menu__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_view__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_res_users__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Domain Access"
+msgstr "Domeintoegang"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__domain_line_ids
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__domain_rule_count
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Domain Rules"
+msgstr "Domeinregels"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Duplicate"
+msgstr "Dupliceren"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__duration_days
+msgid "Duration in days (auditor template)"
+msgstr "Duur in dagen (auditorsjabloon)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__write_right
+msgid "Edit"
+msgstr "Bewerken"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_yaml_wizard__mode__export
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "Export"
+msgstr "Exporteren"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Export button hidden everywhere"
+msgstr "Exportknop overal verborgen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_yaml_wizard__payload
+msgid ""
+"Export: filled in when the export action runs. Import: upload the file you "
+"want to import."
+msgstr ""
+"Export: ingevuld wanneer de exportactie wordt uitgevoerd. Import: upload het"
+" bestand dat u wilt importeren."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__field_line_ids
+msgid "Field Lines"
+msgstr "Veldregels"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_model_fields
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__field_ids
+msgid "Fields"
+msgstr "Velden"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__payload_name
+msgid "File name"
+msgstr "Bestandsnaam"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__domain
+msgid "Filter"
+msgstr ""
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_follower_ids
+msgid "Followers"
+msgstr "Volgers"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Volgers (Partners)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome icoon bijv. fa-tasks"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__hide_external_link
+msgid ""
+"For relational fields (many2one / many2many / one2many), strip the external "
+"open / create / edit affordances by injecting widget options no_open, "
+"no_create and no_edit. Has no effect on non-relational fields."
+msgstr ""
+"Voor relationele velden (many2one / many2many / one2many) verwijder je de "
+"externe open-/aanmaak-/bewerkopties door de widgetopties no_open, no_create "
+"en no_edit toe te voegen. Heeft geen effect op niet-relationele velden."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__duration_days
+msgid ""
+"For the 'auditor' template: number of days the profile remains active. After"
+" that the daily cron deactivates it."
+msgstr ""
+"Voor het sjabloon 'auditor': aantal dagen dat het profiel actief blijft. "
+"Daarna deactiveert de dagelijkse cron het."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__target_model
+msgid ""
+"For the 'own records only' template: the model whose records the user should"
+" be limited to. The template stamps a domain of [('user_id', '=', "
+"'__uid__')] on this model."
+msgstr ""
+"Voor het sjabloon 'own records only': het model waartoe de records van de "
+"gebruiker beperkt moeten worden. Het sjabloon plaatst een domein "
+"[('user_id', '=', '__uid__')] op dit model."
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__full
+msgid "Full access (Read + Create + Edit + Delete)"
+msgstr "Volledige toegang (Lezen + Aanmaken + Bewerken + Verwijderen)"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Full placeholder list:\n"
+"                                                    <code>__uid__</code>,\n"
+"                                                    <code>__cid__</code>,\n"
+"                                                    <code>__company_ids__</code>,\n"
+"                                                    <code>__today__</code>,\n"
+"                                                    <code>__yesterday__</code>,\n"
+"                                                    <code>__tomorrow__</code>,\n"
+"                                                    <code>__week_start__</code> to <code>__week_end__</code>,\n"
+"                                                    <code>__month_start__</code> to <code>__month_end__</code>,\n"
+"                                                    <code>__quarter_start__</code> to <code>__quarter_end__</code>,\n"
+"                                                    <code>__year_start__</code> to <code>__year_end__</code>,\n"
+"                                                    <code>__last_7_days__</code>,\n"
+"                                                    <code>__last_30_days__</code>,\n"
+"                                                    <code>__last_90_days__</code>,\n"
+"                                                    <code>__last_365_days__</code>."
+msgstr ""
+"Volledige lijst met plaatsaanduidingen:\n"
+"                                                    <code>__uid__</code>,\n"
+"                                                    <code>__cid__</code>,\n"
+"                                                    <code>__company_ids__</code>,\n"
+"                                                    <code>__today__</code>,\n"
+"                                                    <code>__yesterday__</code>,\n"
+"                                                    <code>__tomorrow__</code>,\n"
+"                                                    <code>__week_start__</code> tot <code>__week_end__</code>,\n"
+"                                                    <code>__month_start__</code> tot <code>__month_end__</code>,\n"
+"                                                    <code>__quarter_start__</code> tot <code>__quarter_end__</code>,\n"
+"                                                    <code>__year_start__</code> tot <code>__year_end__</code>,\n"
+"                                                    <code>__last_7_days__</code>,\n"
+"                                                    <code>__last_30_days__</code>,\n"
+"                                                    <code>__last_90_days__</code>,\n"
+"                                                    <code>__last_365_days__</code>."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Global"
+msgstr "Voor iedereen"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Global toggles apply to every model the\n"
+"                                    affected users open. Per-model overrides\n"
+"                                    on the Model Access tab take precedence."
+msgstr ""
+"Globale schakelaars gelden voor elk model dat de\n"
+"                                    getroffen gebruikers openen. Overschrijvingen per model\n"
+"                                    op het tabblad Model Access hebben voorrang."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__has_message
+msgid "Has Message"
+msgstr "Heeft bericht"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__invisible
+msgid "Hidden"
+msgstr "Verborgen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hidden_menu_count
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hidden_menu_ids
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hidden Menus"
+msgstr "Verborgen menu's"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__hidden_report_action_ids
+msgid "Hidden Reports"
+msgstr "Verborgen rapporten"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__hidden_server_action_ids
+msgid "Hidden Server Actions"
+msgstr "Verborgen serveracties"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__hidden_view_types
+msgid "Hidden View Types"
+msgstr "Verborgen weergavetypes"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_log_note
+msgid "Hide 'Log Note'"
+msgstr "'Log Note' verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_schedule_activity
+msgid "Hide 'Schedule Activity'"
+msgstr "'Schedule Activity' verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_send_message
+msgid "Hide 'Send Message'"
+msgstr "'Send Message' verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_add_property
+msgid "Hide Add Property"
+msgstr "Eigenschap toevoegen verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_add_property
+msgid "Hide Add Property (everywhere)"
+msgstr "Eigenschap toevoegen verbergen (overal)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_archive
+msgid "Hide Archive"
+msgstr "Archiveren verbergen"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hide Buttons / Tabs / Filters"
+msgstr "Knoppen / Tabbladen / Filters verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_chatter
+msgid "Hide Chatter (everywhere)"
+msgstr "Chatter verbergen (overal)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_create
+msgid "Hide Create"
+msgstr "Maken verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_delete
+msgid "Hide Delete"
+msgstr "Verwijderen verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_duplicate
+msgid "Hide Duplicate"
+msgstr "Dupliceren verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_edit
+msgid "Hide Edit"
+msgstr "Bewerken verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_export
+msgid "Hide Export"
+msgstr "Exporteren verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_export
+msgid "Hide Export (everywhere)"
+msgstr "Exporteren verbergen (overal)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__hide_external_link
+msgid "Hide External Link"
+msgstr "Externe link verbergen"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hide Fields"
+msgstr "Velden verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_import
+msgid "Hide Import"
+msgstr "Importeren verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_import
+msgid "Hide Import (everywhere)"
+msgstr "Importeren verbergen (overal)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_spreadsheet
+msgid "Hide Insert in Spreadsheet"
+msgstr "Invoegen in spreadsheet verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_spreadsheet
+msgid "Hide Insert in Spreadsheet (everywhere)"
+msgstr "Invoegen in spreadsheet verbergen (overal)"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hide Menus"
+msgstr "Menu's verbergen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_schedule_activity
+msgid "Hides the Activities button on every chatter."
+msgstr "Verbergt de knop Activiteiten op elke chatter."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_log_note
+msgid "Hides the Log Note button on every chatter."
+msgstr "Verbergt de knop Log Note op elke chatter."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_send_message
+msgid "Hides the Send Message button on every chatter."
+msgstr "Verbergt de knop Send Message op elke chatter."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_line_mixin__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model_fields__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_rule__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_menu__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_view__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_res_users__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_exception_icon
+msgid "Icon"
+msgstr "Icoon"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icoon om uitzondering op activiteit aan te geven."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Indien aangevinkt vragen nieuwe berichten je aandacht."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Indien aangevinkt hebben sommige berichten een leveringsfout."
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_yaml_wizard__mode__import
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "Import"
+msgstr "Importeren"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_yaml
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Import / Export"
+msgstr "Importeren / Exporteren"
+
+#. module: eh_access_studio
+#: model:ir.actions.act_window,name:eh_access_studio.action_eh_access_yaml_wizard
+msgid "Import / Export Profiles"
+msgstr "Import / Export-profielen"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Import button hidden everywhere"
+msgstr "Importknop overal verborgen"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Imported: %(created)s created, %(updated)s updated."
+msgstr "Geïmporteerd: %(created)s aangemaakt, %(updated)s bijgewerkt."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Inactive"
+msgstr "Inactief"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Insert in Spreadsheet hidden everywhere"
+msgstr "Invoegen in spreadsheet overal verborgen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_is_follower
+msgid "Is Follower"
+msgstr "Is een volger"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__link
+msgid "Kanban link"
+msgstr "Kanban-koppeling"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__kind
+msgid "Kind"
+msgstr "Soort"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__target_label
+msgid "Label"
+msgstr "Omschrijving"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Log Note button hidden"
+msgstr "Knop Notitie loggen verborgen"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/res_users.py:0
+msgid "Login denied for %(user)s."
+msgstr "Aanmelding geweigerd voor %(user)s."
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_ui_menu
+msgid "Menu"
+msgstr ""
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hidden_menu_ids
+msgid ""
+"Menus and submenus removed from the navigation for users in this profile."
+msgstr ""
+"Menu's en submenu's die uit de navigatie zijn verwijderd voor gebruikers in "
+"dit profiel."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Menus listed here are removed from the\n"
+"                                    navigation for users in this profile. The\n"
+"                                    Access Studio configuration menu is always\n"
+"                                    visible to administrators."
+msgstr ""
+"De hier vermelde menu's worden verwijderd uit de\n"
+"                                    navigatie voor gebruikers in dit profiel. Het\n"
+"                                    configuratiemenu van Access Studio is altijd\n"
+"                                    zichtbaar voor beheerders."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Menus removed from navigation."
+msgstr "Menu's verwijderd uit de navigatie."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_has_error
+msgid "Message Delivery error"
+msgstr "Bericht afleverfout"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_ids
+msgid "Messages"
+msgstr "Berichten"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__mode
+msgid "Mode"
+msgstr "Modus"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__model_name
+msgid "Model"
+msgstr "Type"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid "Model %(m)s does not exist in this database."
+msgstr "Model %(m)s bestaat niet in deze database."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Model Access"
+msgstr "Model toegang"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__model_line_ids
+msgid "Model Lines"
+msgstr "Modelregels"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Model-level toggles drop buttons from the\n"
+"                                    UI. They do not block the ORM. Combine with\n"
+"                                    Domain Access for strict gates."
+msgstr ""
+"Toggles op modelniveau verwijderen knoppen uit de\n"
+"                                    UI. Ze blokkeren de ORM niet. Combineer met\n"
+"                                    Domeintoegang voor strikte poorten."
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_model
+msgid "Models"
+msgstr "Modellen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Mijn activiteit deadline"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__name
+msgid "Name"
+msgstr "Naam"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_template
+msgid "New from Template"
+msgstr "Nieuw op basis van sjabloon"
+
+#. module: eh_access_studio
+#: model:ir.actions.act_window,name:eh_access_studio.action_eh_access_template_wizard
+msgid "New profile from template"
+msgstr "Nieuw profiel op basis van sjabloon"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Volgende activiteitenafspraak"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Volgende activiteit deadline"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_summary
+msgid "Next Activity Summary"
+msgstr "Volgende activiteit overzicht"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_type_id
+msgid "Next Activity Type"
+msgstr "Volgende activiteit type"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "No Link"
+msgstr "Geen koppeling"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__none
+msgid "No access"
+msgstr "Geen toegang"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "No domain-rule conflicts detected."
+msgstr "Geen conflicten met domeinregels gedetecteerd."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "No issues found across %(n)s active profile(s)."
+msgstr "Geen problemen gevonden in %(n)s actief profiel(en)."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__node_line_ids
+msgid "Node Lines"
+msgstr "Knooppuntregels"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__page
+msgid "Notebook page / tab"
+msgstr "Notitieboekpagina / tabblad"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aantal acties"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_has_error_counter
+msgid "Number of errors"
+msgstr "Aantal fouten"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Aantal berichten die actie vereisen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Aantal berichten met leveringsfout"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Open the diagnostic summary for this profile."
+msgstr "Open de diagnostische samenvatting voor dit profiel."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__date_until
+msgid ""
+"Optional end date. A scheduled action deactivates the profile when this date"
+" has passed."
+msgstr ""
+"Optionele einddatum. Een geplande actie deactiveert het profiel wanneer deze"
+" datum is verstreken."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_node__target_label
+msgid "Optional label shown only in this configuration screen."
+msgstr "Optioneel label dat alleen in dit configuratiescherm wordt getoond."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__date_from
+msgid "Optional start date. Profile is treated as inactive before this date."
+msgstr ""
+"Optionele startdatum. Het profiel wordt vóór deze datum als inactief "
+"beschouwd."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Own-records template"
+msgstr "Sjabloon voor eigen records"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Per-button (when chatter is shown)"
+msgstr "Per knop (wanneer de chatter wordt getoond)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_domain__rights_preset
+msgid ""
+"Pick a common combination. Switch to 'Custom' to set individual rights "
+"checkboxes."
+msgstr ""
+"Kies een veelvoorkomende combinatie. Schakel over naar 'Aangepast' om "
+"individuele rechten-selectievakjes in te stellen."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid "Pick a name for the new profile."
+msgstr "Kies een naam voor het nieuwe profiel."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Pick at least one profile to export."
+msgstr "Kies ten minste één profiel om te exporteren."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__profile_id
+msgid "Profile"
+msgstr "Profiel"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__company_ids
+msgid ""
+"Profile applies only when the user is currently logged into one of these "
+"companies. Leave empty when 'Apply to all companies' is enabled."
+msgstr ""
+"Het profiel is alleen van toepassing wanneer de gebruiker momenteel is "
+"ingelogd bij een van deze bedrijven. Laat leeg wanneer 'Toepassen op alle "
+"bedrijven' is ingeschakeld."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__name
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Profile name"
+msgstr "Profielnaam"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Profile summary: %(name)s"
+msgstr "Profielsamenvatting: %(name)s"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Profile-level Hide Chatter removes the\n"
+"                                    chatter widget from every model. The\n"
+"                                    per-button toggles hide individual chatter\n"
+"                                    buttons system-wide while leaving the\n"
+"                                    chatter visible. The per-model list below\n"
+"                                    targets specific models when the global\n"
+"                                    toggle is off."
+msgstr ""
+"Chatter verbergen op profielniveau verwijdert de\n"
+"                                    chatter-widget uit elk model. De\n"
+"                                    schakelaars per knop verbergen individuele chatter-\n"
+"                                    knoppen systeembreed terwijl de\n"
+"                                    chatter zichtbaar blijft. De lijst per model hieronder\n"
+"                                    richt zich op specifieke modellen wanneer de globale\n"
+"                                    schakelaar uit staat."
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_profiles
+msgid "Profiles"
+msgstr "Profielen"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_res_users_form_eh_access
+msgid ""
+"Profiles applied to this user. Edit them in the\n"
+"                            Access Studio app. Profile rights are OR-ed for\n"
+"                            domain access; restrictive UI hide flags are the\n"
+"                            union across all active profiles."
+msgstr ""
+"Profielen toegepast op deze gebruiker. Bewerk ze in de\n"
+"                            Access Studio-app. Profielrechten worden ge-OR'd voor\n"
+"                            domeintoegang; restrictieve UI-verbergvlaggen zijn de\n"
+"                            vereniging van alle actieve profielen."
+
+#. module: eh_access_studio
+#: model_terms:ir.actions.act_window,help:eh_access_studio.action_eh_access_profile
+msgid ""
+"Profiles bundle a list of users with a set of access\n"
+"                    overlays. Hide menus and fields from selected users\n"
+"                    without writing record rules or editing security\n"
+"                    groups."
+msgstr ""
+"Profielen bundelen een lijst van gebruikers met een set toegangs-\n"
+"                    overlays. Verberg menu's en velden voor geselecteerde gebruikers\n"
+"                    zonder recordregels te schrijven of beveiligings-\n"
+"                    groepen te bewerken."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__profile_ids
+msgid "Profiles to export"
+msgstr "Te exporteren profielen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_domain__domain
+msgid ""
+"Python list of domain leaves. Smart placeholders are supported. Example: "
+"[(\"company_id\", \"in\", \"__company_ids__\"), (\"create_date\", \">=\", "
+"\"__month_start__\")]."
+msgstr ""
+"Python-lijst van domain leaves. Slimme tijdelijke aanduidingen worden "
+"ondersteund. Voorbeeld: [(\"company_id\", \"in\", \"__company_ids__\"), "
+"(\"create_date\", \">=\", \"__month_start__\")]."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__read_right
+msgid "Read"
+msgstr "Lezen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_create
+msgid "Read + Create"
+msgstr "Lezen + Aanmaken"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_create_write
+msgid "Read + Create + Edit"
+msgstr "Lezen + Aanmaken + Bewerken"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_write
+msgid "Read + Edit"
+msgstr "Lezen + Bewerken"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_only
+msgid "Read only"
+msgstr "Alleen-lezen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__readonly
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Read-Only"
+msgstr "Alleen-lezen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__readonly
+msgid "Read-Only Mode"
+msgstr "Alleen-lezen modus"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__read_only
+msgid "Read-only across the system"
+msgstr "Alleen-lezen in het hele systeem"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_rule
+msgid "Record Rule"
+msgstr "Recordregel"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_spreadsheet
+msgid "Removes 'Insert in Spreadsheet' from list, pivot and graph cog menus."
+msgstr ""
+"Verwijdert 'Insert in Spreadsheet' uit de tandwielmenu's van lijst-, "
+"draaitabel- en grafiekweergaven."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_add_property
+msgid "Removes the 'Add Property' action from form views."
+msgstr "Verwijdert de actie 'Add Property' uit formulierweergaven."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_export
+msgid "Removes the Export button on every list and kanban view."
+msgstr "Verwijdert de knop Exporteren op elke lijst- en kanbanweergave."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_import
+msgid "Removes the Import button on every list and kanban view."
+msgstr "Verwijdert de knop Importeren op elke lijst- en kanbanweergave."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_chatter
+msgid "Removes the chatter widget from every form view."
+msgstr "Verwijdert de chatterwidget uit elke formulierweergave."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__required
+msgid "Required"
+msgstr "Verplicht"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_user_id
+msgid "Responsible User"
+msgstr "Verantwoordelijke gebruiker"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__summary
+msgid "Result"
+msgstr "Resultaat"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__rule_count
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Rules"
+msgstr "Regels"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__own_records_only
+msgid "Sales rep: own records only"
+msgstr "Verkoper: alleen eigen records"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__filter
+msgid "Search filter"
+msgstr "Zoekfilter"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__group
+msgid "Search group-by"
+msgstr "Zoeken in groeperen op"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Send Message button hidden"
+msgstr "Knop Bericht verzenden verborgen"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__sequence
+msgid "Sequence"
+msgstr "Reeks"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Serialised %(count)s profile(s)."
+msgstr "%(count)s profiel(en) geserialiseerd."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__name
+msgid "Short human-readable label shown in administration screens."
+msgstr "Kort, leesbaar label dat in beheerschermen wordt getoond."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Sign in as one of %(users)s in a private browser window. The active-profile "
+"cache, the ir.rule extension and the view post-processors all run on every "
+"page load, so the first navigation exercises the full enforcement path."
+msgstr ""
+"Meld u aan als een van %(users)s in een privé-browservenster. De cache voor "
+"het actieve profiel, de ir.rule-uitbreiding en de weergavepostprocessors "
+"worden bij elke pagina-lading uitgevoerd, dus de eerste navigatie doorloopt "
+"het volledige handhavingspad."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Sign-in disabled for the targeted users"
+msgstr "Aanmelden uitgeschakeld voor de betreffende gebruikers"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/res_users.py:0
+msgid "Sign-in is disabled for this account by an Access Studio profile."
+msgstr ""
+"Aanmelden is voor dit account uitgeschakeld door een Access Studio-profiel."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Status"
+msgstr ""
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status gebaseerd op activiteiten\n"
+"Te laat: Datum is al gepasseerd\n"
+"Vandaag: Datum van activiteit is vandaag\n"
+"Gepland: Toekomstige activiteiten."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Strict ORM-level rules."
+msgstr "Strikte regels op ORM-niveau."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__disable_debug_mode
+msgid ""
+"Strips debug mode from the URL whenever a user in this profile loads the web"
+" client."
+msgstr ""
+"Verwijdert de debugmodus uit de URL wanneer een gebruiker in dit profiel de "
+"webclient laadt."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Summary"
+msgstr "Samenvatting"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__target_model
+msgid "Target model (own-records template)"
+msgstr "Doelmodel (sjabloon voor eigen records)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__target_name
+msgid "Technical Name"
+msgstr "Technische naam"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__template
+msgid "Template"
+msgstr "Sjabloon"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Test Plan"
+msgstr "Testplan"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Test plan not available"
+msgstr "Testplan niet beschikbaar"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Test plan: %(name)s"
+msgstr "Testplan: %(name)s"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_node__target_name
+msgid ""
+"The 'name' attribute of the target node in XML. For example: "
+"'action_view_orders' for a smart button."
+msgstr ""
+"Het 'name'-attribuut van het doelknooppunt in XML. Bijvoorbeeld: "
+"'action_view_orders' voor een slimme knop."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__name
+msgid "The new profile is created with this name."
+msgstr "Het nieuwe profiel wordt met deze naam aangemaakt."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__invisible
+msgid "The selected fields are removed from views."
+msgstr "De geselecteerde velden worden uit de weergaven verwijderd."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__readonly
+msgid ""
+"The selected fields are shown but cannot be edited. The framework's "
+"force_save flag is set so existing values survive saves on records the user "
+"can otherwise modify."
+msgstr ""
+"De geselecteerde velden worden getoond maar kunnen niet worden bewerkt. De "
+"force_save-vlag van het framework is ingesteld, zodat bestaande waarden "
+"behouden blijven bij het opslaan van records die de gebruiker anders wel kan"
+" wijzigen."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__required
+msgid ""
+"The selected fields become mandatory. Use sparingly: a required overlay on a"
+" field that the user cannot fill in (because it lives on a hidden tab) "
+"blocks all saves."
+msgstr ""
+"De geselecteerde velden worden verplicht. Gebruik dit spaarzaam: een "
+"vereiste-overlay op een veld dat de gebruiker niet kan invullen (omdat het "
+"op een verborgen tabblad staat) blokkeert alle opslagacties."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type van de geregistreerde uitzonderingsactiviteit."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"UI hide is UI hide. Fields hidden here are\n"
+"                                    not rendered in views. They remain readable\n"
+"                                    over the API and from server code. Use\n"
+"                                    Domain Access (later phase) when you need a\n"
+"                                    strict gate at the ORM level."
+msgstr ""
+"UI-verbergen is UI-verbergen. Velden die hier verborgen zijn, worden\n"
+"                                    niet weergegeven in weergaven. Ze blijven leesbaar\n"
+"                                    via de API en vanuit servercode. Gebruik\n"
+"                                    Domain Access (latere fase) wanneer u\n"
+"                                    een strikte grens op ORM-niveau nodig hebt."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid "Unknown template: %(t)s."
+msgstr "Onbekende sjabloon: %(t)s."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Upload a YAML file first."
+msgstr "Upload eerst een YAML-bestand."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Use the technical name (the 'name' XML\n"
+"                                    attribute) of the target node. Smart\n"
+"                                    buttons usually start with 'action_'.\n"
+"                                    Notebook tabs use the 'name' attribute on\n"
+"                                    the &lt;page/&gt; element. Filters and\n"
+"                                    group-by entries use the 'name' attribute\n"
+"                                    on the &lt;filter/&gt; element."
+msgstr ""
+"Gebruik de technische naam (het XML-attribuut 'name') van het doelknooppunt."
+" Slimme knoppen beginnen meestal met 'action_'. Notebooktabbladen gebruiken "
+"het attribuut 'name' op het element &lt;page/&gt;. Filters en groeperingen "
+"gebruiken het attribuut 'name' op het element &lt;filter/&gt;."
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_res_users
+msgid "User"
+msgstr "Gebruiker"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_root
+msgid "User Access Studio"
+msgstr ""
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_chatter
+msgid "User Access Studio Chatter Rule"
+msgstr "User Access Studio Chatter-regel"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_domain
+msgid "User Access Studio Domain Rule"
+msgstr "User Access Studio domeinregel"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_field
+msgid "User Access Studio Field Rule"
+msgstr "User Access Studio veldregel"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_yaml_wizard
+msgid "User Access Studio Import / Export"
+msgstr "User Access Studio importeren / exporteren"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_model
+msgid "User Access Studio Model Rule"
+msgstr "User Access Studio modelregel"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_node
+msgid "User Access Studio Node Rule"
+msgstr "User Access Studio noderegel"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_profile
+msgid "User Access Studio Profile"
+msgstr "User Access Studio profiel"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_template_wizard
+msgid "User Access Studio Template Wizard"
+msgstr "User Access Studio sjabloonwizard"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_line_mixin
+msgid "User Access Studio rule-line cache hook"
+msgstr "User Access Studio-cachehook voor regelregels"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "User Access Studio: Import / Export"
+msgstr "User Access Studio: importeren / exporteren"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "User Access Studio: New profile from template"
+msgstr "User Access Studio: nieuw profiel op basis van sjabloon"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__user_count
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__user_ids
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Users"
+msgstr "Gebruikers"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__user_ids
+msgid "Users assigned to the new profile."
+msgstr "Gebruikers die aan het nieuwe profiel zijn toegewezen."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__disable_login
+msgid ""
+"Users in this profile are denied at the authentication gate. Use only when "
+"the profile is targeted at one user; applying it to a group disables the "
+"whole group."
+msgstr ""
+"Gebruikers in dit profiel worden bij de authenticatiepoort geweigerd. "
+"Gebruik dit alleen wanneer het profiel op één gebruiker is gericht; "
+"toepassing op een groep schakelt de hele groep uit."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__user_ids
+msgid "Users to whom this profile applies."
+msgstr "Gebruikers op wie dit profiel van toepassing is."
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__vendor_portal
+msgid "Vendor / contractor: portal-style restricted view"
+msgstr "Leverancier / aannemer: portalachtige beperkte weergave"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_ui_view
+msgid "View"
+msgstr "Bekijk"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "View the test plan for the targeted users."
+msgstr "Bekijk het testplan voor de beoogde gebruikers."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__apply_to_all_companies
+msgid ""
+"When enabled, the profile applies regardless of the user's current company. "
+"The Companies field is ignored."
+msgstr ""
+"Indien ingeschakeld is het profiel van toepassing ongeacht het huidige "
+"bedrijf van de gebruiker. Het veld Bedrijven wordt genegeerd."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_domain__apply_filter
+msgid ""
+"When enabled, the rule limits the set of records to which the chosen rights "
+"apply. Without a filter, the rights apply to all records of the model."
+msgstr ""
+"Indien ingeschakeld beperkt de regel de set records waarop de gekozen "
+"rechten van toepassing zijn. Zonder filter zijn de rechten van toepassing op"
+" alle records van het model."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__readonly
+msgid ""
+"When enabled, users in this profile cannot create, edit or delete records "
+"anywhere in the system. The Access Studio configuration is excluded so "
+"administrators are never locked out."
+msgstr ""
+"Indien ingeschakeld kunnen gebruikers in dit profiel nergens in het systeem "
+"records aanmaken, bewerken of verwijderen. De Access Studio-configuratie is "
+"uitgesloten, zodat beheerders nooit buitengesloten raken."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Whole-system"
+msgstr "Hele systeem"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__payload
+msgid "YAML"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid ""
+"YAML payload too large (max %(mb)s MB). Split the export into smaller files."
+msgstr ""
+"YAML-payload te groot (max. %(mb)s MB). Splits de export op in kleinere "
+"bestanden."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "YAML payload too large after decode (max %(mb)s MB)."
+msgstr "YAML-payload te groot na decoderen (max. %(mb)s MB)."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "YAML root must be a mapping with a 'profiles' key."
+msgstr "De YAML-root moet een mapping zijn met een 'profiles'-sleutel."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "[(\"user_id\", \"=\", \"__uid__\")]"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "all companies"
+msgstr "alle bedrijven"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "disable_debug_mode"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "disable_login"
+msgstr ""
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "e.g. Sales reps - own records"
+msgstr "bijv. Verkoopmedewerkers - eigen records"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_add_property"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_export"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_import"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_log_note"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_schedule_activity"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_spreadsheet"
+msgstr ""
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "list,kanban,..."
+msgstr ""

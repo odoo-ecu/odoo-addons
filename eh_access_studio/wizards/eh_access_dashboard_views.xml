@@ -1,0 +1,21 @@
+<odoo>
+  <record id="view_eh_access_dashboard" model="ir.ui.view">
+    <field name="name">eh.access.dashboard.form</field><field name="model">eh.access.dashboard</field>
+    <field name="arch" type="xml"><form string="Access Studio Overview" create="0" edit="0">
+      <sheet>
+        <h1>Access Studio</h1><p>Review requests, inspect access and prepare safe changes.</p>
+        <div class="oe_button_box" name="button_box">
+          <button type="object" name="action_pending" class="oe_stat_button" icon="fa-check-square-o"><field name="pending_count" widget="statinfo"/></button>
+          <button type="object" name="action_expiring" class="oe_stat_button" icon="fa-clock-o"><field name="expiring_count" widget="statinfo"/></button>
+          <button type="object" name="action_overdue" class="oe_stat_button" icon="fa-exclamation-triangle"><field name="overdue_count" widget="statinfo"/></button>
+          <button type="object" name="action_drafts" class="oe_stat_button" icon="fa-pencil"><field name="draft_count" widget="statinfo"/></button>
+          <button type="object" name="action_roles" class="oe_stat_button" icon="fa-users"><field name="role_count" widget="statinfo"/></button>
+        </div>
+        <div class="alert alert-info">Role expiry is reconciled every minute while the scheduler runs. An overdue count requires administrator attention. Restriction profile expiry removes restrictions; it does not revoke underlying Odoo permissions.</div>
+        <separator string="Recent governance events"/>
+        <field name="audit_ids" readonly="1" nolabel="1"><list create="0" edit="0" delete="0"><field name="occurred_at"/><field name="event"/><field name="actor_id"/><field name="user_id"/><field name="resource_name"/></list></field>
+      </sheet>
+    </form></field>
+  </record>
+  <record id="action_eh_access_dashboard" model="ir.actions.act_window"><field name="name">Overview</field><field name="res_model">eh.access.dashboard</field><field name="view_mode">form</field></record>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2026 ERP Heritage (https://www.erpheritage.com.au)
+    License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
+
+    Not noupdate on purpose: runs on every install and upgrade so an
+    existing database picks up the hourly time-window job. See
+    eh.access.profile._eh_ensure_cron_schedule for why it is safe.
+-->
+<odoo>
+    <function model="eh.access.profile" name="_eh_ensure_cron_schedule"/>
+</odoo>

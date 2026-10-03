@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_eh_access_role_list" model="ir.ui.view">
+        <field name="name">eh.access.role.list</field>
+        <field name="model">eh.access.role</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="not active">
+                <field name="name"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="group_ids" widget="many2many_tags" optional="show"/>
+                <field name="profile_ids" widget="many2many_tags" optional="show"/>
+                <field name="requestable"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_eh_access_role_form" model="ir.ui.view">
+        <field name="name">eh.access.role.form</field>
+        <field name="model">eh.access.role</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_open_assignments" type="object" string="Manage Assignments" class="btn-primary" groups="eh_access_studio.group_eh_access_manager"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-warning" invisible="active"/>
+                    <div class="oe_title"><h1><field name="name" placeholder="e.g. Accounts payable reviewer"/></h1></div>
+                    <div class="alert alert-info" role="alert">Native Odoo groups grant access across the database. This company's scope controls role administration and eligible users; it does not limit native groups to this company's records.</div>
+                    <group>
+                        <group>
+                            <field name="company_id"/>
+                            <field name="requestable"/>
+                            <field name="active"/>
+                        </group>
+                        <group><field name="description" placeholder="Who needs this role, and why?"/></group>
+                    </group>
+                    <notebook>
+                        <page string="Permissions">
+                            <group>
+                                <field name="group_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                                <field name="profile_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                                <field name="included_role_ids" widget="many2many_tags" domain="[('company_id', '=', company_id), ('id', '!=', id)]" options="{'no_create': True}"/>
+                            </group>
+                            <p class="text-muted">Restriction profiles must be scoped to this company only. Included roles must belong to this company. Changes update existing assignments.</p>
+                        </page>
+                        <page string="Assignment History" groups="eh_access_studio.group_eh_access_manager">
+                            <field name="assignment_ids" readonly="1">
+                                <list create="0" delete="0">
+                                    <field name="user_id"/>
+                                    <field name="starts_at"/>
+                                    <field name="ends_at"/>
+                                    <field name="applied_state" widget="badge"/>
+                                    <field name="request_id"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_eh_access_role" model="ir.actions.act_window">
+        <field name="name">Security Roles</field>
+        <field name="res_model">eh.access.role</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html"><p class="o_view_nocontent_smiling_face">Create reusable roles with native groups and restriction profiles.</p></field>
+    </record>
+    <record id="view_eh_access_assignment_list" model="ir.ui.view">
+        <field name="name">eh.access.assignment.list</field>
+        <field name="model">eh.access.assignment</field>
+        <field name="arch" type="xml">
+            <list delete="0" decoration-muted="applied_state in ('expired', 'revoked')" decoration-warning="applied_state == 'suspended'">
+                <field name="user_id"/>
+                <field name="role_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="starts_at"/>
+                <field name="ends_at"/>
+                <field name="applied_state" widget="badge"/>
+                <field name="granted_by_id" optional="hide"/>
+                <field name="request_id" optional="show"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_eh_access_assignment_form" model="ir.ui.view">
+        <field name="name">eh.access.assignment.form</field>
+        <field name="model">eh.access.assignment</field>
+        <field name="arch" type="xml">
+            <form delete="0">
+                <header>
+                    <button name="action_revoke" type="object" string="Revoke Assignment" invisible="revoked or not id" groups="eh_access_studio.group_eh_access_manager"/>
+                    <field name="applied_state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="alert alert-info" role="alert">Scheduled changes run every minute while the scheduler is healthy. Revocation can be delayed during scheduler outages. Manual permissions and other active assignments stay in place.</div>
+                    <group>
+                        <group>
+                            <field name="role_id" readonly="id" options="{'no_create': True}"/>
+                            <field name="user_id" readonly="id" options="{'no_create': True}"/>
+                            <field name="company_id"/>
+                            <field name="reason" readonly="revoked or applied_state == 'expired'"/>
+                        </group>
+                        <group>
+                            <field name="starts_at" readonly="revoked or applied_state == 'expired'"/>
+                            <field name="ends_at" readonly="revoked or applied_state == 'expired'"/>
+                            <field name="granted_by_id"/>
+                            <field name="request_id"/>
+                            <field name="revoked" invisible="1"/>
+                            <field name="revoked_at" invisible="not revoked"/>
+                            <field name="revoked_by_id" invisible="not revoked"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_eh_access_assignment" model="ir.actions.act_window">
+        <field name="name">Role Assignments</field>
+        <field name="res_model">eh.access.assignment</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

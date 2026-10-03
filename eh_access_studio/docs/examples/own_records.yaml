@@ -1,0 +1,69 @@
+# User Access Studio: own-records-only template.
+# Copyright 2026 ERP Heritage (https://www.erpheritage.com.au).
+# License LGPL-3.0 or later.
+#
+# Scenario: a sales rep who should only see and edit the records they
+# are responsible for. The domain rule on sale.order narrows the
+# accessible set to where user_id equals the current user. Export is
+# hidden everywhere so reps cannot pull the full pipeline to a CSV.
+#
+# Adjust the model in the domain_lines block if your business uses a
+# different responsibility field, or duplicate the entry for crm.lead,
+# helpdesk.ticket, project.task etc.
+
+profiles:
+  - name: Sales rep (own records)
+    sequence: 20
+    active: true
+    readonly: false
+    apply_to_all_companies: true
+    date_from: null
+    date_until: null
+
+    hide_chatter: false
+    hide_send_message: false
+    hide_log_note: false
+    hide_schedule_activity: false
+
+    hide_import: false
+    hide_export: true
+    hide_spreadsheet: true
+    hide_add_property: true
+
+    disable_login: false
+    disable_debug_mode: true
+
+    users:
+      - sales.alice@example.test
+      - sales.bob@example.test
+    companies: []
+    hidden_menus: []
+
+    field_lines: []
+
+    model_lines:
+      - model: sale.order
+        restrict_create: false
+        restrict_edit: false
+        restrict_delete: true
+        restrict_archive: true
+        restrict_duplicate: false
+        restrict_import: true
+        restrict_export: true
+        restrict_spreadsheet: true
+        restrict_add_property: true
+        hidden_view_types: pivot,graph
+        hidden_reports: []
+        hidden_server_actions: []
+
+    node_lines: []
+    chatter_lines: []
+
+    domain_lines:
+      - model: sale.order
+        read_right: true
+        create_right: true
+        write_right: true
+        delete_right: false
+        apply_filter: true
+        domain: '[("user_id", "=", "__uid__")]'

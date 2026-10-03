@@ -1,0 +1,2021 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_access_studio
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:32+0000\n"
+"PO-Revision-Date: 2026-07-01 04:32+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Korean\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_access_studio
+#: model:res.groups,comment:eh_access_studio.group_eh_access_manager
+msgid ""
+"\n"
+"                Full access to Access Studio. Can create, edit and deactivate\n"
+"                profiles. Implies Access Studio User.\n"
+"            "
+msgstr ""
+"\n"
+"Access Studio에 대한 전체 액세스. 프로필을 생성, 편집 및 비활성화할 수 있습니다.\n"
+"                Access Studio User를 포함합니다."
+
+#. module: eh_access_studio
+#: model:res.groups,comment:eh_access_studio.group_eh_access_user
+msgid ""
+"\n"
+"                Read-only access to the Access Studio configuration. Users in\n"
+"                this group can view profiles and rule lines but cannot edit\n"
+"                them.\n"
+"            "
+msgstr ""
+"\n"
+"Access Studio 구성에 대한 읽기 전용 액세스. 이 그룹의\n"
+"                사용자는 프로필과 규칙 행을 볼 수 있지만 편집할 수 없습니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"\n"
+"... and %(extra)s more."
+msgstr ""
+"\n"
+"... 외 %(extra)s개 더."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(n)s active profile(s) have no rules (no-op): %(names)s"
+msgstr "%(n)s개의 활성 프로필에 규칙이 없습니다 (동작 없음): %(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(n)s active profile(s) have no users assigned: %(names)s"
+msgstr "%(n)s개의 활성 프로필에 배정된 사용자가 없습니다: %(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(n)s active profile(s) past their Active Until date (cron has not "
+"deactivated them yet): %(names)s"
+msgstr "%(n)s개의 활성 프로필이 '활성 종료' 날짜를 지났습니다 (cron이 아직 비활성화하지 않음): %(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(n)s company / companies"
+msgstr "%(n)s개 회사"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(n)s conflict(s) detected:\n"
+"\n"
+"%(list)s%(tail)s\n"
+"\n"
+"Resolution: deactivate one of the profiles, or align their domain filters so they describe the same record set."
+msgstr ""
+"%(n)s개의 충돌이 감지되었습니다:\n"
+"\n"
+"%(list)s%(tail)s\n"
+"\n"
+"해결 방법: 프로필 중 하나를 비활성화하거나, 도메인 필터를 정렬하여 동일한 레코드 집합을 설명하도록 하십시오."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(n)s domain rule(s) cannot be parsed and will fail closed at runtime. "
+"Profiles affected: %(names)s"
+msgstr "%(n)s개의 도메인 규칙을 구문 분석할 수 없어 런타임에 닫힘 상태로 실패합니다. 영향을 받는 프로필: %(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(name)s (copy)"
+msgstr "%(name)s (사본)"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(name)s applies to %(users)s user(s) under %(scope)s.\n"
+"\n"
+"%(body)s"
+msgstr ""
+"%(name)s은(는) %(scope)s 하의 %(users)s명의 사용자에게 적용됩니다.\n"
+"\n"
+"%(body)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(user)s on %(model)s: %(profiles)s"
+msgstr "%(model)s의 %(user)s: %(profiles)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "'profiles' must be a list."
+msgstr "'profiles'는 리스트여야 합니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s domain rule(s): strict ORM-level gates"
+msgstr "- %(n)s개의 도메인 규칙: 엄격한 ORM 수준 게이트"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s field rule(s) across %(models)s model(s)"
+msgstr "- %(models)s개 모델에 걸친 %(n)s개의 필드 규칙"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s menu(s) hidden: %(names)s%(tail)s"
+msgstr "- %(n)s개의 메뉴 숨김: %(names)s%(tail)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s model rule(s) across %(models)s model(s)"
+msgstr "- %(models)s개 모델에 걸친 %(n)s개의 모델 규칙"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s node rule(s) (button / tab / link / filter)"
+msgstr "- %(n)s개의 노드 규칙 (버튼 / 탭 / 링크 / 필터)"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s per-model chatter override(s)"
+msgstr "- 모델별 %(n)s개의 채터 재정의"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- Chatter hidden on every form view"
+msgstr "- 모든 폼 보기에서 채터 숨김"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- No rules configured. The profile is a no-op."
+msgstr "- 구성된 규칙이 없습니다. 이 프로필은 아무 작업도 하지 않습니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- Read-only mode: blocks create / edit / delete on every model"
+msgstr "- 읽기 전용 모드: 모든 모델에서 생성 / 편집 / 삭제 차단"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<code>[\"&amp;\", (\"user_id\", \"=\", \"__uid__\"), (\"state\", \"=\", "
+"\"draft\")]</code> compound (own and draft)"
+msgstr ""
+"<code>[\"&amp;\", (\"user_id\", \"=\", \"__uid__\"), (\"state\", \"=\", "
+"\"draft\")]</code> 복합(본인 및 초안)"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<code>[(\"company_id\", \"in\", \"__company_ids__\")]</code> records in the "
+"user's allowed companies"
+msgstr "<code>[(\"company_id\", \"in\", \"__company_ids__\")]</code> 사용자가 허용된 회사의 레코드"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<code>[(\"create_date\", \"&gt;=\", \"__month_start__\")]</code> created "
+"this month"
+msgstr "<code>[(\"create_date\", \"&gt;=\", \"__month_start__\")]</code> 이번 달 생성됨"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "<code>[(\"create_uid\", \"=\", \"__uid__\")]</code> own records by creator"
+msgstr "<code>[(\"create_uid\", \"=\", \"__uid__\")]</code> 작성자 기준 본인 레코드"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "<code>[(\"date\", \"&gt;=\", \"__last_30_days__\")]</code> last thirty days"
+msgstr "<code>[(\"date\", \"&gt;=\", \"__last_30_days__\")]</code> 지난 30일"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "<code>[(\"user_id\", \"=\", \"__uid__\")]</code> own records by responsible"
+msgstr "<code>[(\"user_id\", \"=\", \"__uid__\")]</code> 담당자 기준 본인 레코드"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<strong>Domain Access is the strict gate.</strong>\n"
+"                                    Rights and filters defined here are enforced\n"
+"                                    by the ORM, not just the UI. They block\n"
+"                                    server code, the API and any other\n"
+"                                    interaction path. Filters that fail to\n"
+"                                    parse, or that reference unknown\n"
+"                                    placeholders, fail closed (block all\n"
+"                                    access). Test in a non-production\n"
+"                                    environment first."
+msgstr ""
+"<strong>도메인 접근은 엄격한 관문입니다.</strong>\n"
+"                                    여기에 정의된 권한과 필터는 UI뿐만 아니라 ORM에 의해 적용됩니다. 서버 코드, API 및 기타 모든 상호작용 경로를 차단합니다. 구문 분석에 실패하거나 알 수 없는 자리 표시자를 참조하는 필터는 닫힌 상태로 실패합니다(모든 접근 차단). 먼저 비운영 환경에서 테스트하십시오."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<strong>Filter syntax.</strong>\n"
+"                                                Python list of domain leaves.\n"
+"                                                Smart placeholders are resolved\n"
+"                                                at evaluation time. Ready-made\n"
+"                                                examples (copy and adapt):"
+msgstr ""
+"<strong>필터 구문.</strong>\n"
+"                                                도메인 리프의 Python 리스트입니다. 스마트 자리 표시자는 평가 시점에 확인됩니다. 바로 쓸 수 있는 예시(복사하여 수정):"
+
+#. module: eh_access_studio
+#: model:ir.actions.act_window,name:eh_access_studio.action_eh_access_profile
+msgid "Access Profiles"
+msgstr "접근 프로필"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_res_users_form_eh_access
+msgid "Access Studio"
+msgstr ""
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_res_users__access_profile_ids
+msgid "Access Studio Profiles"
+msgstr "Access Studio 프로필"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/base_model.py:0
+msgid ""
+"Access Studio: %(action)s is disabled for this model by your access profile."
+msgstr "Access Studio: 접근 프로필에 의해 이 모델에서 %(action)s이(가) 비활성화되어 있습니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Access Studio: %(user)s is an administrator and cannot be placed in a read-"
+"only profile."
+msgstr "Access Studio: %(user)s은(는) 관리자이므로 읽기 전용 프로필에 배치할 수 없습니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Access Studio: 'Active From' must not be later than 'Active Until'."
+msgstr "Access Studio: '유효 시작'은 '유효 종료'보다 늦을 수 없습니다."
+
+#. module: eh_access_studio
+#: model:res.groups,name:eh_access_studio.group_eh_access_manager
+msgid "Access Studio: Manager"
+msgstr "Access Studio: 관리자"
+
+#. module: eh_access_studio
+#: model:res.groups,name:eh_access_studio.group_eh_access_user
+msgid "Access Studio: User"
+msgstr "Access Studio: 사용자"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_field.py:0
+msgid "Access Studio: a field cannot be both hidden and required. Pick one."
+msgstr "Access Studio: 필드를 숨김과 필수로 동시에 설정할 수 없습니다. 하나를 선택하세요."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_field.py:0
+msgid ""
+"Access Studio: a field rule must mark its fields hidden, read-only, required"
+" or hide the external link."
+msgstr "Access Studio: 필드 규칙은 해당 필드를 숨김, 읽기 전용, 필수로 표시하거나 외부 링크를 숨겨야 합니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_node.py:0
+msgid "Access Studio: a node rule must have a technical name."
+msgstr "Access Studio: 노드 규칙에는 기술 이름이 있어야 합니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Access Studio: a profile named %(name)s already exists. Pick a different "
+"name so import / export can match by name unambiguously."
+msgstr ""
+"Access Studio: %(name)s(이)라는 이름의 프로필이 이미 존재합니다. 가져오기/내보내기가 이름으로 명확하게 일치시킬 수 "
+"있도록 다른 이름을 선택하세요."
+
+#. module: eh_access_studio
+#: model:ir.actions.server,name:eh_access_studio.action_eh_access_conflict_report
+msgid "Access Studio: conflict report"
+msgstr "Access Studio: 충돌 보고서"
+
+#. module: eh_access_studio
+#: model:ir.actions.server,name:eh_access_studio.cron_deactivate_expired_profiles_ir_actions_server
+msgid "Access Studio: deactivate expired profiles"
+msgstr "Access Studio: 만료된 프로필 비활성화"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_domain.py:0
+msgid ""
+"Access Studio: filter cannot be parsed (%(error)s). Use a Python list of "
+"domain leaves."
+msgstr ""
+"Access Studio: 필터를 구문 분석할 수 없습니다 (%(error)s). 도메인 리프의 Python 목록을 사용하세요."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_domain.py:0
+msgid "Access Studio: filter must be a Python list."
+msgstr "Access Studio: 필터는 Python 목록이어야 합니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+#: model:ir.actions.server,name:eh_access_studio.action_eh_access_health_check
+msgid "Access Studio: health check"
+msgstr "Access Studio: 상태 점검"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Access Studio: health check passed"
+msgstr "Access Studio: 상태 점검 통과"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_chatter.py:0
+msgid ""
+"Access Studio: model %(model)s already has a chatter rule on this profile."
+msgstr "Access Studio: 모델 %(model)s에는 이 프로필에 이미 chatter 규칙이 있습니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Access Studio: profile auto-deactivated because its Active Until date "
+"(%(date)s) has passed."
+msgstr "Access Studio: 활성 종료일(%(date)s)이 지났기 때문에 프로필이 자동으로 비활성화되었습니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_model.py:0
+msgid "Access Studio: unknown view type(s) %(types)s. Allowed: %(allowed)s."
+msgstr "Access Studio: 알 수 없는 뷰 유형 %(types)s. 허용됨: %(allowed)s."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__rights_preset
+msgid "Access level"
+msgstr "접근 수준"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_needaction
+msgid "Action Needed"
+msgstr "조치 필요"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Activate"
+msgstr "활성화"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__active
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Active"
+msgstr "활성화"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__date_from
+msgid "Active From"
+msgstr "활성 시작일"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__date_until
+msgid "Active Until"
+msgstr "활성 종료일"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_ids
+msgid "Activities"
+msgstr "활동"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Activities button hidden"
+msgstr "활동 버튼 숨김"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "활동 예외 장식"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_state
+msgid "Activity State"
+msgstr "활동 상태"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "활동 유형 아이콘"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Add Property hidden everywhere"
+msgstr "속성 추가를 모든 곳에서 숨김"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Add at least one user to the profile first."
+msgstr "먼저 프로필에 사용자를 한 명 이상 추가하세요."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__apply_filter
+msgid "Apply Filter"
+msgstr "필터 적용"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__apply_to_all_companies
+msgid "Apply to all companies"
+msgstr "모든 회사에 적용"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__user_ids
+msgid "Apply to users"
+msgstr "사용자에게 적용"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_attachment_count
+msgid "Attachment Count"
+msgstr "첨부 파일 수"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Auditor template"
+msgstr "감사자 템플릿"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__auditor
+msgid "Auditor: read everything, no edit, no debug"
+msgstr "감사자: 모두 읽기, 편집 불가, 디버그 불가"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Authentication / Debug"
+msgstr "인증 / 디버그"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_base
+msgid "Base"
+msgstr "기준액"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__button
+msgid "Button (object / action)"
+msgstr "버튼 (object / action)"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Cancel"
+msgstr "취소"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Chatter"
+msgstr "메시지창"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__chatter_line_ids
+msgid "Chatter Lines"
+msgstr "채터 라인"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "Close"
+msgstr "닫기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_model__hidden_view_types
+msgid ""
+"Comma-separated list of view types to remove from action responses. "
+"Recognised values: list, kanban, form, calendar, pivot, graph, gantt, "
+"activity, cohort, grid, map, hierarchy, search."
+msgstr ""
+"작업 응답에서 제거할 뷰 유형의 쉼표로 구분된 목록입니다. 인식되는 값: list, kanban, form, calendar, "
+"pivot, graph, gantt, activity, cohort, grid, map, hierarchy, search."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__company_ids
+msgid "Companies"
+msgstr "회사"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_configuration
+msgid "Configuration"
+msgstr "설정"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Conflict report"
+msgstr "충돌 보고서"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Could not decode the uploaded file (%(error)s). Expected UTF-8."
+msgstr "업로드된 파일을 디코딩할 수 없습니다 (%(error)s). UTF-8이 필요합니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Could not decode the uploaded file (%(error)s). Expected base64."
+msgstr "업로드된 파일을 디코딩할 수 없습니다 (%(error)s). base64가 필요합니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Could not parse YAML (%(error)s)."
+msgstr "YAML을 구문 분석할 수 없습니다 (%(error)s)."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__create_right
+msgid "Create"
+msgstr "작성"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Create profile"
+msgstr "프로필 생성"
+
+#. module: eh_access_studio
+#: model_terms:ir.actions.act_window,help:eh_access_studio.action_eh_access_profile
+msgid "Create your first access profile"
+msgstr "첫 번째 액세스 프로필을 생성하십시오"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__create_uid
+msgid "Created by"
+msgstr "작성자"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__create_date
+msgid "Created on"
+msgstr "작성일자"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a heavily restricted profile: hides the standard Settings menu, "
+"hides export everywhere, disables developer mode, and stamps a domain on "
+"sale.order limiting access to the user's own records."
+msgstr ""
+"매우 제한된 프로필을 생성합니다. 표준 설정 메뉴를 숨기고, 모든 곳에서 내보내기를 숨기며, 개발자 모드를 비활성화하고, "
+"sale.order에 도메인을 적용하여 사용자 자신의 레코드로만 액세스를 제한합니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a profile with Read-Only Mode enabled. The user can browse the "
+"entire system but cannot create, edit or delete any record. Administrators "
+"are exempt."
+msgstr ""
+"읽기 전용 모드가 활성화된 프로필을 생성합니다. 사용자는 전체 시스템을 탐색할 수 있지만 어떤 레코드도 생성, 편집 또는 삭제할 수 "
+"없습니다. 관리자는 예외입니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a profile with a domain rule on the chosen model that limits read / "
+"edit to records where user_id equals the current user. Hides the export "
+"button on every model."
+msgstr ""
+"선택한 모델에 도메인 규칙이 있는 프로필을 생성하여 user_id가 현재 사용자와 같은 레코드로만 읽기/편집을 제한합니다. 모든 모델에서"
+" 내보내기 버튼을 숨깁니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a read-only profile with disable_debug_mode enabled and an Active "
+"Until date set to today plus the chosen number of days. After expiry the "
+"daily cron deactivates the profile."
+msgstr ""
+"disable_debug_mode가 활성화된 읽기 전용 프로필을 생성하고 '유효 기한' 날짜를 오늘에 선택한 일수를 더한 날짜로 "
+"설정합니다. 만료 후 일일 cron이 프로필을 비활성화합니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__custom
+msgid "Custom"
+msgstr "사용자 정의"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Custom rights"
+msgstr "사용자 지정 권한"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Deactivate"
+msgstr "비활성화"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__delete_right
+msgid "Delete"
+msgstr "삭제"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__description
+msgid "Description"
+msgstr "설명"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Developer mode disabled (debug=0 enforced)"
+msgstr "개발자 모드 비활성화됨(debug=0 적용됨)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__disable_debug_mode
+msgid "Disable Developer Mode"
+msgstr "개발자 모드 비활성화"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__disable_login
+msgid "Disable Login"
+msgstr "로그인 비활성화"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_line_mixin__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model_fields__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_rule__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_menu__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_view__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_res_users__display_name
+msgid "Display Name"
+msgstr "표시명"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Domain Access"
+msgstr "도메인 접근"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__domain_line_ids
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__domain_rule_count
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Domain Rules"
+msgstr "도메인 규칙"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Duplicate"
+msgstr "복사"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__duration_days
+msgid "Duration in days (auditor template)"
+msgstr "소요 일수(감사인 템플릿)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__write_right
+msgid "Edit"
+msgstr "편집"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_yaml_wizard__mode__export
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "Export"
+msgstr "내보내기"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Export button hidden everywhere"
+msgstr "내보내기 버튼을 모든 곳에서 숨김"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_yaml_wizard__payload
+msgid ""
+"Export: filled in when the export action runs. Import: upload the file you "
+"want to import."
+msgstr "내보내기: 내보내기 작업이 실행될 때 채워집니다. 가져오기: 가져올 파일을 업로드하십시오."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__field_line_ids
+msgid "Field Lines"
+msgstr "필드 라인"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_model_fields
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__field_ids
+msgid "Fields"
+msgstr "필드"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__payload_name
+msgid "File name"
+msgstr "파일명"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__domain
+msgid "Filter"
+msgstr "필터"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_follower_ids
+msgid "Followers"
+msgstr "팔로워"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "팔로워 (협력사)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "멋진 아이콘 폰트 예: fa-tasks"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__hide_external_link
+msgid ""
+"For relational fields (many2one / many2many / one2many), strip the external "
+"open / create / edit affordances by injecting widget options no_open, "
+"no_create and no_edit. Has no effect on non-relational fields."
+msgstr ""
+"관계형 필드(many2one / many2many / one2many)의 경우 위젯 옵션 no_open, no_create, "
+"no_edit를 주입하여 외부 열기 / 생성 / 편집 기능을 제거합니다. 비관계형 필드에는 영향을 주지 않습니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__duration_days
+msgid ""
+"For the 'auditor' template: number of days the profile remains active. After"
+" that the daily cron deactivates it."
+msgstr "'auditor' 템플릿의 경우: 프로필이 활성 상태로 유지되는 일수. 그 이후에는 일일 cron이 비활성화합니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__target_model
+msgid ""
+"For the 'own records only' template: the model whose records the user should"
+" be limited to. The template stamps a domain of [('user_id', '=', "
+"'__uid__')] on this model."
+msgstr ""
+"'own records only' 템플릿의 경우: 사용자가 자신의 레코드로 제한되어야 하는 모델. 템플릿은 이 모델에 도메인 "
+"[('user_id', '=', '__uid__')]을 적용합니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__full
+msgid "Full access (Read + Create + Edit + Delete)"
+msgstr "전체 접근 (읽기 + 생성 + 편집 + 삭제)"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Full placeholder list:\n"
+"                                                    <code>__uid__</code>,\n"
+"                                                    <code>__cid__</code>,\n"
+"                                                    <code>__company_ids__</code>,\n"
+"                                                    <code>__today__</code>,\n"
+"                                                    <code>__yesterday__</code>,\n"
+"                                                    <code>__tomorrow__</code>,\n"
+"                                                    <code>__week_start__</code> to <code>__week_end__</code>,\n"
+"                                                    <code>__month_start__</code> to <code>__month_end__</code>,\n"
+"                                                    <code>__quarter_start__</code> to <code>__quarter_end__</code>,\n"
+"                                                    <code>__year_start__</code> to <code>__year_end__</code>,\n"
+"                                                    <code>__last_7_days__</code>,\n"
+"                                                    <code>__last_30_days__</code>,\n"
+"                                                    <code>__last_90_days__</code>,\n"
+"                                                    <code>__last_365_days__</code>."
+msgstr ""
+"전체 자리 표시자 목록:\n"
+"                                                    <code>__uid__</code>,\n"
+"                                                    <code>__cid__</code>,\n"
+"                                                    <code>__company_ids__</code>,\n"
+"                                                    <code>__today__</code>,\n"
+"                                                    <code>__yesterday__</code>,\n"
+"                                                    <code>__tomorrow__</code>,\n"
+"                                                    <code>__week_start__</code> ~ <code>__week_end__</code>,\n"
+"                                                    <code>__month_start__</code> ~ <code>__month_end__</code>,\n"
+"                                                    <code>__quarter_start__</code> ~ <code>__quarter_end__</code>,\n"
+"                                                    <code>__year_start__</code> ~ <code>__year_end__</code>,\n"
+"                                                    <code>__last_7_days__</code>,\n"
+"                                                    <code>__last_30_days__</code>,\n"
+"                                                    <code>__last_90_days__</code>,\n"
+"                                                    <code>__last_365_days__</code>."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Global"
+msgstr "전체"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Global toggles apply to every model the\n"
+"                                    affected users open. Per-model overrides\n"
+"                                    on the Model Access tab take precedence."
+msgstr ""
+"전역 토글은 영향을 받는 사용자가 여는\n"
+"                                    모든 모델에 적용됩니다. Model Access 탭의\n"
+"                                    모델별 재정의가 우선합니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__has_message
+msgid "Has Message"
+msgstr "메시지가 있습니다"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__invisible
+msgid "Hidden"
+msgstr "숨김"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hidden_menu_count
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hidden_menu_ids
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hidden Menus"
+msgstr "숨겨진 메뉴"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__hidden_report_action_ids
+msgid "Hidden Reports"
+msgstr "숨겨진 보고서"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__hidden_server_action_ids
+msgid "Hidden Server Actions"
+msgstr "숨겨진 서버 작업"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__hidden_view_types
+msgid "Hidden View Types"
+msgstr "숨겨진 보기 유형"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_log_note
+msgid "Hide 'Log Note'"
+msgstr "'Log Note' 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_schedule_activity
+msgid "Hide 'Schedule Activity'"
+msgstr "'Schedule Activity' 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_send_message
+msgid "Hide 'Send Message'"
+msgstr "'Send Message' 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_add_property
+msgid "Hide Add Property"
+msgstr "속성 추가 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_add_property
+msgid "Hide Add Property (everywhere)"
+msgstr "속성 추가 숨기기(모든 곳)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_archive
+msgid "Hide Archive"
+msgstr "보관 숨기기"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hide Buttons / Tabs / Filters"
+msgstr "버튼 / 탭 / 필터 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_chatter
+msgid "Hide Chatter (everywhere)"
+msgstr "Chatter 숨기기(모든 곳)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_create
+msgid "Hide Create"
+msgstr "만들기 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_delete
+msgid "Hide Delete"
+msgstr "삭제 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_duplicate
+msgid "Hide Duplicate"
+msgstr "복제 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_edit
+msgid "Hide Edit"
+msgstr "편집 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_export
+msgid "Hide Export"
+msgstr "내보내기 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_export
+msgid "Hide Export (everywhere)"
+msgstr "내보내기 숨기기(모든 곳)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__hide_external_link
+msgid "Hide External Link"
+msgstr "외부 링크 숨기기"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hide Fields"
+msgstr "필드 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_import
+msgid "Hide Import"
+msgstr "가져오기 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_import
+msgid "Hide Import (everywhere)"
+msgstr "가져오기 숨기기(모든 곳)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_spreadsheet
+msgid "Hide Insert in Spreadsheet"
+msgstr "스프레드시트에 삽입 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_spreadsheet
+msgid "Hide Insert in Spreadsheet (everywhere)"
+msgstr "스프레드시트에 삽입 숨기기(모든 곳)"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hide Menus"
+msgstr "메뉴 숨기기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_schedule_activity
+msgid "Hides the Activities button on every chatter."
+msgstr "모든 chatter에서 활동 버튼을 숨깁니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_log_note
+msgid "Hides the Log Note button on every chatter."
+msgstr "모든 chatter에서 Log Note 버튼을 숨깁니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_send_message
+msgid "Hides the Send Message button on every chatter."
+msgstr "모든 chatter에서 Send Message 버튼을 숨깁니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_line_mixin__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model_fields__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_rule__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_menu__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_view__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_res_users__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_exception_icon
+msgid "Icon"
+msgstr "아이콘"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "예외 활동을 표시하기 위한 아이콘"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "만약 선택하였으면, 신규 메시지에 주의를 기울여야 합니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "이 옵션을 선택하면 일부 정보가 전달 오류를 생성합니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_yaml_wizard__mode__import
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "Import"
+msgstr "가져오기"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_yaml
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Import / Export"
+msgstr "가져오기 / 내보내기"
+
+#. module: eh_access_studio
+#: model:ir.actions.act_window,name:eh_access_studio.action_eh_access_yaml_wizard
+msgid "Import / Export Profiles"
+msgstr "수입 / 수출 프로필"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Import button hidden everywhere"
+msgstr "가져오기 버튼 모든 곳에서 숨김"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Imported: %(created)s created, %(updated)s updated."
+msgstr "가져옴: %(created)s개 생성, %(updated)s개 업데이트."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Inactive"
+msgstr "비활성"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Insert in Spreadsheet hidden everywhere"
+msgstr "스프레드시트에 삽입을 모든 곳에서 숨김"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_is_follower
+msgid "Is Follower"
+msgstr "팔로워임"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__link
+msgid "Kanban link"
+msgstr "Kanban 링크"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__kind
+msgid "Kind"
+msgstr "종류"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__target_label
+msgid "Label"
+msgstr "라벨"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__write_uid
+msgid "Last Updated by"
+msgstr "최근 갱신한 사람"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__write_date
+msgid "Last Updated on"
+msgstr "최근 갱신 일자"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Log Note button hidden"
+msgstr "메모 기록 버튼 숨김"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/res_users.py:0
+msgid "Login denied for %(user)s."
+msgstr "%(user)s의 로그인이 거부되었습니다."
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_ui_menu
+msgid "Menu"
+msgstr "메뉴"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hidden_menu_ids
+msgid ""
+"Menus and submenus removed from the navigation for users in this profile."
+msgstr "이 프로필의 사용자에 대해 탐색에서 제거된 메뉴 및 하위 메뉴."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Menus listed here are removed from the\n"
+"                                    navigation for users in this profile. The\n"
+"                                    Access Studio configuration menu is always\n"
+"                                    visible to administrators."
+msgstr ""
+"여기에 나열된 메뉴는 이 프로필의\n"
+"                                    사용자에 대해 탐색에서 제거됩니다.\n"
+"                                    Access Studio 구성 메뉴는 항상\n"
+"                                    관리자에게 표시됩니다."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Menus removed from navigation."
+msgstr "탐색에서 제거된 메뉴."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_has_error
+msgid "Message Delivery error"
+msgstr "메시지 전송 오류"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_ids
+msgid "Messages"
+msgstr "메시지"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__mode
+msgid "Mode"
+msgstr "모드"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__model_name
+msgid "Model"
+msgstr "모델"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid "Model %(m)s does not exist in this database."
+msgstr "모델 %(m)s이(가) 이 데이터베이스에 존재하지 않습니다."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Model Access"
+msgstr "모델 사용"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__model_line_ids
+msgid "Model Lines"
+msgstr "모델 라인"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Model-level toggles drop buttons from the\n"
+"                                    UI. They do not block the ORM. Combine with\n"
+"                                    Domain Access for strict gates."
+msgstr ""
+"모델 수준 토글은\n"
+"                                    UI에서 버튼을 제거합니다. ORM을 차단하지는 않습니다. 엄격한 제어를 위해\n"
+"                                    도메인 액세스와 함께 사용하십시오."
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_model
+msgid "Models"
+msgstr "모델"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "내 활동 마감일"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__name
+msgid "Name"
+msgstr "이름"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_template
+msgid "New from Template"
+msgstr "템플릿에서 새로 만들기"
+
+#. module: eh_access_studio
+#: model:ir.actions.act_window,name:eh_access_studio.action_eh_access_template_wizard
+msgid "New profile from template"
+msgstr "템플릿에서 새 프로필"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "다음 활동 캘린더 행사"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "다음 활동 마감일"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_summary
+msgid "Next Activity Summary"
+msgstr "다음 활동 요약"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_type_id
+msgid "Next Activity Type"
+msgstr "다음 활동 유형"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "No Link"
+msgstr "링크 없음"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__none
+msgid "No access"
+msgstr "접근 권한 없음"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "No domain-rule conflicts detected."
+msgstr "도메인 규칙 충돌이 감지되지 않았습니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "No issues found across %(n)s active profile(s)."
+msgstr "%(n)s개의 활성 프로필에서 문제가 발견되지 않았습니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__node_line_ids
+msgid "Node Lines"
+msgstr "노드 라인"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__page
+msgid "Notebook page / tab"
+msgstr "노트북 페이지 / 탭"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_needaction_counter
+msgid "Number of Actions"
+msgstr "작업 수"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_has_error_counter
+msgid "Number of errors"
+msgstr "오류 횟수"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "조치가 필요한 메시지 수"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "전송 오류가 발생한 메시지 수입니다."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Open the diagnostic summary for this profile."
+msgstr "이 프로필의 진단 요약을 엽니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__date_until
+msgid ""
+"Optional end date. A scheduled action deactivates the profile when this date"
+" has passed."
+msgstr "선택적 종료 날짜입니다. 이 날짜가 지나면 예약된 작업이 프로필을 비활성화합니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_node__target_label
+msgid "Optional label shown only in this configuration screen."
+msgstr "이 구성 화면에만 표시되는 선택적 레이블입니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__date_from
+msgid "Optional start date. Profile is treated as inactive before this date."
+msgstr "선택적 시작 날짜입니다. 이 날짜 이전에는 프로필이 비활성으로 처리됩니다."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Own-records template"
+msgstr "본인 레코드 템플릿"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Per-button (when chatter is shown)"
+msgstr "버튼별 (chatter가 표시된 경우)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_domain__rights_preset
+msgid ""
+"Pick a common combination. Switch to 'Custom' to set individual rights "
+"checkboxes."
+msgstr "일반적인 조합을 선택하세요. 개별 권한 체크박스를 설정하려면 '사용자 지정'으로 전환하세요."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid "Pick a name for the new profile."
+msgstr "새 프로필의 이름을 선택하세요."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Pick at least one profile to export."
+msgstr "내보낼 프로필을 하나 이상 선택하세요."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__profile_id
+msgid "Profile"
+msgstr "프로필"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__company_ids
+msgid ""
+"Profile applies only when the user is currently logged into one of these "
+"companies. Leave empty when 'Apply to all companies' is enabled."
+msgstr ""
+"프로필은 사용자가 현재 이 회사 중 하나에 로그인되어 있을 때만 적용됩니다. '모든 회사에 적용'이 활성화된 경우 비워 두십시오."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__name
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Profile name"
+msgstr "프로필 이름"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Profile summary: %(name)s"
+msgstr "프로필 요약: %(name)s"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Profile-level Hide Chatter removes the\n"
+"                                    chatter widget from every model. The\n"
+"                                    per-button toggles hide individual chatter\n"
+"                                    buttons system-wide while leaving the\n"
+"                                    chatter visible. The per-model list below\n"
+"                                    targets specific models when the global\n"
+"                                    toggle is off."
+msgstr ""
+"프로필 수준의 채터 숨기기는 모든\n"
+"                                    모델에서 채터 위젯을 제거합니다.\n"
+"                                    버튼별 토글은 채터를 표시된 상태로 두면서\n"
+"                                    개별 채터 버튼을\n"
+"                                    시스템 전체에서 숨깁니다. 아래의 모델별\n"
+"                                    목록은 전역 토글이 꺼져 있을 때\n"
+"                                    특정 모델을 대상으로 합니다."
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_profiles
+msgid "Profiles"
+msgstr "프로필"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_res_users_form_eh_access
+msgid ""
+"Profiles applied to this user. Edit them in the\n"
+"                            Access Studio app. Profile rights are OR-ed for\n"
+"                            domain access; restrictive UI hide flags are the\n"
+"                            union across all active profiles."
+msgstr ""
+"이 사용자에게 적용된 프로필입니다.\n"
+"                            Access Studio 앱에서 편집하십시오. 프로필 권한은\n"
+"                            도메인 액세스에 대해 OR로 결합됩니다. 제한적 UI 숨기기 플래그는\n"
+"                            모든 활성 프로필의 합집합입니다."
+
+#. module: eh_access_studio
+#: model_terms:ir.actions.act_window,help:eh_access_studio.action_eh_access_profile
+msgid ""
+"Profiles bundle a list of users with a set of access\n"
+"                    overlays. Hide menus and fields from selected users\n"
+"                    without writing record rules or editing security\n"
+"                    groups."
+msgstr ""
+"프로필은 사용자 목록을 일련의 액세스\n"
+"                    오버레이와 함께 묶습니다. 레코드 규칙을 작성하거나 보안\n"
+"                    그룹을 편집하지 않고도 선택한 사용자로부터\n"
+"                    메뉴와 필드를 숨깁니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__profile_ids
+msgid "Profiles to export"
+msgstr "내보낼 프로필"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_domain__domain
+msgid ""
+"Python list of domain leaves. Smart placeholders are supported. Example: "
+"[(\"company_id\", \"in\", \"__company_ids__\"), (\"create_date\", \">=\", "
+"\"__month_start__\")]."
+msgstr ""
+"domain leaves의 Python 목록입니다. 스마트 자리 표시자가 지원됩니다. 예: [(\"company_id\", \"in\","
+" \"__company_ids__\"), (\"create_date\", \">=\", \"__month_start__\")]."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__read_right
+msgid "Read"
+msgstr "읽기"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_create
+msgid "Read + Create"
+msgstr "읽기 + 생성"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_create_write
+msgid "Read + Create + Edit"
+msgstr "읽기 + 생성 + 편집"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_write
+msgid "Read + Edit"
+msgstr "읽기 + 편집"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_only
+msgid "Read only"
+msgstr "읽기 전용"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__readonly
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Read-Only"
+msgstr "읽기 전용"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__readonly
+msgid "Read-Only Mode"
+msgstr "읽기 전용 모드"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__read_only
+msgid "Read-only across the system"
+msgstr "시스템 전체에서 읽기 전용"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_rule
+msgid "Record Rule"
+msgstr "레코드 규칙"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_spreadsheet
+msgid "Removes 'Insert in Spreadsheet' from list, pivot and graph cog menus."
+msgstr "목록, 피벗, 그래프의 톱니바퀴 메뉴에서 'Insert in Spreadsheet'를 제거합니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_add_property
+msgid "Removes the 'Add Property' action from form views."
+msgstr "양식 보기에서 'Add Property' 작업을 제거합니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_export
+msgid "Removes the Export button on every list and kanban view."
+msgstr "모든 목록 및 칸반 보기에서 내보내기 버튼을 제거합니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_import
+msgid "Removes the Import button on every list and kanban view."
+msgstr "모든 목록 및 칸반 보기에서 가져오기 버튼을 제거합니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_chatter
+msgid "Removes the chatter widget from every form view."
+msgstr "모든 양식 보기에서 채터 위젯을 제거합니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__required
+msgid "Required"
+msgstr "요청함"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_user_id
+msgid "Responsible User"
+msgstr "담당 사용자"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__summary
+msgid "Result"
+msgstr "결과"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__rule_count
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Rules"
+msgstr "규칙"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__own_records_only
+msgid "Sales rep: own records only"
+msgstr "영업 담당자: 본인 레코드만"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__filter
+msgid "Search filter"
+msgstr "검색 필터"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__group
+msgid "Search group-by"
+msgstr "그룹화 검색"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Send Message button hidden"
+msgstr "메시지 보내기 버튼 숨김"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__sequence
+msgid "Sequence"
+msgstr "순서"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Serialised %(count)s profile(s)."
+msgstr "%(count)s개 프로필을 직렬화했습니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__name
+msgid "Short human-readable label shown in administration screens."
+msgstr "관리 화면에 표시되는 사람이 읽을 수 있는 짧은 레이블."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Sign in as one of %(users)s in a private browser window. The active-profile "
+"cache, the ir.rule extension and the view post-processors all run on every "
+"page load, so the first navigation exercises the full enforcement path."
+msgstr ""
+"비공개 브라우저 창에서 %(users)s 중 하나로 로그인합니다. 활성 프로필 캐시, ir.rule 확장, 뷰 후처리기가 모두 페이지가 "
+"로드될 때마다 실행되므로 첫 탐색에서 전체 적용 경로가 실행됩니다."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Sign-in disabled for the targeted users"
+msgstr "대상 사용자의 로그인이 비활성화되었습니다"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/res_users.py:0
+msgid "Sign-in is disabled for this account by an Access Studio profile."
+msgstr "이 계정의 로그인은 Access Studio 프로필에 의해 비활성화되었습니다."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Status"
+msgstr "상태"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"활동 기준 상태\n"
+"기한 초과: 기한이 이미 지났습니다.\n"
+"오늘: 활동 날짜가 오늘입니다.\n"
+"예정: 향후 계획된 활동입니다."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Strict ORM-level rules."
+msgstr "엄격한 ORM 수준 규칙입니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__disable_debug_mode
+msgid ""
+"Strips debug mode from the URL whenever a user in this profile loads the web"
+" client."
+msgstr "이 프로필의 사용자가 웹 클라이언트를 로드할 때마다 URL에서 디버그 모드를 제거합니다."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Summary"
+msgstr "요약"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__target_model
+msgid "Target model (own-records template)"
+msgstr "대상 모델(자체 레코드 템플릿)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__target_name
+msgid "Technical Name"
+msgstr "기술 이름"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__template
+msgid "Template"
+msgstr "서식"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Test Plan"
+msgstr "테스트 계획"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Test plan not available"
+msgstr "테스트 계획을 사용할 수 없습니다"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Test plan: %(name)s"
+msgstr "테스트 계획: %(name)s"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_node__target_name
+msgid ""
+"The 'name' attribute of the target node in XML. For example: "
+"'action_view_orders' for a smart button."
+msgstr "XML에서 대상 노드의 'name' 속성입니다. 예: 스마트 버튼의 경우 'action_view_orders'."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__name
+msgid "The new profile is created with this name."
+msgstr "이 이름으로 새 프로필이 생성됩니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__invisible
+msgid "The selected fields are removed from views."
+msgstr "선택한 필드가 뷰에서 제거됩니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__readonly
+msgid ""
+"The selected fields are shown but cannot be edited. The framework's "
+"force_save flag is set so existing values survive saves on records the user "
+"can otherwise modify."
+msgstr ""
+"선택한 필드는 표시되지만 편집할 수 없습니다. 프레임워크의 force_save 플래그가 설정되어 있어 사용자가 다른 방법으로 수정할 수 "
+"있는 레코드에서도 저장 시 기존 값이 유지됩니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__required
+msgid ""
+"The selected fields become mandatory. Use sparingly: a required overlay on a"
+" field that the user cannot fill in (because it lives on a hidden tab) "
+"blocks all saves."
+msgstr ""
+"선택한 필드가 필수가 됩니다. 신중하게 사용하세요. 사용자가 입력할 수 없는 필드(숨겨진 탭에 있으므로)에 필수 오버레이를 적용하면 모든"
+" 저장이 차단됩니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "레코드에 있는 예외 활동의 유형입니다."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"UI hide is UI hide. Fields hidden here are\n"
+"                                    not rendered in views. They remain readable\n"
+"                                    over the API and from server code. Use\n"
+"                                    Domain Access (later phase) when you need a\n"
+"                                    strict gate at the ORM level."
+msgstr ""
+"UI 숨김은 UI 숨김일 뿐입니다. 여기서 숨긴 필드는\n"
+"                                    뷰에 렌더링되지 않습니다. API를 통해\n"
+"                                    그리고 서버 코드에서는 계속 읽을 수 있습니다. ORM 수준에서\n"
+"                                    엄격한 차단이 필요할 때는\n"
+"                                    Domain Access(이후 단계)를 사용하십시오."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid "Unknown template: %(t)s."
+msgstr "알 수 없는 템플릿: %(t)s."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Upload a YAML file first."
+msgstr "먼저 YAML 파일을 업로드하세요."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Use the technical name (the 'name' XML\n"
+"                                    attribute) of the target node. Smart\n"
+"                                    buttons usually start with 'action_'.\n"
+"                                    Notebook tabs use the 'name' attribute on\n"
+"                                    the &lt;page/&gt; element. Filters and\n"
+"                                    group-by entries use the 'name' attribute\n"
+"                                    on the &lt;filter/&gt; element."
+msgstr ""
+"대상 노드의 기술명(XML 'name' 속성)을 사용하세요. 스마트 버튼은 보통 'action_'로 시작합니다. 노트북 탭은 "
+"&lt;page/&gt; 요소의 'name' 속성을 사용합니다. 필터 및 그룹화 항목은 &lt;filter/&gt; 요소의 'name' "
+"속성을 사용합니다."
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_res_users
+msgid "User"
+msgstr "사용자"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_root
+msgid "User Access Studio"
+msgstr "사용자 액세스 스튜디오"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_chatter
+msgid "User Access Studio Chatter Rule"
+msgstr "User Access Studio 채터 규칙"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_domain
+msgid "User Access Studio Domain Rule"
+msgstr "User Access Studio 도메인 규칙"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_field
+msgid "User Access Studio Field Rule"
+msgstr "User Access Studio 필드 규칙"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_yaml_wizard
+msgid "User Access Studio Import / Export"
+msgstr "사용자 액세스 스튜디오 가져오기 / 내보내기"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_model
+msgid "User Access Studio Model Rule"
+msgstr "User Access Studio 모델 규칙"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_node
+msgid "User Access Studio Node Rule"
+msgstr "User Access Studio 노드 규칙"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_profile
+msgid "User Access Studio Profile"
+msgstr "User Access Studio 프로필"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_template_wizard
+msgid "User Access Studio Template Wizard"
+msgstr "User Access Studio 템플릿 마법사"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_line_mixin
+msgid "User Access Studio rule-line cache hook"
+msgstr "사용자 액세스 스튜디오 규칙 라인 캐시 후크"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "User Access Studio: Import / Export"
+msgstr "사용자 액세스 스튜디오: 가져오기 / 내보내기"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "User Access Studio: New profile from template"
+msgstr "User Access Studio: 템플릿에서 새 프로필"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__user_count
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__user_ids
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Users"
+msgstr "사용자"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__user_ids
+msgid "Users assigned to the new profile."
+msgstr "새 프로필에 할당된 사용자입니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__disable_login
+msgid ""
+"Users in this profile are denied at the authentication gate. Use only when "
+"the profile is targeted at one user; applying it to a group disables the "
+"whole group."
+msgstr ""
+"이 프로필의 사용자는 인증 게이트에서 거부됩니다. 프로필이 한 명의 사용자를 대상으로 할 때만 사용하십시오. 그룹에 적용하면 그룹 전체가"
+" 비활성화됩니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__user_ids
+msgid "Users to whom this profile applies."
+msgstr "이 프로필이 적용되는 사용자입니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__vendor_portal
+msgid "Vendor / contractor: portal-style restricted view"
+msgstr "공급업체 / 계약업체: 포털 스타일 제한 보기"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_ui_view
+msgid "View"
+msgstr "화면"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "View the test plan for the targeted users."
+msgstr "대상 사용자를 위한 테스트 계획을 확인하세요."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__apply_to_all_companies
+msgid ""
+"When enabled, the profile applies regardless of the user's current company. "
+"The Companies field is ignored."
+msgstr "활성화하면 사용자의 현재 회사와 관계없이 프로필이 적용됩니다. 회사 필드는 무시됩니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_domain__apply_filter
+msgid ""
+"When enabled, the rule limits the set of records to which the chosen rights "
+"apply. Without a filter, the rights apply to all records of the model."
+msgstr "활성화하면 선택한 권한이 적용되는 레코드 집합을 규칙이 제한합니다. 필터가 없으면 권한은 모델의 모든 레코드에 적용됩니다."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__readonly
+msgid ""
+"When enabled, users in this profile cannot create, edit or delete records "
+"anywhere in the system. The Access Studio configuration is excluded so "
+"administrators are never locked out."
+msgstr ""
+"활성화하면 이 프로필의 사용자는 시스템 어디에서도 레코드를 생성, 편집 또는 삭제할 수 없습니다. 관리자가 절대 잠기지 않도록 "
+"Access Studio 구성은 제외됩니다."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Whole-system"
+msgstr "전체 시스템"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__payload
+msgid "YAML"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid ""
+"YAML payload too large (max %(mb)s MB). Split the export into smaller files."
+msgstr "YAML 페이로드가 너무 큽니다(최대 %(mb)s MB). 내보내기를 더 작은 파일로 분할하세요."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "YAML payload too large after decode (max %(mb)s MB)."
+msgstr "디코딩 후 YAML 페이로드가 너무 큽니다(최대 %(mb)s MB)."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "YAML root must be a mapping with a 'profiles' key."
+msgstr "YAML 루트는 'profiles' 키가 있는 매핑이어야 합니다."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "[(\"user_id\", \"=\", \"__uid__\")]"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "all companies"
+msgstr "모든 회사"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "disable_debug_mode"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "disable_login"
+msgstr ""
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "e.g. Sales reps - own records"
+msgstr "예: 영업 담당자 - 본인 레코드"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_add_property"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_export"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_import"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_log_note"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_schedule_activity"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_spreadsheet"
+msgstr ""
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "list,kanban,..."
+msgstr ""

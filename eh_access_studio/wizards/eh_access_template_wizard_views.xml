@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2026 ERP Heritage (https://www.erpheritage.com.au)
+    License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
+-->
+<odoo>
+    <data>
+
+        <record id="view_eh_access_template_wizard_form" model="ir.ui.view">
+            <field name="name">eh.access.template.wizard.form</field>
+            <field name="model">eh.access.template.wizard</field>
+            <field name="arch" type="xml">
+                <form string="User Access Studio: New profile from template">
+                    <sheet>
+                        <group>
+                            <field name="template" widget="radio"/>
+                            <field name="name" placeholder="e.g. Sales reps - own records"/>
+                            <field name="user_ids"
+                                   widget="many2many_tags"
+                                   options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="apply_to_all_companies"/>
+                            <field name="company_ids" widget="many2many_tags" invisible="apply_to_all_companies" required="not apply_to_all_companies" options="{'no_create': True}"/>
+                        </group>
+                        <group invisible="template not in ('own_records_only', 'vendor_portal')"
+                               string="Own-records template">
+                            <field name="target_model_id" options="{'no_create': True}"/>
+                            <field name="target_model" invisible="1"/>
+                        </group>
+                        <group invisible="template != 'auditor'"
+                               string="Auditor template">
+                            <field name="duration_days"/>
+                        </group>
+                        <group>
+                            <field name="description" readonly="1" nolabel="1"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_create_profile"
+                                string="Create inactive draft"
+                                type="object"
+                                class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_eh_access_template_wizard" model="ir.actions.act_window">
+            <field name="name">New profile from template</field>
+            <field name="res_model">eh.access.template.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

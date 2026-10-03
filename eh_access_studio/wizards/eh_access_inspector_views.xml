@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_eh_access_inspector_form" model="ir.ui.view">
+        <field name="name">eh.access.inspector.form</field>
+        <field name="model">eh.access.inspector</field>
+        <field name="arch" type="xml">
+            <form string="Inspect effective access">
+                <header><button name="action_inspect" type="object" string="Inspect access" class="btn-primary"/></header>
+                <sheet>
+                    <p>Select a user and document type. Add a sample record to evaluate record rules. No business operation is executed.</p>
+                    <group>
+                        <group><field name="user_id" options="{'no_create': True}"/><field name="company_id" options="{'no_create': True}"/></group>
+                        <group><field name="model_id" options="{'no_create': True}"/><field name="model_name" invisible="1"/><field name="operation"/><field name="record_id" invisible="operation == 'create'"/></group>
+                    </group>
+                    <field name="decision" readonly="1" invisible="not decision"/>
+                    <field name="result_html" widget="html" readonly="1" nolabel="1"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_eh_access_inspector" model="ir.actions.act_window">
+        <field name="name">Inspect Access</field><field name="res_model">eh.access.inspector</field>
+        <field name="view_mode">form</field><field name="target">current</field>
+    </record>
+</odoo>

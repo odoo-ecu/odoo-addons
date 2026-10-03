@@ -1,0 +1,2088 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_access_studio
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:32+0000\n"
+"PO-Revision-Date: 2026-07-01 04:32+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: eh_access_studio
+#: model:res.groups,comment:eh_access_studio.group_eh_access_manager
+msgid ""
+"\n"
+"                Full access to Access Studio. Can create, edit and deactivate\n"
+"                profiles. Implies Access Studio User.\n"
+"            "
+msgstr ""
+"\n"
+"Access Studio तक पूर्ण पहुँच। प्रोफ़ाइल बना सकते हैं, संपादित कर सकते हैं और निष्क्रिय कर सकते हैं।\n"
+"                इसमें Access Studio User शामिल है।"
+
+#. module: eh_access_studio
+#: model:res.groups,comment:eh_access_studio.group_eh_access_user
+msgid ""
+"\n"
+"                Read-only access to the Access Studio configuration. Users in\n"
+"                this group can view profiles and rule lines but cannot edit\n"
+"                them.\n"
+"            "
+msgstr ""
+"\n"
+"Access Studio कॉन्फ़िगरेशन तक केवल-पढ़ने की पहुँच। इस समूह के\n"
+"                उपयोगकर्ता प्रोफ़ाइल और नियम पंक्तियाँ देख सकते हैं लेकिन उन्हें संपादित नहीं कर सकते।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"\n"
+"... and %(extra)s more."
+msgstr ""
+"\n"
+"... और %(extra)s अन्य।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(n)s active profile(s) have no rules (no-op): %(names)s"
+msgstr ""
+"%(n)s सक्रिय प्रोफ़ाइल में कोई नियम नहीं है (कोई कार्रवाई नहीं): %(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(n)s active profile(s) have no users assigned: %(names)s"
+msgstr ""
+"%(n)s सक्रिय प्रोफ़ाइल में कोई उपयोगकर्ता असाइन नहीं किया गया: %(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(n)s active profile(s) past their Active Until date (cron has not "
+"deactivated them yet): %(names)s"
+msgstr ""
+"%(n)s सक्रिय प्रोफ़ाइल अपनी 'सक्रिय तक' तिथि पार कर चुके हैं (cron ने अभी तक"
+" उन्हें निष्क्रिय नहीं किया है): %(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(n)s company / companies"
+msgstr "%(n)s कंपनी/कंपनियाँ"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(n)s conflict(s) detected:\n"
+"\n"
+"%(list)s%(tail)s\n"
+"\n"
+"Resolution: deactivate one of the profiles, or align their domain filters so they describe the same record set."
+msgstr ""
+"%(n)s विरोध का पता चला:\n"
+"\n"
+"%(list)s%(tail)s\n"
+"\n"
+"समाधान: प्रोफ़ाइल में से किसी एक को निष्क्रिय करें, या उनके डोमेन फ़िल्टर को संरेखित करें ताकि वे समान रिकॉर्ड सेट का वर्णन करें।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(n)s domain rule(s) cannot be parsed and will fail closed at runtime. "
+"Profiles affected: %(names)s"
+msgstr ""
+"%(n)s डोमेन नियम को पार्स नहीं किया जा सकता और रनटाइम पर बंद अवस्था में विफल"
+" होंगे। प्रभावित प्रोफ़ाइल: %(names)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(name)s (copy)"
+msgstr "%(name)s (प्रतिलिपि)"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"%(name)s applies to %(users)s user(s) under %(scope)s.\n"
+"\n"
+"%(body)s"
+msgstr ""
+"%(name)s %(scope)s के अंतर्गत %(users)s उपयोगकर्ता पर लागू होता है।\n"
+"\n"
+"%(body)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "%(user)s on %(model)s: %(profiles)s"
+msgstr "%(model)s पर %(user)s: %(profiles)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "'profiles' must be a list."
+msgstr "'profiles' एक सूची होनी चाहिए।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s domain rule(s): strict ORM-level gates"
+msgstr "- %(n)s डोमेन नियम: सख्त ORM-स्तरीय गेट"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s field rule(s) across %(models)s model(s)"
+msgstr "- %(models)s मॉडल में %(n)s फ़ील्ड नियम"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s menu(s) hidden: %(names)s%(tail)s"
+msgstr "- %(n)s मेनू छिपाए गए: %(names)s%(tail)s"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s model rule(s) across %(models)s model(s)"
+msgstr "- %(models)s मॉडल में %(n)s मॉडल नियम"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s node rule(s) (button / tab / link / filter)"
+msgstr "- %(n)s नोड नियम (बटन / टैब / लिंक / फ़िल्टर)"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- %(n)s per-model chatter override(s)"
+msgstr "- प्रति-मॉडल %(n)s चैटर ओवरराइड"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- Chatter hidden on every form view"
+msgstr "- हर फ़ॉर्म व्यू पर चैटर छिपा हुआ"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- No rules configured. The profile is a no-op."
+msgstr "- कोई नियम कॉन्फ़िगर नहीं किया गया। प्रोफ़ाइल का कोई प्रभाव नहीं है।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "- Read-only mode: blocks create / edit / delete on every model"
+msgstr ""
+"- केवल-पढ़ने-योग्य मोड: हर मॉडल पर बनाना / संपादित करना / हटाना अवरुद्ध करता"
+" है"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<code>[\"&amp;\", (\"user_id\", \"=\", \"__uid__\"), (\"state\", \"=\", "
+"\"draft\")]</code> compound (own and draft)"
+msgstr ""
+"<code>[\"&amp;\", (\"user_id\", \"=\", \"__uid__\"), (\"state\", \"=\", "
+"\"draft\")]</code> संयुक्त (स्वयं और मसौदा)"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<code>[(\"company_id\", \"in\", \"__company_ids__\")]</code> records in the "
+"user's allowed companies"
+msgstr ""
+"<code>[(\"company_id\", \"in\", \"__company_ids__\")]</code> उपयोगकर्ता की "
+"अनुमत कंपनियों के रिकॉर्ड"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<code>[(\"create_date\", \"&gt;=\", \"__month_start__\")]</code> created "
+"this month"
+msgstr "<code>[(\"create_date\", \"&gt;=\", \"__month_start__\")]</code> इस माह बनाया गया"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "<code>[(\"create_uid\", \"=\", \"__uid__\")]</code> own records by creator"
+msgstr ""
+"<code>[(\"create_uid\", \"=\", \"__uid__\")]</code> निर्माता के अनुसार स्वयं"
+" के रिकॉर्ड"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "<code>[(\"date\", \"&gt;=\", \"__last_30_days__\")]</code> last thirty days"
+msgstr "<code>[(\"date\", \"&gt;=\", \"__last_30_days__\")]</code> पिछले तीस दिन"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "<code>[(\"user_id\", \"=\", \"__uid__\")]</code> own records by responsible"
+msgstr ""
+"<code>[(\"user_id\", \"=\", \"__uid__\")]</code> जिम्मेदार के अनुसार स्वयं "
+"के रिकॉर्ड"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<strong>Domain Access is the strict gate.</strong>\n"
+"                                    Rights and filters defined here are enforced\n"
+"                                    by the ORM, not just the UI. They block\n"
+"                                    server code, the API and any other\n"
+"                                    interaction path. Filters that fail to\n"
+"                                    parse, or that reference unknown\n"
+"                                    placeholders, fail closed (block all\n"
+"                                    access). Test in a non-production\n"
+"                                    environment first."
+msgstr ""
+"<strong>डोमेन एक्सेस सख्त द्वार है।</strong>\n"
+"                                    यहाँ परिभाषित अधिकार और फ़िल्टर ORM द्वारा लागू किए जाते हैं, केवल UI द्वारा नहीं। वे सर्वर कोड, API और किसी भी अन्य इंटरैक्शन पथ को अवरुद्ध करते हैं। जो फ़िल्टर पार्स नहीं हो पाते, या अज्ञात प्लेसहोल्डर संदर्भित करते हैं, वे बंद अवस्था में विफल होते हैं (सभी एक्सेस अवरुद्ध कर देते हैं)। पहले गैर-उत्पादन परिवेश में परीक्षण करें।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"<strong>Filter syntax.</strong>\n"
+"                                                Python list of domain leaves.\n"
+"                                                Smart placeholders are resolved\n"
+"                                                at evaluation time. Ready-made\n"
+"                                                examples (copy and adapt):"
+msgstr ""
+"<strong>फ़िल्टर सिंटैक्स।</strong>\n"
+"                                                डोमेन लीव्स की Python सूची। स्मार्ट प्लेसहोल्डर मूल्यांकन के समय हल किए जाते हैं। तैयार उदाहरण (कॉपी करें और अनुकूलित करें):"
+
+#. module: eh_access_studio
+#: model:ir.actions.act_window,name:eh_access_studio.action_eh_access_profile
+msgid "Access Profiles"
+msgstr "पहुंच प्रोफाइल"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_res_users_form_eh_access
+msgid "Access Studio"
+msgstr ""
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_res_users__access_profile_ids
+msgid "Access Studio Profiles"
+msgstr "Access Studio प्रोफाइल"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/base_model.py:0
+msgid ""
+"Access Studio: %(action)s is disabled for this model by your access profile."
+msgstr ""
+"Access Studio: आपके पहुंच प्रोफाइल द्वारा इस मॉडल के लिए %(action)s अक्षम "
+"है।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Access Studio: %(user)s is an administrator and cannot be placed in a read-"
+"only profile."
+msgstr ""
+"Access Studio: %(user)s एक व्यवस्थापक है और उसे केवल-पढ़ने योग्य प्रोफाइल "
+"में नहीं रखा जा सकता।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Access Studio: 'Active From' must not be later than 'Active Until'."
+msgstr "Access Studio: 'सक्रिय से' 'सक्रिय तक' के बाद का नहीं होना चाहिए।"
+
+#. module: eh_access_studio
+#: model:res.groups,name:eh_access_studio.group_eh_access_manager
+msgid "Access Studio: Manager"
+msgstr "Access Studio: प्रबंधक"
+
+#. module: eh_access_studio
+#: model:res.groups,name:eh_access_studio.group_eh_access_user
+msgid "Access Studio: User"
+msgstr "Access Studio: उपयोगकर्ता"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_field.py:0
+msgid "Access Studio: a field cannot be both hidden and required. Pick one."
+msgstr ""
+"Access Studio: कोई फ़ील्ड एक साथ छिपी और आवश्यक दोनों नहीं हो सकती। किसी एक "
+"को चुनें।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_field.py:0
+msgid ""
+"Access Studio: a field rule must mark its fields hidden, read-only, required"
+" or hide the external link."
+msgstr ""
+"Access Studio: फ़ील्ड नियम को अपनी फ़ील्ड को छिपा, केवल-पढ़ने योग्य, आवश्यक "
+"चिह्नित करना चाहिए या बाहरी लिंक छिपाना चाहिए।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_node.py:0
+msgid "Access Studio: a node rule must have a technical name."
+msgstr "Access Studio: नोड नियम का एक तकनीकी नाम होना चाहिए।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Access Studio: a profile named %(name)s already exists. Pick a different "
+"name so import / export can match by name unambiguously."
+msgstr ""
+"Access Studio: %(name)s नाम का प्रोफ़ाइल पहले से मौजूद है। कोई अन्य नाम "
+"चुनें ताकि आयात / निर्यात नाम से स्पष्ट रूप से मिलान कर सके।"
+
+#. module: eh_access_studio
+#: model:ir.actions.server,name:eh_access_studio.action_eh_access_conflict_report
+msgid "Access Studio: conflict report"
+msgstr "Access Studio: विरोध रिपोर्ट"
+
+#. module: eh_access_studio
+#: model:ir.actions.server,name:eh_access_studio.cron_deactivate_expired_profiles_ir_actions_server
+msgid "Access Studio: deactivate expired profiles"
+msgstr "Access Studio: समाप्त हो चुके प्रोफ़ाइल निष्क्रिय करें"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_domain.py:0
+msgid ""
+"Access Studio: filter cannot be parsed (%(error)s). Use a Python list of "
+"domain leaves."
+msgstr ""
+"Access Studio: फ़िल्टर पार्स नहीं किया जा सका (%(error)s)। डोमेन लीव्स की एक"
+" Python सूची का उपयोग करें।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_domain.py:0
+msgid "Access Studio: filter must be a Python list."
+msgstr "Access Studio: फ़िल्टर एक Python सूची होनी चाहिए।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+#: model:ir.actions.server,name:eh_access_studio.action_eh_access_health_check
+msgid "Access Studio: health check"
+msgstr "Access Studio: स्वास्थ्य जाँच"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Access Studio: health check passed"
+msgstr "Access Studio: स्वास्थ्य जाँच सफल रही"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_chatter.py:0
+msgid ""
+"Access Studio: model %(model)s already has a chatter rule on this profile."
+msgstr ""
+"Access Studio: मॉडल %(model)s के पास इस प्रोफ़ाइल पर पहले से ही एक chatter "
+"नियम है।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Access Studio: profile auto-deactivated because its Active Until date "
+"(%(date)s) has passed."
+msgstr ""
+"Access Studio: प्रोफ़ाइल स्वतः निष्क्रिय हो गई क्योंकि इसकी सक्रिय रहने की "
+"अंतिम तिथि (%(date)s) बीत चुकी है।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_model.py:0
+msgid "Access Studio: unknown view type(s) %(types)s. Allowed: %(allowed)s."
+msgstr "Access Studio: अज्ञात व्यू प्रकार %(types)s। अनुमत: %(allowed)s।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__rights_preset
+msgid "Access level"
+msgstr "एक्सेस स्तर"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_needaction
+msgid "Action Needed"
+msgstr "कार्रवाई की ज़रूरत है"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Activate"
+msgstr "ऐक्टिवेट"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__active
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Active"
+msgstr "ऐक्टिव"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__date_from
+msgid "Active From"
+msgstr "इससे सक्रिय"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__date_until
+msgid "Active Until"
+msgstr "इस तक सक्रिय"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_ids
+msgid "Activities"
+msgstr "गतिविधियाँ"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Activities button hidden"
+msgstr "गतिविधियाँ बटन छिपा हुआ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "ऐक्टिविटी एक्सेप्शन डेकोरेशन"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_state
+msgid "Activity State"
+msgstr "ऐक्टिविटी स्टेट"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ऐक्टिविटी टाइप आइकॉन"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Add Property hidden everywhere"
+msgstr "प्रॉपर्टी जोड़ें हर जगह छिपा हुआ"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Add at least one user to the profile first."
+msgstr "पहले प्रोफ़ाइल में कम से कम एक उपयोगकर्ता जोड़ें।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__apply_filter
+msgid "Apply Filter"
+msgstr "फ़िल्टर लागू करें"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__apply_to_all_companies
+msgid "Apply to all companies"
+msgstr "सभी कंपनियों पर लागू करें"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__user_ids
+msgid "Apply to users"
+msgstr "उपयोगकर्ताओं पर लागू करें"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_attachment_count
+msgid "Attachment Count"
+msgstr "अटैचमेंट की संख्या"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Auditor template"
+msgstr "ऑडिटर टेम्पलेट"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__auditor
+msgid "Auditor: read everything, no edit, no debug"
+msgstr "ऑडिटर: सब कुछ पढ़ें, कोई संपादन नहीं, कोई डिबग नहीं"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Authentication / Debug"
+msgstr "प्रमाणीकरण / डिबग"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_base
+msgid "Base"
+msgstr "बेस"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__button
+msgid "Button (object / action)"
+msgstr "बटन (object / action)"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Cancel"
+msgstr "रद्द"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Chatter"
+msgstr "चैटर"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__chatter_line_ids
+msgid "Chatter Lines"
+msgstr "चैटर पंक्तियां"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "Close"
+msgstr "बंद करें"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_model__hidden_view_types
+msgid ""
+"Comma-separated list of view types to remove from action responses. "
+"Recognised values: list, kanban, form, calendar, pivot, graph, gantt, "
+"activity, cohort, grid, map, hierarchy, search."
+msgstr ""
+"एक्शन प्रतिक्रियाओं से हटाए जाने वाले व्यू प्रकारों की अल्पविराम से अलग की "
+"गई सूची। मान्य मान: list, kanban, form, calendar, pivot, graph, gantt, "
+"activity, cohort, grid, map, hierarchy, search।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__company_ids
+msgid "Companies"
+msgstr "कंपनियां"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_configuration
+msgid "Configuration"
+msgstr "कॉन्फ़िगरेशन"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Conflict report"
+msgstr "संघर्ष रिपोर्ट"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Could not decode the uploaded file (%(error)s). Expected UTF-8."
+msgstr ""
+"अपलोड की गई फ़ाइल को डिकोड नहीं किया जा सका (%(error)s)। UTF-8 अपेक्षित है।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Could not decode the uploaded file (%(error)s). Expected base64."
+msgstr ""
+"अपलोड की गई फ़ाइल को डिकोड नहीं किया जा सका (%(error)s)। base64 अपेक्षित है।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Could not parse YAML (%(error)s)."
+msgstr "YAML को पार्स नहीं किया जा सका (%(error)s)।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__create_right
+msgid "Create"
+msgstr "बनाएँ"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Create profile"
+msgstr "प्रोफ़ाइल बनाएं"
+
+#. module: eh_access_studio
+#: model_terms:ir.actions.act_window,help:eh_access_studio.action_eh_access_profile
+msgid "Create your first access profile"
+msgstr "अपनी पहली एक्सेस प्रोफ़ाइल बनाएं"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__create_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__create_uid
+msgid "Created by"
+msgstr "इन्होंने बनाया"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__create_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__create_date
+msgid "Created on"
+msgstr "इस तारीख को बनाया गया"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a heavily restricted profile: hides the standard Settings menu, "
+"hides export everywhere, disables developer mode, and stamps a domain on "
+"sale.order limiting access to the user's own records."
+msgstr ""
+"एक अत्यधिक प्रतिबंधित प्रोफ़ाइल बनाता है: मानक सेटिंग्स मेनू छुपाता है, हर "
+"जगह निर्यात छुपाता है, डेवलपर मोड अक्षम करता है, और sale.order पर एक डोमेन "
+"लगाता है जो पहुंच को उपयोगकर्ता के अपने रिकॉर्ड तक सीमित करता है."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a profile with Read-Only Mode enabled. The user can browse the "
+"entire system but cannot create, edit or delete any record. Administrators "
+"are exempt."
+msgstr ""
+"रीड-ओनली मोड सक्षम के साथ एक प्रोफ़ाइल बनाता है. उपयोगकर्ता पूरे सिस्टम को "
+"ब्राउज़ कर सकता है लेकिन किसी भी रिकॉर्ड को बना, संपादित या हटा नहीं सकता. "
+"व्यवस्थापकों को छूट है."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a profile with a domain rule on the chosen model that limits read / "
+"edit to records where user_id equals the current user. Hides the export "
+"button on every model."
+msgstr ""
+"चुने गए मॉडल पर एक डोमेन नियम के साथ एक प्रोफ़ाइल बनाता है जो पढ़ने/संपादन "
+"को उन रिकॉर्ड तक सीमित करता है जहां user_id वर्तमान उपयोगकर्ता के बराबर है. "
+"हर मॉडल पर निर्यात बटन छुपाता है."
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid ""
+"Creates a read-only profile with disable_debug_mode enabled and an Active "
+"Until date set to today plus the chosen number of days. After expiry the "
+"daily cron deactivates the profile."
+msgstr ""
+"disable_debug_mode सक्षम के साथ एक रीड-ओनली प्रोफ़ाइल बनाता है और 'सक्रिय "
+"तक' तिथि को आज प्लस चुनी गई दिनों की संख्या पर सेट करता है. समाप्ति के बाद "
+"दैनिक cron प्रोफ़ाइल को निष्क्रिय कर देता है."
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__custom
+msgid "Custom"
+msgstr "कस्टम"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Custom rights"
+msgstr "कस्टम अधिकार"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Deactivate"
+msgstr "निष्क्रिय करें"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__delete_right
+msgid "Delete"
+msgstr "हटाएं"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__description
+msgid "Description"
+msgstr "विवरण"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Developer mode disabled (debug=0 enforced)"
+msgstr "डेवलपर मोड अक्षम (debug=0 लागू)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__disable_debug_mode
+msgid "Disable Developer Mode"
+msgstr "डेवलपर मोड अक्षम करें"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__disable_login
+msgid "Disable Login"
+msgstr "लॉगिन अक्षम करें"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_line_mixin__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model_fields__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_rule__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_menu__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_view__display_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_res_users__display_name
+msgid "Display Name"
+msgstr "डिस्प्ले का नाम"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Domain Access"
+msgstr "डोमेन एक्सेस"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__domain_line_ids
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__domain_rule_count
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Domain Rules"
+msgstr "डोमेन नियम"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Duplicate"
+msgstr "नकली"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__duration_days
+msgid "Duration in days (auditor template)"
+msgstr "दिनों में अवधि (ऑडिटर टेम्पलेट)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__write_right
+msgid "Edit"
+msgstr "संपादित"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_yaml_wizard__mode__export
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "Export"
+msgstr "एक्सपोर्ट करें"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Export button hidden everywhere"
+msgstr "निर्यात बटन हर जगह छिपा हुआ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_yaml_wizard__payload
+msgid ""
+"Export: filled in when the export action runs. Import: upload the file you "
+"want to import."
+msgstr ""
+"निर्यात: निर्यात क्रिया चलने पर भरा जाता है। आयात: वह फ़ाइल अपलोड करें जिसे "
+"आप आयात करना चाहते हैं।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__field_line_ids
+msgid "Field Lines"
+msgstr "फ़ील्ड लाइनें"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_model_fields
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__field_ids
+msgid "Fields"
+msgstr "फ़ील्ड"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__payload_name
+msgid "File name"
+msgstr "फ़ाइल नाम"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__domain
+msgid "Filter"
+msgstr "फ़िल्टर"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_follower_ids
+msgid "Followers"
+msgstr "फ़ॉलोवर"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "फ़ॉलोवर (पार्टनर)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "फॉन्ट के बेहतरीन आइकॉन जैसे, फा-टॉस्क"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__hide_external_link
+msgid ""
+"For relational fields (many2one / many2many / one2many), strip the external "
+"open / create / edit affordances by injecting widget options no_open, "
+"no_create and no_edit. Has no effect on non-relational fields."
+msgstr ""
+"रिलेशनल फ़ील्ड (many2one / many2many / one2many) के लिए, विजेट विकल्प "
+"no_open, no_create और no_edit जोड़कर बाहरी खोलें / बनाएँ / संपादित करें "
+"विकल्प हटा दें। गैर-रिलेशनल फ़ील्ड पर इसका कोई प्रभाव नहीं पड़ता।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__duration_days
+msgid ""
+"For the 'auditor' template: number of days the profile remains active. After"
+" that the daily cron deactivates it."
+msgstr ""
+"'auditor' टेम्पलेट के लिए: प्रोफ़ाइल कितने दिन सक्रिय रहती है। इसके बाद "
+"दैनिक cron इसे निष्क्रिय कर देता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__target_model
+msgid ""
+"For the 'own records only' template: the model whose records the user should"
+" be limited to. The template stamps a domain of [('user_id', '=', "
+"'__uid__')] on this model."
+msgstr ""
+"'own records only' टेम्पलेट के लिए: वह मॉडल जिसके रिकॉर्ड तक उपयोगकर्ता को "
+"सीमित रखा जाना चाहिए। टेम्पलेट इस मॉडल पर [('user_id', '=', '__uid__')] "
+"डोमेन लगाता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__full
+msgid "Full access (Read + Create + Edit + Delete)"
+msgstr "पूर्ण पहुँच (पढ़ना + बनाना + संपादित करना + हटाना)"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Full placeholder list:\n"
+"                                                    <code>__uid__</code>,\n"
+"                                                    <code>__cid__</code>,\n"
+"                                                    <code>__company_ids__</code>,\n"
+"                                                    <code>__today__</code>,\n"
+"                                                    <code>__yesterday__</code>,\n"
+"                                                    <code>__tomorrow__</code>,\n"
+"                                                    <code>__week_start__</code> to <code>__week_end__</code>,\n"
+"                                                    <code>__month_start__</code> to <code>__month_end__</code>,\n"
+"                                                    <code>__quarter_start__</code> to <code>__quarter_end__</code>,\n"
+"                                                    <code>__year_start__</code> to <code>__year_end__</code>,\n"
+"                                                    <code>__last_7_days__</code>,\n"
+"                                                    <code>__last_30_days__</code>,\n"
+"                                                    <code>__last_90_days__</code>,\n"
+"                                                    <code>__last_365_days__</code>."
+msgstr ""
+"पूर्ण प्लेसहोल्डर सूची:\n"
+"                                                    <code>__uid__</code>,\n"
+"                                                    <code>__cid__</code>,\n"
+"                                                    <code>__company_ids__</code>,\n"
+"                                                    <code>__today__</code>,\n"
+"                                                    <code>__yesterday__</code>,\n"
+"                                                    <code>__tomorrow__</code>,\n"
+"                                                    <code>__week_start__</code> से <code>__week_end__</code>,\n"
+"                                                    <code>__month_start__</code> से <code>__month_end__</code>,\n"
+"                                                    <code>__quarter_start__</code> से <code>__quarter_end__</code>,\n"
+"                                                    <code>__year_start__</code> से <code>__year_end__</code>,\n"
+"                                                    <code>__last_7_days__</code>,\n"
+"                                                    <code>__last_30_days__</code>,\n"
+"                                                    <code>__last_90_days__</code>,\n"
+"                                                    <code>__last_365_days__</code>."
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Global"
+msgstr "वैश्विक"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Global toggles apply to every model the\n"
+"                                    affected users open. Per-model overrides\n"
+"                                    on the Model Access tab take precedence."
+msgstr ""
+"वैश्विक टॉगल प्रभावित उपयोगकर्ताओं द्वारा खोले गए\n"
+"                                    प्रत्येक मॉडल पर लागू होते हैं। Model Access टैब पर\n"
+"                                    प्रति-मॉडल ओवरराइड को प्राथमिकता मिलती है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__has_message
+msgid "Has Message"
+msgstr "मैसेज है"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__invisible
+msgid "Hidden"
+msgstr "छिपाया गया"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hidden_menu_count
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hidden_menu_ids
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hidden Menus"
+msgstr "छिपे हुए मेनू"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__hidden_report_action_ids
+msgid "Hidden Reports"
+msgstr "छिपी हुई रिपोर्ट"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__hidden_server_action_ids
+msgid "Hidden Server Actions"
+msgstr "छिपी हुई सर्वर क्रियाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__hidden_view_types
+msgid "Hidden View Types"
+msgstr "छिपे हुए दृश्य प्रकार"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_log_note
+msgid "Hide 'Log Note'"
+msgstr "'Log Note' छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_schedule_activity
+msgid "Hide 'Schedule Activity'"
+msgstr "'Schedule Activity' छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_send_message
+msgid "Hide 'Send Message'"
+msgstr "'Send Message' छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_add_property
+msgid "Hide Add Property"
+msgstr "प्रॉपर्टी जोड़ें छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_add_property
+msgid "Hide Add Property (everywhere)"
+msgstr "प्रॉपर्टी जोड़ें छिपाएँ (हर जगह)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_archive
+msgid "Hide Archive"
+msgstr "आर्काइव छिपाएँ"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hide Buttons / Tabs / Filters"
+msgstr "बटन / टैब / फ़िल्टर छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_chatter
+msgid "Hide Chatter (everywhere)"
+msgstr "Chatter छिपाएँ (हर जगह)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_create
+msgid "Hide Create"
+msgstr "बनाएँ छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_delete
+msgid "Hide Delete"
+msgstr "हटाएँ छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_duplicate
+msgid "Hide Duplicate"
+msgstr "डुप्लिकेट छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_edit
+msgid "Hide Edit"
+msgstr "संपादित करें छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_export
+msgid "Hide Export"
+msgstr "एक्सपोर्ट छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_export
+msgid "Hide Export (everywhere)"
+msgstr "एक्सपोर्ट छिपाएँ (हर जगह)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__hide_external_link
+msgid "Hide External Link"
+msgstr "बाहरी लिंक छिपाएँ"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hide Fields"
+msgstr "फ़ील्ड छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_import
+msgid "Hide Import"
+msgstr "इंपोर्ट छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_import
+msgid "Hide Import (everywhere)"
+msgstr "इंपोर्ट छिपाएँ (हर जगह)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__restrict_spreadsheet
+msgid "Hide Insert in Spreadsheet"
+msgstr "स्प्रेडशीट में सम्मिलित करें छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__hide_spreadsheet
+msgid "Hide Insert in Spreadsheet (everywhere)"
+msgstr "स्प्रेडशीट में सम्मिलित करें छिपाएँ (हर जगह)"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Hide Menus"
+msgstr "मेनू छिपाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_schedule_activity
+msgid "Hides the Activities button on every chatter."
+msgstr "प्रत्येक chatter पर गतिविधियाँ बटन छिपाता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_log_note
+msgid "Hides the Log Note button on every chatter."
+msgstr "प्रत्येक chatter पर Log Note बटन छिपाता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_send_message
+msgid "Hides the Send Message button on every chatter."
+msgstr "प्रत्येक chatter पर Send Message बटन छिपाता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_line_mixin__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_model_fields__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_rule__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_menu__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_ir_ui_view__id
+#: model:ir.model.fields,field_description:eh_access_studio.field_res_users__id
+msgid "ID"
+msgstr "आईडी"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_exception_icon
+msgid "Icon"
+msgstr "आइकॉन"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "एक छोटा निशान जो बताता है कि कुछ अलग या असामान्य हुआ है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "अगर यह बॉक्स चेक है, तो नए मैसेज देखने ज़रूरी हैं।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "अगर बॉक्स पर टिक है, तो कुछ मैसेज भेजने में गलती हुई है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_yaml_wizard__mode__import
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "Import"
+msgstr "इंपोर्ट करना"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_yaml
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Import / Export"
+msgstr "आयात / निर्यात"
+
+#. module: eh_access_studio
+#: model:ir.actions.act_window,name:eh_access_studio.action_eh_access_yaml_wizard
+msgid "Import / Export Profiles"
+msgstr "आयात / निर्यात प्रोफ़ाइल"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Import button hidden everywhere"
+msgstr "आयात बटन हर जगह छिपा हुआ"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Imported: %(created)s created, %(updated)s updated."
+msgstr "आयात किया गया: %(created)s बनाए गए, %(updated)s अपडेट किए गए।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Inactive"
+msgstr "निष्क्रि"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Insert in Spreadsheet hidden everywhere"
+msgstr "स्प्रेडशीट में डालें विकल्प हर जगह छिपा हुआ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_is_follower
+msgid "Is Follower"
+msgstr "फ़ॉलोवर है"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__link
+msgid "Kanban link"
+msgstr "Kanban लिंक"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__kind
+msgid "Kind"
+msgstr "प्रकार"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__target_label
+msgid "Label"
+msgstr "लेबल"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__write_uid
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__write_uid
+msgid "Last Updated by"
+msgstr "इन्होंने आखिरी बार अपडेट किया"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__write_date
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__write_date
+msgid "Last Updated on"
+msgstr "आखिरी बार अपडेट हुआ"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Log Note button hidden"
+msgstr "नोट लॉग करें बटन छिपा हुआ"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/res_users.py:0
+msgid "Login denied for %(user)s."
+msgstr "%(user)s के लिए लॉगिन अस्वीकृत।"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_ui_menu
+msgid "Menu"
+msgstr "मेन्यू"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hidden_menu_ids
+msgid ""
+"Menus and submenus removed from the navigation for users in this profile."
+msgstr ""
+"इस प्रोफ़ाइल के उपयोगकर्ताओं के लिए नेविगेशन से हटाए गए मेन्यू और सबमेन्यू।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Menus listed here are removed from the\n"
+"                                    navigation for users in this profile. The\n"
+"                                    Access Studio configuration menu is always\n"
+"                                    visible to administrators."
+msgstr ""
+"यहाँ सूचीबद्ध मेन्यू इस प्रोफ़ाइल के उपयोगकर्ताओं के लिए\n"
+"                                    नेविगेशन से हटा दिए जाते हैं।\n"
+"                                    Access Studio कॉन्फ़िगरेशन मेन्यू हमेशा\n"
+"                                    व्यवस्थापकों को दिखाई देता है।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Menus removed from navigation."
+msgstr "नेविगेशन से हटाए गए मेन्यू।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_has_error
+msgid "Message Delivery error"
+msgstr "मैसेज डिलीवरी में गड़बड़ी"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_ids
+msgid "Messages"
+msgstr "संदेश"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__mode
+msgid "Mode"
+msgstr "मोड"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__model_name
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__model_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__model_name
+msgid "Model"
+msgstr "मॉडल"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid "Model %(m)s does not exist in this database."
+msgstr "मॉडल %(m)s इस डेटाबेस में मौजूद नहीं है।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Model Access"
+msgstr "मॉडल ऐक्सेस"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__model_line_ids
+msgid "Model Lines"
+msgstr "मॉडल पंक्तियाँ"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Model-level toggles drop buttons from the\n"
+"                                    UI. They do not block the ORM. Combine with\n"
+"                                    Domain Access for strict gates."
+msgstr ""
+"मॉडल-स्तरीय टॉगल\n"
+"                                    UI से बटन हटा देते हैं। वे ORM को अवरुद्ध नहीं करते। सख्त गेट के लिए\n"
+"                                    डोमेन एक्सेस के साथ संयोजित करें।"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_model
+msgid "Models"
+msgstr "मॉडल"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "मेरी गतिविधि की डेडलाइन"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__name
+msgid "Name"
+msgstr "नाम"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_template
+msgid "New from Template"
+msgstr "टेम्पलेट से नया"
+
+#. module: eh_access_studio
+#: model:ir.actions.act_window,name:eh_access_studio.action_eh_access_template_wizard
+msgid "New profile from template"
+msgstr "टेम्पलेट से नई प्रोफ़ाइल"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "अगली गतिविधि कैलेंडर इवेंट"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "अगली गतिविधि की डेडलाइन"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_summary
+msgid "Next Activity Summary"
+msgstr "अगली गतिविधी की जानकारी"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_type_id
+msgid "Next Activity Type"
+msgstr "अगली गतिविधि का प्रकार"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "No Link"
+msgstr "कोई लिंक नहीं"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__none
+msgid "No access"
+msgstr "कोई पहुँच नहीं"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "No domain-rule conflicts detected."
+msgstr "कोई डोमेन-नियम टकराव नहीं पाया गया।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "No issues found across %(n)s active profile(s)."
+msgstr "%(n)s सक्रिय प्रोफ़ाइल में कोई समस्या नहीं मिली।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__node_line_ids
+msgid "Node Lines"
+msgstr "नोड पंक्तियाँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__page
+msgid "Notebook page / tab"
+msgstr "नोटबुक पृष्ठ / टैब"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_needaction_counter
+msgid "Number of Actions"
+msgstr "ऐक्शन की संख्या"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__message_has_error_counter
+msgid "Number of errors"
+msgstr "गड़बड़ी की संख्या"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "ऐसे मैसेज की संख्या जिनपर कार्रवाई की ज़रूरत है"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "डिलीवरी में गड़बड़ी वाले मैसेज की संख्या"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Open the diagnostic summary for this profile."
+msgstr "इस प्रोफ़ाइल के लिए नैदानिक सारांश खोलें।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__date_until
+msgid ""
+"Optional end date. A scheduled action deactivates the profile when this date"
+" has passed."
+msgstr ""
+"वैकल्पिक समाप्ति तिथि। इस तिथि के बीत जाने पर एक निर्धारित क्रिया प्रोफ़ाइल "
+"को निष्क्रिय कर देती है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_node__target_label
+msgid "Optional label shown only in this configuration screen."
+msgstr "केवल इस कॉन्फ़िगरेशन स्क्रीन में दिखाया गया वैकल्पिक लेबल।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__date_from
+msgid "Optional start date. Profile is treated as inactive before this date."
+msgstr ""
+"वैकल्पिक आरंभ तिथि। इस तिथि से पहले प्रोफ़ाइल को निष्क्रिय माना जाता है।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "Own-records template"
+msgstr "स्वयं-रिकॉर्ड टेम्पलेट"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Per-button (when chatter is shown)"
+msgstr "प्रति बटन (जब chatter दिखाया जाता है)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_domain__rights_preset
+msgid ""
+"Pick a common combination. Switch to 'Custom' to set individual rights "
+"checkboxes."
+msgstr ""
+"एक सामान्य संयोजन चुनें। व्यक्तिगत अधिकार चेकबॉक्स सेट करने के लिए 'कस्टम' "
+"पर स्विच करें।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid "Pick a name for the new profile."
+msgstr "नई प्रोफ़ाइल के लिए एक नाम चुनें।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Pick at least one profile to export."
+msgstr "निर्यात करने के लिए कम से कम एक प्रोफ़ाइल चुनें।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_chatter__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_model__profile_id
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__profile_id
+msgid "Profile"
+msgstr "प्रोफ़ाइल"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__company_ids
+msgid ""
+"Profile applies only when the user is currently logged into one of these "
+"companies. Leave empty when 'Apply to all companies' is enabled."
+msgstr ""
+"प्रोफ़ाइल केवल तभी लागू होती है जब उपयोगकर्ता वर्तमान में इनमें से किसी एक "
+"कंपनी में लॉग इन हो। 'सभी कंपनियों पर लागू करें' सक्षम होने पर खाली छोड़ "
+"दें।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__name
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Profile name"
+msgstr "प्रोफ़ाइल नाम"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Profile summary: %(name)s"
+msgstr "प्रोफ़ाइल सारांश: %(name)s"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Profile-level Hide Chatter removes the\n"
+"                                    chatter widget from every model. The\n"
+"                                    per-button toggles hide individual chatter\n"
+"                                    buttons system-wide while leaving the\n"
+"                                    chatter visible. The per-model list below\n"
+"                                    targets specific models when the global\n"
+"                                    toggle is off."
+msgstr ""
+"प्रोफ़ाइल-स्तर पर चैटर छिपाएं हर मॉडल से\n"
+"                                    चैटर विजेट को हटा देता है।\n"
+"                                    प्रति-बटन टॉगल सिस्टम-व्यापी रूप से\n"
+"                                    अलग-अलग चैटर बटन को छिपाते हैं जबकि\n"
+"                                    चैटर दृश्यमान रहता है। नीचे दी गई प्रति-मॉडल सूची\n"
+"                                    वैश्विक टॉगल बंद होने पर विशिष्ट\n"
+"                                    मॉडल को लक्षित करती है।"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_profiles
+msgid "Profiles"
+msgstr "प्रोफ़ाइल"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_res_users_form_eh_access
+msgid ""
+"Profiles applied to this user. Edit them in the\n"
+"                            Access Studio app. Profile rights are OR-ed for\n"
+"                            domain access; restrictive UI hide flags are the\n"
+"                            union across all active profiles."
+msgstr ""
+"इस उपयोगकर्ता पर लागू प्रोफ़ाइल। उन्हें\n"
+"                            Access Studio ऐप में संपादित करें। प्रोफ़ाइल अधिकार डोमेन\n"
+"                            एक्सेस के लिए OR किए जाते हैं; प्रतिबंधात्मक UI छिपाने वाले फ़्लैग\n"
+"                            सभी सक्रिय प्रोफ़ाइल का संघ हैं।"
+
+#. module: eh_access_studio
+#: model_terms:ir.actions.act_window,help:eh_access_studio.action_eh_access_profile
+msgid ""
+"Profiles bundle a list of users with a set of access\n"
+"                    overlays. Hide menus and fields from selected users\n"
+"                    without writing record rules or editing security\n"
+"                    groups."
+msgstr ""
+"प्रोफ़ाइल उपयोगकर्ताओं की एक सूची को एक्सेस\n"
+"                    ओवरले के सेट के साथ बंडल करती हैं। रिकॉर्ड नियम लिखे या सुरक्षा\n"
+"                    समूह संपादित किए बिना चयनित उपयोगकर्ताओं से\n"
+"                    मेनू और फ़ील्ड छिपाएं।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__profile_ids
+msgid "Profiles to export"
+msgstr "निर्यात करने के लिए प्रोफ़ाइल"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_domain__domain
+msgid ""
+"Python list of domain leaves. Smart placeholders are supported. Example: "
+"[(\"company_id\", \"in\", \"__company_ids__\"), (\"create_date\", \">=\", "
+"\"__month_start__\")]."
+msgstr ""
+"domain leaves की Python सूची। स्मार्ट प्लेसहोल्डर समर्थित हैं। उदाहरण: "
+"[(\"company_id\", \"in\", \"__company_ids__\"), (\"create_date\", \">=\", "
+"\"__month_start__\")]."
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_domain__read_right
+msgid "Read"
+msgstr "पढ़ें"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_create
+msgid "Read + Create"
+msgstr "पढ़ें + बनाएँ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_create_write
+msgid "Read + Create + Edit"
+msgstr "पढ़ें + बनाएँ + संपादित करें"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_write
+msgid "Read + Edit"
+msgstr "पढ़ें + संपादित करें"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_domain__rights_preset__read_only
+msgid "Read only"
+msgstr "केवल पढ़ने योग्य"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__readonly
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Read-Only"
+msgstr "केवल पढ़ने योग्य"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__readonly
+msgid "Read-Only Mode"
+msgstr "केवल पढ़ने योग्य मोड"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__read_only
+msgid "Read-only across the system"
+msgstr "पूरे सिस्टम में केवल पढ़ने योग्य"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_rule
+msgid "Record Rule"
+msgstr "रिकॉर्ड करने का नियम"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_spreadsheet
+msgid "Removes 'Insert in Spreadsheet' from list, pivot and graph cog menus."
+msgstr "सूची, पिवट और ग्राफ़ कॉग मेनू से 'Insert in Spreadsheet' हटाता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_add_property
+msgid "Removes the 'Add Property' action from form views."
+msgstr "फ़ॉर्म व्यू से 'Add Property' क्रिया हटाता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_export
+msgid "Removes the Export button on every list and kanban view."
+msgstr "प्रत्येक सूची और कानबन व्यू पर निर्यात बटन हटाता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_import
+msgid "Removes the Import button on every list and kanban view."
+msgstr "प्रत्येक सूची और कानबन व्यू पर आयात बटन हटाता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__hide_chatter
+msgid "Removes the chatter widget from every form view."
+msgstr "प्रत्येक फ़ॉर्म व्यू से चैटर विजेट हटाता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_field__required
+msgid "Required"
+msgstr "ज़रूरी"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__activity_user_id
+msgid "Responsible User"
+msgstr "जिम्मेदार उपयोगकर्ता"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__summary
+msgid "Result"
+msgstr "रिज़ल्ट"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__rule_count
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Rules"
+msgstr "नियम"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__own_records_only
+msgid "Sales rep: own records only"
+msgstr "बिक्री प्रतिनिधि: केवल स्वयं के रिकॉर्ड"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__filter
+msgid "Search filter"
+msgstr "खोज फ़िल्टर"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_node__kind__group
+msgid "Search group-by"
+msgstr "समूहीकरण खोजें"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Send Message button hidden"
+msgstr "संदेश भेजें बटन छिपा हुआ"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__sequence
+msgid "Sequence"
+msgstr "सीक्वेंस"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Serialised %(count)s profile(s)."
+msgstr "%(count)s प्रोफ़ाइल क्रमबद्ध की गई।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__name
+msgid "Short human-readable label shown in administration screens."
+msgstr "प्रशासन स्क्रीन में दिखाया जाने वाला संक्षिप्त, पठनीय लेबल।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid ""
+"Sign in as one of %(users)s in a private browser window. The active-profile "
+"cache, the ir.rule extension and the view post-processors all run on every "
+"page load, so the first navigation exercises the full enforcement path."
+msgstr ""
+"निजी ब्राउज़र विंडो में %(users)s में से किसी एक के रूप में साइन इन करें। "
+"सक्रिय-प्रोफ़ाइल कैश, ir.rule एक्सटेंशन और व्यू पोस्ट-प्रोसेसर हर पेज लोड पर"
+" चलते हैं, इसलिए पहला नेविगेशन पूरे प्रवर्तन पथ का परीक्षण करता है।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Sign-in disabled for the targeted users"
+msgstr "लक्षित उपयोगकर्ताओं के लिए साइन-इन अक्षम है"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/res_users.py:0
+msgid "Sign-in is disabled for this account by an Access Studio profile."
+msgstr ""
+"इस खाते के लिए Access Studio प्रोफ़ाइल द्वारा साइन-इन अक्षम कर दिया गया है।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_search
+msgid "Status"
+msgstr "स्टेटस"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"ऐक्टिविटी के हिसाब से स्टेटस\n"
+"ओवरड्यू: जिस काम की आखिरी तारीख निकल गई हो\n"
+"टुडे: जो काम आज करना है\n"
+"प्लान्ड: जो काम भविष्य में करने हैं।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Strict ORM-level rules."
+msgstr "सख्त ORM-स्तरीय नियम।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__disable_debug_mode
+msgid ""
+"Strips debug mode from the URL whenever a user in this profile loads the web"
+" client."
+msgstr ""
+"जब भी इस प्रोफ़ाइल का कोई उपयोगकर्ता वेब क्लाइंट लोड करता है, तो URL से डिबग"
+" मोड हटा देता है।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Summary"
+msgstr "पूरी जानकारी"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__target_model
+msgid "Target model (own-records template)"
+msgstr "लक्ष्य मॉडल (स्वयं-रिकॉर्ड टेम्प्लेट)"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_node__target_name
+msgid "Technical Name"
+msgstr "तकनीकी नाम"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_template_wizard__template
+msgid "Template"
+msgstr "टेंप्लेट"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Test Plan"
+msgstr "परीक्षण योजना"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Test plan not available"
+msgstr "परीक्षण योजना उपलब्ध नहीं है"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "Test plan: %(name)s"
+msgstr "परीक्षण योजना: %(name)s"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_node__target_name
+msgid ""
+"The 'name' attribute of the target node in XML. For example: "
+"'action_view_orders' for a smart button."
+msgstr ""
+"XML में लक्ष्य नोड का 'name' विशेषता। उदाहरण के लिए: स्मार्ट बटन के लिए "
+"'action_view_orders'।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__name
+msgid "The new profile is created with this name."
+msgstr "नई प्रोफ़ाइल इस नाम से बनाई जाती है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__invisible
+msgid "The selected fields are removed from views."
+msgstr "चयनित फ़ील्ड को दृश्यों से हटा दिया जाता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__readonly
+msgid ""
+"The selected fields are shown but cannot be edited. The framework's "
+"force_save flag is set so existing values survive saves on records the user "
+"can otherwise modify."
+msgstr ""
+"चयनित फ़ील्ड दिखाए जाते हैं लेकिन उन्हें संपादित नहीं किया जा सकता। "
+"फ़्रेमवर्क का force_save फ़्लैग सेट किया गया है ताकि उन रिकॉर्ड पर सहेजने के"
+" दौरान मौजूदा मान बने रहें जिन्हें उपयोगकर्ता अन्यथा संशोधित कर सकता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_field__required
+msgid ""
+"The selected fields become mandatory. Use sparingly: a required overlay on a"
+" field that the user cannot fill in (because it lives on a hidden tab) "
+"blocks all saves."
+msgstr ""
+"चयनित फ़ील्ड अनिवार्य हो जाते हैं। इसका सीमित उपयोग करें: ऐसे फ़ील्ड पर "
+"आवश्यक ओवरले जिसे उपयोगकर्ता भर नहीं सकता (क्योंकि यह एक छिपे हुए टैब पर है)"
+" सभी सहेजने की क्रियाओं को अवरुद्ध कर देता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "रिकॉर्ड में जो अलग तरह की गतिविधि हुई है, वह किस तरह की है।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"UI hide is UI hide. Fields hidden here are\n"
+"                                    not rendered in views. They remain readable\n"
+"                                    over the API and from server code. Use\n"
+"                                    Domain Access (later phase) when you need a\n"
+"                                    strict gate at the ORM level."
+msgstr ""
+"UI छिपाना केवल UI छिपाना है। यहाँ छिपाए गए फ़ील्ड\n"
+"                                    व्यूज़ में रेंडर नहीं होते। वे\n"
+"                                    API के माध्यम से और सर्वर कोड से पठनीय रहते हैं। जब आपको\n"
+"                                    ORM स्तर पर एक कड़ी सीमा चाहिए हो तब\n"
+"                                    Domain Access (बाद के चरण) का उपयोग करें।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_template_wizard.py:0
+msgid "Unknown template: %(t)s."
+msgstr "अज्ञात टेम्पलेट: %(t)s।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "Upload a YAML file first."
+msgstr "पहले एक YAML फ़ाइल अपलोड करें।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid ""
+"Use the technical name (the 'name' XML\n"
+"                                    attribute) of the target node. Smart\n"
+"                                    buttons usually start with 'action_'.\n"
+"                                    Notebook tabs use the 'name' attribute on\n"
+"                                    the &lt;page/&gt; element. Filters and\n"
+"                                    group-by entries use the 'name' attribute\n"
+"                                    on the &lt;filter/&gt; element."
+msgstr ""
+"लक्ष्य नोड का तकनीकी नाम (XML का 'name' विशेषता) उपयोग करें। स्मार्ट बटन "
+"आमतौर पर 'action_' से शुरू होते हैं। नोटबुक टैब &lt;page/&gt; तत्व पर 'name'"
+" विशेषता का उपयोग करते हैं। फ़िल्टर और ग्रुप-बाय प्रविष्टियाँ "
+"&lt;filter/&gt; तत्व पर 'name' विशेषता का उपयोग करती हैं।"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_res_users
+msgid "User"
+msgstr "उपयोगकर्ता"
+
+#. module: eh_access_studio
+#: model:ir.ui.menu,name:eh_access_studio.menu_eh_access_root
+msgid "User Access Studio"
+msgstr "यूज़र एक्सेस स्टूडियो"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_chatter
+msgid "User Access Studio Chatter Rule"
+msgstr "यूज़र एक्सेस स्टूडियो चैटर नियम"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_domain
+msgid "User Access Studio Domain Rule"
+msgstr "यूज़र एक्सेस स्टूडियो डोमेन नियम"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_field
+msgid "User Access Studio Field Rule"
+msgstr "यूज़र एक्सेस स्टूडियो फ़ील्ड नियम"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_yaml_wizard
+msgid "User Access Studio Import / Export"
+msgstr "यूज़र एक्सेस स्टूडियो इम्पोर्ट / एक्सपोर्ट"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_model
+msgid "User Access Studio Model Rule"
+msgstr "यूज़र एक्सेस स्टूडियो मॉडल नियम"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_node
+msgid "User Access Studio Node Rule"
+msgstr "यूज़र एक्सेस स्टूडियो नोड नियम"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_profile
+msgid "User Access Studio Profile"
+msgstr "यूज़र एक्सेस स्टूडियो प्रोफ़ाइल"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_template_wizard
+msgid "User Access Studio Template Wizard"
+msgstr "यूज़र एक्सेस स्टूडियो टेम्पलेट विज़ार्ड"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_eh_access_line_mixin
+msgid "User Access Studio rule-line cache hook"
+msgstr "यूज़र एक्सेस स्टूडियो रूल-लाइन कैश हुक"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_yaml_wizard_form
+msgid "User Access Studio: Import / Export"
+msgstr "यूज़र एक्सेस स्टूडियो: इम्पोर्ट / एक्सपोर्ट"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "User Access Studio: New profile from template"
+msgstr "यूज़र एक्सेस स्टूडियो: टेम्पलेट से नई प्रोफ़ाइल"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__user_count
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_profile__user_ids
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Users"
+msgstr "उपयोगकर्ता"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_template_wizard__user_ids
+msgid "Users assigned to the new profile."
+msgstr "नई प्रोफ़ाइल को सौंपे गए यूज़र।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__disable_login
+msgid ""
+"Users in this profile are denied at the authentication gate. Use only when "
+"the profile is targeted at one user; applying it to a group disables the "
+"whole group."
+msgstr ""
+"इस प्रोफ़ाइल के यूज़र प्रमाणीकरण गेट पर अस्वीकृत कर दिए जाते हैं। इसका उपयोग"
+" केवल तब करें जब प्रोफ़ाइल किसी एक यूज़र को लक्षित करती हो; इसे किसी समूह पर"
+" लागू करने से पूरा समूह अक्षम हो जाता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__user_ids
+msgid "Users to whom this profile applies."
+msgstr "वे यूज़र जिन पर यह प्रोफ़ाइल लागू होती है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields.selection,name:eh_access_studio.selection__eh_access_template_wizard__template__vendor_portal
+msgid "Vendor / contractor: portal-style restricted view"
+msgstr "विक्रेता / ठेकेदार: पोर्टल-शैली प्रतिबंधित दृश्य"
+
+#. module: eh_access_studio
+#: model:ir.model,name:eh_access_studio.model_ir_ui_view
+msgid "View"
+msgstr "देखें"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "View the test plan for the targeted users."
+msgstr "लक्षित उपयोगकर्ताओं के लिए परीक्षण योजना देखें।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__apply_to_all_companies
+msgid ""
+"When enabled, the profile applies regardless of the user's current company. "
+"The Companies field is ignored."
+msgstr ""
+"सक्षम होने पर, प्रोफ़ाइल उपयोगकर्ता की वर्तमान कंपनी की परवाह किए बिना लागू "
+"होती है। कंपनियां फ़ील्ड को अनदेखा किया जाता है।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_domain__apply_filter
+msgid ""
+"When enabled, the rule limits the set of records to which the chosen rights "
+"apply. Without a filter, the rights apply to all records of the model."
+msgstr ""
+"सक्षम होने पर, नियम उन रिकॉर्ड के सेट को सीमित करता है जिन पर चुने गए अधिकार"
+" लागू होते हैं। फ़िल्टर के बिना, अधिकार मॉडल के सभी रिकॉर्ड पर लागू होते "
+"हैं।"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,help:eh_access_studio.field_eh_access_profile__readonly
+msgid ""
+"When enabled, users in this profile cannot create, edit or delete records "
+"anywhere in the system. The Access Studio configuration is excluded so "
+"administrators are never locked out."
+msgstr ""
+"सक्षम होने पर, इस प्रोफ़ाइल के उपयोगकर्ता सिस्टम में कहीं भी रिकॉर्ड बना, "
+"संपादित या हटा नहीं सकते। Access Studio कॉन्फ़िगरेशन को बाहर रखा गया है ताकि"
+" व्यवस्थापक कभी लॉक आउट न हों।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "Whole-system"
+msgstr "संपूर्ण सिस्टम"
+
+#. module: eh_access_studio
+#: model:ir.model.fields,field_description:eh_access_studio.field_eh_access_yaml_wizard__payload
+msgid "YAML"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid ""
+"YAML payload too large (max %(mb)s MB). Split the export into smaller files."
+msgstr ""
+"YAML पेलोड बहुत बड़ा है (अधिकतम %(mb)s MB)। एक्सपोर्ट को छोटी फ़ाइलों में "
+"विभाजित करें।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "YAML payload too large after decode (max %(mb)s MB)."
+msgstr "डिकोड के बाद YAML पेलोड बहुत बड़ा है (अधिकतम %(mb)s MB)।"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/wizards/eh_access_yaml_wizard.py:0
+msgid "YAML root must be a mapping with a 'profiles' key."
+msgstr "YAML रूट में 'profiles' कुंजी वाला मैपिंग होना चाहिए।"
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "[(\"user_id\", \"=\", \"__uid__\")]"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "all companies"
+msgstr "सभी कंपनियां"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "disable_debug_mode"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "disable_login"
+msgstr ""
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_template_wizard_form
+msgid "e.g. Sales reps - own records"
+msgstr "उदा. बिक्री प्रतिनिधि - स्वयं के रिकॉर्ड"
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_add_property"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_export"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_import"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_log_note"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_schedule_activity"
+msgstr ""
+
+#. module: eh_access_studio
+#. odoo-python
+#: code:addons/eh_access_studio/models/eh_access_profile.py:0
+msgid "hide_spreadsheet"
+msgstr ""
+
+#. module: eh_access_studio
+#: model_terms:ir.ui.view,arch_db:eh_access_studio.view_eh_access_profile_form
+msgid "list,kanban,..."
+msgstr ""

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="ware_house_user_restrict" model="res.groups">
+        <field name="name">Restrict Stock Warehouse Location &amp; Operations</field>
+        <field name="implied_ids"
+               eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="warehouse_restriction_for_user.restrict_stock_picking" model="ir.rule">
+        <field name="name">Restrict Stock Picking</field>
+        <field name="model_id" ref="model_stock_picking"/>
+        <field name="groups" eval="[(4, ref('warehouse_restriction_for_user.ware_house_user_restrict'))]"/>
+    </record>
+</odoo>

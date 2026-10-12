@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+
+        <record id="view_users_form_inherit_allowed_locations" model="ir.ui.view">
+            <field name="name">res.users.form.allowed.locations</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[@name='preferences']" position="inside">
+                    <group string="Warehouse Access">
+                        <field name="allowed_location_ids" widget="many2many_tags"
+                               domain="[('usage', 'in', ('internal', 'transit'))]"/>
+                        <field name="not_allowed_transfer_location_ids" widget="many2many_tags"
+                               domain="[('usage', 'in', ('internal', 'transit'))]"/>
+                    </group>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

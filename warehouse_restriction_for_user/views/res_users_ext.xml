@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="user_restrict" model="ir.ui.view">
+        <field name="name">Users</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='preferences']//group[@name='other_preferences']"
+                   position="before">
+                <group string="RESTRICT WAREHOUSE OPERATION" name="restrict_ware_house_operation">
+
+                    <field name="restrict_operation"/>
+
+                    <field name="ware_house_picking_type_ids"
+                           string="Warehouse Operation Picking Type" invisible="restrict_operation != True"  widget="many2many_tags"/>
+<!--                           attrs="{'invisible':[('restrict_operation','!=',True)]}"-->
+
+                </group>
+                <group string="RESTRICT WAREHOUSE LOCATION" name="restrict_warehouse_location">
+                    <field name="restrict_location"/>
+                    <field name="allow_location_ids" string="Allowed Location" required="restrict_location == True" invisible="restrict_location != True" widget="many2many_tags"/>
+<!--                           attrs="{'invisible':[('restrict_location','!=',True)]}" -->
+                </group>
+                <group string="RESTRICT STOCK WAREHOUSE OPERATION" name="restrict_stock_ware_house_operation">
+                    <field name="restrict_ware_house"/>
+                    <field name="allowed_ware_house_ids" string="Allowed WareHouse" required="restrict_ware_house == True" invisible="restrict_ware_house != True" widget="many2many_tags" />
+<!--                           attrs="{'invisible':[('restrict_ware_house','!=',True)]}"-->
+
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
+
+
+
+

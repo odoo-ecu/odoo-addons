@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_menu_access_rule_tree" model="ir.ui.view">
+        <field name="name">menu.access.rule.tree</field>
+        <field name="model">menu.access.rule</field>
+        <field name="arch" type="xml">
+            <list default_order="name">
+                <field name="name"/>
+                <field name="based_option"/>
+                <field name="group_id"/>
+                <field name="allow_group_id"/>
+                <field name="user_ids"/>
+                <field name="menu_ids"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_menu_access_rule_form" model="ir.ui.view">
+        <field name="name">menu.access.rule.form</field>
+        <field name="model">menu.access.rule</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="based_option" widget="radio" options="{'horizontal': True}"/>
+                    </group>
+                    <group invisible="based_option != 'groups'">
+                        <group>
+                            <field name="group_id" options="{'no_create_edit': True}" required="based_option == 'groups'"/>
+                            <span>If a user belongs to this group, the selected menus will be hidden.</span>
+                        </group>
+                        <group>
+                            <field name="allow_group_id" options="{'no_create_edit': True}"/>
+                            <span>If a user also belongs to this group, the restriction from the restricted group will not be applied.</span>
+                        </group>
+                    </group>
+                    <group invisible="based_option != 'users'">
+                        <field name="user_ids" widget="many2many_tags"  required="based_option == 'users'"/>
+                    </group>
+                    <group>
+                        <field name="menu_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_menu_access_rule_search" model="ir.ui.view">
+        <field name="name">menu.access.rule.search</field>
+        <field name="model">menu.access.rule</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="group_id"/>
+                <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_menu_access_rule" model="ir.actions.act_window">
+        <field name="name">Menu Access Rules</field>
+        <field name="res_model">menu.access.rule</field>
+        <field name="view_mode">list,form,search</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create rules to dynamically hide menus based on groups.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_menu_access_rule_root"
+              name="Menu Restrictions"
+              parent="base.next_id_2"
+              action="action_menu_access_rule"
+              sequence="1"/>
+</odoo>

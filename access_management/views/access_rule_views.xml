@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="access_management_view_form" model="ir.ui.view">
+        <field name="name">access.management.view.form</field>
+        <field name="model">access.rule</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="action_toggle_active" type="object"
+                            icon="fa-bars" invisible="active == False">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text text-danger">
+                                    Deactivate Rule
+                                </span>
+                            </div>
+                        </button>
+                        <button class="oe_stat_button" name="action_toggle_active" type="object"
+                            icon="fa-bars" invisible="active == True">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text text-success">
+                                    Activate Rule
+                                </span>
+                            </div>
+                        </button>
+                    </div>
+                    <div>
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="user_ids" widget="many2many_tags"
+                                required="1"
+                                options="{'no_create': True}" />
+                        </group>
+                        <group>
+                            <field name="company_id" options="{'no_create': True}"
+                                groups="base.group_multi_company" />
+                            <field name="readonly" />
+                            <field name="restrict_debug_mode" />
+                        </group>
+                    </group>
+                    <group string="Activity">
+                        <group>
+                            <field name="create_uid" readonly="1" />
+                            <field name="create_date" readonly="1" />
+                        </group>
+                        <group>
+                            <field name="write_uid" readonly="1" />
+                            <field name="write_date" readonly="1" />
+                        </group>
+                    </group>
+                    <separator />
+                    <notebook>
+                        <page string="Model Access">
+                            <field name="record_rule_ids"
+                                context="{'default_rule_id': id}">
+                                <list editable="top">
+                                    <field name="model_id" required="1"
+                                        options="{'no_create': True}" />
+                                    <field name="name" required="1" />
+                                    <field name="domain_force" required="1" />
+                                    <field name="perm_read" />
+                                    <field name="perm_write" />
+                                    <field name="perm_create" />
+                                    <field name="perm_unlink" />
+                                </list>
+                            </field>
+                        </page>
+                        <page name="restrict_menu" string="Restrict Menus">
+                            <field name="hide_menu_domain" invisible="True" />
+                            <field name="hide_menu_ids" domain="hide_menu_domain"
+                                options="{'no_create': True}" />
+                        </page>
+                        <page name="restrict_views" string="Restrict Views">
+                            <field name="restricted_view_ids"
+                                context="{'default_rule_id': id}">
+                                <list editable="bottom">
+                                    <field name="model_id" required="1"
+                                        options="{'no_create': True}" />
+                                    <field name="model" column_invisible="1" />
+                                    <field name="view_id"
+                                        domain="[('model', '=', model)]"
+                                        required="1" />
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Reports" name="hide_reports">
+                            <field name="hidden_report_ids"
+                                context="{'default_rule_id': id}">
+                                <list editable="bottom">
+                                    <field name="model_id" required="1"
+                                        options="{'no_create': True}" />
+                                    <field name="hide_report_btn" />
+                                    <field name="report_id"
+                                        domain="[('model_id', '=', model_id)]" />
+                                </list>
+                            </field>
+                        </page>
+                        <page name="field_access" string="Field Access">
+                            <field name="field_access_ids" context="{'default_rule_id': id}">
+                                <list editable="bottom">
+                                    <field name="model_id" required="1"
+                                        options="{'no_create': True}" />
+                                    <field name="used_field_ids" column_invisible="1" />
+                                    <field name="field_id"
+                                        domain="[('model_id', '=', model_id),('id', 'not in', used_field_ids)]"
+                                        options="{'no_create': True}" />
+                                    <field name="access" required="1" />
+                                </list>
+                            </field>
+                        </page>
+                        <page name="chatter" string="Chatter">
+                            <field name="chatter_setting_ids"
+                                context="{'default_rule_id': id}">
+                                <list editable="bottom">
+                                    <field name="model_id" required="1"
+                                        options="{'no_create': True}" />
+                                    <field name="hide_chatter" />
+                                    <field name="hide_send_message" />
+                                    <field name="hide_search_message" />
+                                    <field name="hide_lognote" />
+                                    <field name="hide_activity" />
+                                    <field name="hide_attachments" />
+                                    <field name="hide_followers" />
+                                </list>
+                            </field>
+                        </page>
+                        <page name="hide_buttons" string="Hide/Show button">
+                            <field name="hide_button_ids"
+                                domain="[('view_node_id.node_option', '=', 'button')]">
+                                <list editable="bottom" open_form_view="false">
+                                    <field name="model_id" required="1"
+                                        options="{'no_create': True}" />
+                                    <field name="view_node_id"
+                                        domain="[('model_id' , '=' , model_id), ('node_option', '=', 'button')]"
+                                        widget="selection"
+                                        required="1" />
+                                </list>
+                            </field>
+                        </page>
+                        <page name="hide_pages" string="Hide/Show Pages">
+                            <field name="hide_page_ids"
+                                domain="[('view_node_id.node_option', '=', 'page')]">
+                                <list editable="bottom" open_form_view="false">
+                                    <field name="model_id" required="1"
+                                        options="{'no_create': True}" />
+                                    <field name="view_node_id"
+                                        domain="[('model_id' , '=' , model_id), ('node_option', '=', 'page')]"
+                                        widget="selection"
+                                        required="1" />
+                                </list>
+                            </field>
+                        </page>
+                        <page name="hide_links" string="Hide/Show Links">
+                            <field name="hide_link_ids"
+                                domain="[('view_node_id.node_option', '=', 'link')]">
+                                <list editable="bottom" open_form_view="false">
+                                    <field name="model_id" required="1"
+                                        options="{'no_create': True}" />
+                                    <field name="view_node_id"
+                                        domain="[('model_id' , '=' , model_id), ('node_option', '=', 'link')]"
+                                        widget="selection"
+                                        required="1" />
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Common" name="common">
+                            <group>
+                                <group string="Chatter &amp; Activity">
+                                    <field name="hide_chatter" />
+                                    <field name="hide_send_message" />
+                                    <field name="hide_search_message" />
+                                    <field name="hide_lognote" />
+                                    <field name="hide_activity" />
+                                    <field name="hide_attachments" />
+                                    <field name="hide_followers" />
+                                </group>
+                                <group string="Reports &amp; Imports">
+                                    <field name="hide_report_btn" />
+                                    <field name="restrict_import_records" />
+                                    <field name="restrict_export" />
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="access_management_view_tree" model="ir.ui.view">
+        <field name="name">access.management.view.tree</field>
+        <field name="model">access.rule</field>
+        <field name="arch" type="xml">
+            <list open_form_view="True">
+                <field name="name" />
+                <field name="company_id" optional="hide" groups="base.group_multi_company" />
+                <field name="user_ids" widget="many2many_tags" />
+                <field name="readonly" optional="hide" />
+                <field name="restrict_debug_mode" optional="hide" />
+                <field name="hide_menu_ids" widget="many2many_tags" optional="hide" />
+            </list>
+        </field>
+    </record>
+    <record id="access_management_view_search" model="ir.ui.view">
+        <field name="name">access.management.view.search</field>
+        <field name="model">access.rule</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="readonly" />
+                <field name="restrict_debug_mode" />
+                <!-- Filters -->
+                <filter name="filter_disabled" string="Disabled" domain="[('active', '=', False)]"
+                    context="{}" />
+                <filter name="filter_readonly" string="Readonly" domain="[('readonly', '=', True)]"
+                    context="{}" />
+                <filter name="filter_debug_restricted" string="Debug Restricted"
+                    domain="[('restrict_debug_mode', '=', True)]"
+                    context="{}" />
+            </search>
+        </field>
+    </record>
+    <record id="access_management_action_show" model="ir.actions.act_window">
+        <field name="name">Access Rules</field>
+        <field name="res_model">access.rule</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="access_management_view_search" />
+    </record>
+    <menuitem id="access_management_menu_main" name="Easy Access Rules"
+        web_icon="access_management,static/description/icon.png"
+        action="access_management_action_show"
+        groups="access_management.access_management_group_user" />
+</odoo>

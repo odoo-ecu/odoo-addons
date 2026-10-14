@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="Chatter" t-inherit="mail.Chatter" t-inherit-mode="extension">
+        <xpath expr="//div" position="attributes">
+            <attribute name="t-if">state.thread &amp;&amp; !state.hideChatter</attribute>
+        </xpath>
+        <!-- Send Message -->
+        <xpath expr="//button[hasclass('o-mail-Chatter-sendMessage')]" position="attributes">
+            <attribute name="t-if">!state.hideSendMessage</attribute>
+        </xpath>
+        <!-- Log Note -->
+        <xpath expr="//button[hasclass('o-mail-Chatter-logNote')]" position="attributes">
+            <attribute name="t-if">!state.hideLogNote</attribute>
+        </xpath>
+        <!-- Activity -->
+        <xpath expr="//button[hasclass('o-mail-Chatter-activity')]" position="attributes">
+            <attribute name="t-if">props.has_activities &amp;&amp; !state.hideActivity</attribute>
+        </xpath>
+        <!-- Followers -->
+        <xpath expr="//div[hasclass('o-mail-Followers')]" position="attributes">
+            <attribute name="t-if">!state.hideFollowers</attribute>
+        </xpath>
+
+        <xpath expr="//t[1]/button[hasclass('text-action')]" position="attributes">
+            <attribute name="t-if">!state.hideSearchMessage</attribute>
+        </xpath>
+    </t>
+
+    <t t-name="Chatter.attachFiles" t-inherit="mail.Chatter.attachFiles" t-inherit-mode="extension">
+        <xpath expr="//button" position="attributes">
+            <attribute name="t-if">!state.hideAttachments</attribute>
+        </xpath>
+    </t>
+</templates>

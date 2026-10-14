@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Category -->
+    <record id="easy_access_role_category" model="ir.module.category">
+        <field name="name">Easy Access Rule</field>
+    </record>
+
+    <!-- Groups -->
+    <record id="access_management_group_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="easy_access_role_category" />
+    </record>
+
+    <record id="access_management_group_admin" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="implied_ids"
+            eval="[Command.link(ref('access_management.access_management_group_user'))]" />
+        <field name="category_id" ref="easy_access_role_category" />
+    </record>
+</odoo>
